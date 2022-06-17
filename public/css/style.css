@@ -1,13 +1,43 @@
+/* Header */
+
+/* fin Header */
+
+
+/* ---NavBar--- */
+
 .textNavbar {
-    margin-left: 5.3rem;
+    margin-left: 6rem;
     color: black;
 }
 
-.iconProfile{
+/* ---icon--- */
+.iconProfile {
     width: 5rem;
     height: 5rem;
 }
-.taille{
- font-size: 2.5rem;
-    
+
+.taille {
+    font-size: 2.5rem;
+
 }
+/* ---fin icon--- */
+
+/* ---fin NavBar--- */
+
+
+/* ---premier block---  */
+
+.imageArticle1 {
+    width: 95%;
+    height: auto;
+}
+/* fin premier block  */
+
+/* ---second block--- */
+
+.image2 {
+    width: 50%;
+    height: auto;
+}
+
+/* ---fin second block--- */

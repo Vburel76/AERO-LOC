@@ -27,9 +27,6 @@
     <nav class="navbar navbar-expand-lg bg-light border border-dark justify-content-around">
 
         <div class="container-fluid">
-
-           
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,36 +38,66 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item ">
-                        <a class="nav-link fs-3 textNavbar " href="#">A propos</a>
+                        <a class="nav-link fs-4 textNavbar " href="#">A propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-3 textNavbar " href="#">La flotte</a>
+                        <a class="nav-link fs-4 textNavbar " href="#">La flotte</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-3 textNavbar " href="#">Formation</a>
+                        <a class="nav-link fs-4 textNavbar " href="#">Formation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-3 textNavbar " href="#">Location</a>
+                        <a class="nav-link fs-4 textNavbar " href="#">Location</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-3 textNavbar " href="#">Contact</a>
+                        <a class="nav-link fs-4 textNavbar " href="#">Contact</a>
                     </li>
                 </ul>
             </div>
-
             <div class="d-lg-block d-none">
                 <i class="bi bi-person-circle taille"></i>
             </div>
-
         </div>
-
     </nav>
 
 
-
-
     <main>
+        <section class="row  section1 mt-5 m-0 p-0">
+
+            <article class="col-12 col-lg-6  text-center ">
+                <img class="imageArticle1" src="../public/img/aeroclub.jpg" alt="">
+            </article>
+            <article class="col m-3 p-0 ">
+                <p class="  mt-3 ">L’entreprise Airpark est fondée en 2021 et implantée près de la ville du Havre.
+                    Nous sommes spécialisés dans la location d’avions monomoteurs de moins de 3 tonnes .
+                    Nous offrons également la possibilité de passer le LAPL et le PPL licences de pilotage obligatoire pour pouvoir piloter un de nos avions .<br>
+                    Retrouver sur notre site toutes les informations sur la location et le passage des licences de pilotage.
+                </p>
+            </article>
+        </section>
+
+        <div class="row  mt-4 m-0 p-0 justify-content-center ">
+            <h3 class=" col-lg-6 col-10 border border-danger p-2 text-center rounded">Informations</h3>
+        </div>
+
+        <div class="row border border-dark m-0 p-0 section1">
+
+            <div class="border border-dark text-center">
+                <img class="border border-danger image2 mt-3" src="../public/img/presentation.jpg" alt="">
+            </div>
+            <div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
     </main>
+
     <footer>
     </footer>
 
