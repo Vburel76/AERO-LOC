@@ -6,7 +6,8 @@
 /* ---NavBar--- */
 
 .textNavbar {
-    margin-left: 6rem;
+    margin-left: 5rem;
+    margin-right: 2rem;
     color: black;
 }
 
@@ -17,9 +18,10 @@
 }
 
 .taille {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 
 }
+
 /* ---fin icon--- */
 
 /* ---fin NavBar--- */
@@ -31,6 +33,7 @@
     width: 95%;
     height: auto;
 }
+
 /* fin premier block  */
 
 /* ---second block--- */
@@ -41,3 +44,25 @@
 }
 
 /* ---fin second block--- */
+
+/* troisieme block  */
+
+.image3 {
+    width: 60%;
+    height: auto;
+}
+
+.info{
+    border: 1px solid black;
+    height: 17rem;
+    margin-top: 1.5rem;
+}
+
+.avis{
+    height: 12rem;
+}
+
+
+.tailleIcon{
+    font-size: 5rem;
+}
