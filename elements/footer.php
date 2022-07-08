@@ -1,5 +1,5 @@
 <div class="border border-dark">
-        <footer class=" row d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <footer class=" row m-0 p-0 d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 
 
             <div class="col-12 col-lg-4 d-flex justify-content-center">
