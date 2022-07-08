@@ -10,7 +10,7 @@ require_once '../data/table.php';
     </header>
     <?php include '../elements/navBar.php' ?>
 
-    <h1 class="text-center">Présentation de la flotte</h1>
+    <h1 class="text-center mt-4">Présentation de la flotte</h1>
 
 
     <?php
@@ -18,27 +18,27 @@ require_once '../data/table.php';
 
     foreach ($tableFly as $key => $value) {
         if (($start % 2) == 0) { ?>
-            <div class="row m-0 p-0 justify-content-center mt-5">
+            <div class="row mx-0 p-0 justify-content-center espaceFly">
                 <div class="col-lg-11 col-11 ">
                     <div class="row m-0 p-0  ">
                         <div class="col-lg-3 col-12 p-0 m-0 ">
                             <img class="imageFlotte" src="../public/img/<?= $value['planeImg'] ?>" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body col-lg-9  col-9  ">
-                            <p class="card-text fs-2 mx-1"><?= $value['title'] ?></p>
-                            <div class="fs-4 mx-1">
+                            <p class="card-text fs-2 mx-3"><?= $value['title'] ?></p>
+                            <div class="fs-4 mx-3">
                                 <p>Le Robin DR400 est un avion de tourisme monomoteur très utilisé dans les aéroclubs, produit par la société Robin Aircraft, anciennement appelée Avions Pierre Robin.</p>
                             </div>
-                            <div class="row justify-content-start  m-0 p-0">
+                            <div class="row justify-content-evenly  m-0 p-0">
                                 <ul class="col-lg-3 col-11   mx-3 ">
-                                    <li class="fs-5"><?= $value['size'] ?></li>
-                                    <li class="fs-5"><?= $value['place'] ?></li>
-                                    <li class="fs-5"><?= $value['scope'] ?></li>
+                                    <li class="fs-5">Taille :<?= $value['size'] ?></li>
+                                    <li class="fs-5">Places : <?= $value['place'] ?></li>
+                                    <li class="fs-5"> portée : <?= $value['scope'] ?></li>
                                 </ul>
                                 <ul class="col-lg-3 col-11  mx-3 ">
-                                    <li class="fs-5"><?= $value['autonomy'] ?></li>
-                                    <li class="fs-5"><?= $value['altitude'] ?></li>
-                                    <li class="fs-5"><?= $value['speed'] ?></li>
+                                    <li class="fs-5">Autonomie : <?= $value['autonomy'] ?></li>
+                                    <li class="fs-5"> Altitude max :<?= $value['altitude'] ?></li>
+                                    <li class="fs-5"> Vitesse Max : <?= $value['speed'] ?></li>
                                 </ul>
                             </div>
 
@@ -50,7 +50,7 @@ require_once '../data/table.php';
             
             <!-- second block  -->
 
-            <div class="row m-0 p-0 justify-content-center mt-5">
+            <div class="row m-0 p-0 justify-content-center espaceFly">
                 <div class="col-lg-11 col-11 ">
                     <div class="row m-0 p-0 ">
                         <div class="col-lg-3 col-12 p-0 m-0  d-lg-none d-block">
@@ -61,7 +61,7 @@ require_once '../data/table.php';
                             <div class="fs-4 mx-1">
                                 <p>Le Robin DR400 est un avion de tourisme monomoteur très utilisé dans les aéroclubs, produit par la société Robin Aircraft, anciennement appelée Avions Pierre Robin.</p>
                             </div>
-                            <div class="row justify-content-end  m-0 p-0">
+                            <div class="row justify-content-evenly  m-0 p-0">
                                 <ul class="col-lg-3 col-11   mx-3 ">
                                     <li class="fs-5"><?= $value['size'] ?></li>
                                     <li class="fs-5"><?= $value['place'] ?></li>

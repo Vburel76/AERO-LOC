@@ -52,24 +52,51 @@
     height: auto;
 }
 
-.info{
+.info {
     border: 1px solid black;
     height: 17rem;
     margin-top: 1.5rem;
 }
 
-.avis{
+.avis {
     height: 12rem;
 }
 
 
-.tailleIcon{
+.tailleIcon {
     font-size: 5rem;
 }
 
+/* troisieme block fin */
 
-.imageFlotte{
+
+/* fly  */
+
+.imageFlotte {
     width: 100%;
     height: auto;
+}
+
+.espaceFly {
+    
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* fly fin */
+
+
+/* formation  */
+
+.tableauSize{
+    width: 5rem;
+}
+
+.FormularSize{
+    width: 23rem;
+}
+
+.spanSize{
+    width: 5rem;
 }
 

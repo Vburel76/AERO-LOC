@@ -1,2 +1,2 @@
 <?php
-header("location: views/fly.php");
+header("location: views/formation.php");
