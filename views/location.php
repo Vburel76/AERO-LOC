@@ -10,9 +10,16 @@ require_once '../data/table.php';
     </header>
     <?php include '../elements/navBar.php' ?>
 
+    <section class="row m-0 p-0 justify-content-center border border-dark">
+        <article class="col-lg-8 border border-dark">
+            <p class="fs-3 text-center">Louer un avion privé depuis l'aéroport d'octeville</p>
+            <p>Vous pouvez louer nos avions pour un ou plusieurs jours. Le préalable indispensable est une heure de vol avec un instructeur d'Aero-Loc afin de valider vos capacités au pilotage de l'appareil.</p>
+        </article>
+
+    </section>
 
     <div class="border border-dark d-flex justify-content-center">
-        <div class="row col-lg-10 col-12 m-0 p-0 justify-content-center border border-dark">
+        <div class="row col-lg-10 col-12 m-0 p-0 justify-content-center ">
             <?php
             foreach ($tableFly as $key => $value) { ?>
                 <div class="card mt-4 m-5 " style="width: 20rem;">
@@ -39,10 +46,10 @@ require_once '../data/table.php';
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col border border-dark text-center">
+                                            <div class="col  text-center">
                                                 <img src="../public/img/<?= $value['planeImgLoc'] ?>">
                                             </div>
-                                            <div class="col border border-dark">
+                                            <div class="col ">
                                                 <div class="row">
                                                     <div class="col">
                                                         <p>date souhaitée :</p>
@@ -54,14 +61,14 @@ require_once '../data/table.php';
                                                     </div>
                                                 </div>
                                                 <div class="row mt-3">
-                                                    <div class="col-lg-12 border border-dark">
+                                                    <div class="col-lg-12 ">
                                                         <p>départ :</p>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
                                                             <input type="text" class="form-control" type="text" autocomplete="off" name="startAirport" placeholder="de" data-next-input="date">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 border border-dark">
+                                                    <div class="col-lg-12 ">
                                                         <p>arrivée :</p>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>

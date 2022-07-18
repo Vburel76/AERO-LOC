@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
 
@@ -28,8 +27,15 @@
                 </li>
             </ul>
 
-            <div class="d-lg-block d-none">
-                <i class="bi bi-person-circle taille"></i>
+            <div class="d-lg-block d-none dropstart">
+                <button class="btn  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle taille"></i>    
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
             </div>
         </div>
     </div>
