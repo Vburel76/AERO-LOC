@@ -99,8 +99,24 @@
         </div>
     </div>
 
+    <div class="text-center">
+        <p>Début des leçons de pilotage pratique a l'issu de l'obention du PPL théorique .</p>
+    </div>
 
-    <p>Formulaire</p>
+    <div class="row m-0 p-0 justify-content-center">
+
+        <div class="col-lg-3 col-11 text-center">
+            7 heures en simulateur de vol
+        </div>
+
+        <div class="col-lg-3 col-11 text-center">
+            28 heures en vol avec instructeur
+        </div>
+
+    </div>
+
+
+    <p class="text-center fs-4">Formulaire</p>
 
 
     <div class="row m-0 p-0 justify-content-center ">
@@ -126,6 +142,12 @@
             <textarea class=" form-control" style="width: 23rem; height:13.5rem" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea  ">Comments</label>
         </div>
+
+        <div class=" row d-flex justify-content-center border border-dark mt-3">
+            <button type="button" class="btn col-lg-3 btn-primary buttonSize">Envoyer</button>
+        </div>
+
+
     </div>
 
 

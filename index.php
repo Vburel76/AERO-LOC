@@ -1,2 +1,2 @@
 <?php
-header("location: views/formation.php");
+header("location: views/location.php");
