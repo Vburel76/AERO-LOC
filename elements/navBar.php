@@ -5,8 +5,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="d-lg-none d-block">
-            <i class="bi bi-person-circle taille"></i>
+        <div class="d-lg-none d-block dropstart">
+            <button class="btn  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-circle taille"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Mon profil</a></li>
+                <li><a class="dropdown-item" href="#">paramètre</a></li>
+                <li><a class="dropdown-item" href="#">Connection/Deconnection</a></li>
+            </ul>
         </div>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -29,12 +36,12 @@
 
             <div class="d-lg-block d-none dropstart">
                 <button class="btn  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-circle taille"></i>    
+                    <i class="bi bi-person-circle taille"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Mon profil</a></li>
+                    <li><a class="dropdown-item" href="#">paramètre</a></li>
+                    <li><a class="dropdown-item" href="#">Connection/Deconnection</a></li>
                 </ul>
             </div>
         </div>

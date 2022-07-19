@@ -1,2 +1,2 @@
 <?php
-header("location: views/location.php");
+header("location: views/validate.php");
