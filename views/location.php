@@ -1,4 +1,3 @@
-
 <?php
 require_once '../data/table.php';
 ?>
@@ -24,6 +23,7 @@ require_once '../data/table.php';
             <?php
             foreach ($tableFly as $key => $value) { ?>
                 <div class="card mt-4 m-5 " style="width: 20rem;">
+                    
                     <img src="../public/img/<?= $value['planeImgLoc'] ?>" class="card-img-top mt-2" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?= $value['title'] ?></h5>
@@ -32,8 +32,7 @@ require_once '../data/table.php';
                         <p class="card-text">Portée de l'avion : <?= $value['scope'] ?></p>
                         <p class="card-text">Altitude max :<?= $value['altitude'] ?></p>
 
-                        <!-- Button trigger modal -->
-                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal<?= $key ?>">
+                        <a href="validate.php?id=<?= $key ?>" class="btn btn-primary">
                             Louer
                         </a>
 
