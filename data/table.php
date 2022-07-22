@@ -4,8 +4,9 @@
 $tableFly = [
     [
         "planeImg" => "Robin DR400.jpg",
+        "planeImgVal" => "Robin DR400-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Robin DR400 loc.jpg",
+        "planeImgLoc" => "Robin DR400-loc.jpg",
         "title" => "Robin DR400",
         "size"  => " 9 m",
         "place" => "4",
@@ -16,8 +17,9 @@ $tableFly = [
     ],
     [
         "planeImg" => "Socata TBM-700.jpg",
+        "planeImgVal" => "Socata TBM-700-val.jpg",
         "textCard" => "Appareil à partir de de 650 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Socata TBM-700 loc.jpg",
+        "planeImgLoc" => "Socata TBM-700-loc.jpg",
         "title" => "Socata TBM-700",
         "size"  => " 10 m",
         "place" => "6",
@@ -28,8 +30,9 @@ $tableFly = [
     ],
     [
         "planeImg" => "G120A.jpg",
+        "planeImgVal" => "G120A-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "G120A loc.jpg",
+        "planeImgLoc" => "G120A-loc.jpg",
         "title" => "G120A",
         "size"  => " 10 m",
         "place" => "4",
@@ -40,8 +43,9 @@ $tableFly = [
     ],
     [
         "planeImg" => "Cirrus SR-22.jpg",
+        "planeImgVal" => "Cirrus SR-22-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Cirrus SR-22 loc.jpg",
+        "planeImgLoc" => "Cirrus SR-22-loc.jpg",
         "title" => "Cirrus SR-22",
         "size"  => " 11 m",
         "place" => "5",
@@ -52,8 +56,9 @@ $tableFly = [
     ],
     [
         "planeImg" => "Cessna 172.jpg",
+        "planeImgVal" => "Cessna 172-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Cessna 172 loc.jpg",
+        "planeImgLoc" => "Cessna 172-loc.jpg",
         "title" => "Cessna 172",
         "size"  => " 11 m",
         "place" => "4",
@@ -64,8 +69,9 @@ $tableFly = [
     ],
     [
         "planeImg" => "Cessna 182.jpg",
+        "planeImgVal" => "Cessna 182-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Cessna 182 loc.jpg",
+        "planeImgLoc" => "Cessna 182-loc.jpg",
         "title" => "Cessna 182",
         "size"  => " 11 m",
         "place" => "4",

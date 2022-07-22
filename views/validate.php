@@ -13,8 +13,8 @@ require_once '../data/table.php';
         <div class="container border border-dark">
             <div class="row m-3">
                 <div class="col-lg-6 border border-danger">
-                    <div class="border border-dark">
-                        <img class="imageFlotte" src="../public/img/<?= $tableFly[$_GET['id']]['planeImg'] ?>" alt="">
+                    <div class="border border-dark text-center">
+                        <img class="imageFlotte" src="../public/img/<?= $tableFly[$_GET['id']]['planeImgVal'] ?>" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 border border-danger">
