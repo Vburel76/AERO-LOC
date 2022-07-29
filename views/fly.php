@@ -20,9 +20,9 @@ require_once '../data/table.php';
         if (($start % 2) == 0) { ?>
             <div class="row mx-0 p-0 justify-content-center espaceFly">
                 <div class="col-lg-11 col-11 ">
-                    <div class="row m-0 p-0  ">
+                    <div class="row m-0 p-0 ">
                         <div class="col-lg-3 col-12 p-0 m-0 ">
-                            <img class="imageFlotte" src="../public/img/<?= $value['planeImg'] ?>" class="card-img-top" alt="...">
+                            <img class="imageFlotte" src="../public/img/<?= $value['planeImgVal'] ?>" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body col-lg-9  col-9  ">
                             <p class="card-text fs-2 mx-3"><?= $value['title'] ?></p>
@@ -54,7 +54,7 @@ require_once '../data/table.php';
                 <div class="col-lg-11 col-11 ">
                     <div class="row m-0 p-0 ">
                         <div class="col-lg-3 col-12 p-0 m-0  d-lg-none d-block">
-                            <img class="imageFlotte" src="../public/img/<?= $value['planeImg'] ?>" class="card-img-top" alt="...">
+                            <img class="imageFlotte" src="../public/img/<?= $value['planeImgVal'] ?>" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body col-lg-9  col-9  ">
                             <p class="card-text fs-2 mx-1"><?= $value['title'] ?></p>
@@ -76,7 +76,7 @@ require_once '../data/table.php';
 
                         </div>
                         <div class="col-lg-3 col-12 p-0 m-0  d-lg-block d-none">
-                            <img class="imageFlotte" src="../public/img/<?= $value['planeImg'] ?>" class="card-img-top" alt="...">
+                            <img class="imageFlotte" src="../public/img/<?= $value['planeImgVal'] ?>" class="card-img-top" alt="...">
                         </div>
                     </div>
                 </div>

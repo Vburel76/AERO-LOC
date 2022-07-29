@@ -1,6 +1,18 @@
 /* Header */
 
+
+header {
+    height: 28rem;
+    background-image: url("../img/louer_avion_taxi_aérien.jpg");
+}
+
 /* fin Header */
+
+.presentationColor {
+    color: rgb(31, 80, 123) ;
+}
+
+
 
 
 /* ---NavBar--- */
@@ -8,28 +20,51 @@
 .textNavbar {
     margin-left: 5rem;
     margin-right: 2rem;
-    color: black;
+    color: white;
+}
+
+
+.colorNav {
+    background-color: rgb(31, 80, 123);
+    position: sticky;
+    top: 0;
+    width: 100%;
+   
+}
+
+
+@media screen and (max-width: 480px) {
+    .colorNav {
+        background-color: rgb(31, 80, 123);
+        position: relative;
+    }
 }
 
 /* ---icon--- */
 .iconProfile {
     width: 5rem;
     height: 5rem;
+
 }
 
 .taille {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    color: white;
 
 }
 
 /* ---fin icon--- */
-
 /* ---fin NavBar--- */
 
+/* body */
+body {
+    background-color: rgb(231, 231, 239);
+}
 
 /* ---premier block---  */
 
 .imageArticle1 {
+
     width: 95%;
     height: auto;
 }
@@ -48,14 +83,18 @@
 /* troisieme block  */
 
 .image3 {
-    width: 60%;
+    width: 53%;
     height: auto;
 }
 
 .info {
-    border: 1px solid black;
+    border: 2px solid black;
     height: 17rem;
     margin-top: 1.5rem;
+}
+
+.info2 {
+    border: 2px solid black;
 }
 
 .avis {
@@ -73,12 +112,17 @@
 /* fly  */
 
 .imageFlotte {
-    width: 37rem;
+    width: 100%;
+    height: auto;
+}
+
+.imageFlotteVal {
+    width: 30rem;
     height: auto;
 }
 
 .espaceFly {
-    
+
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
@@ -88,17 +132,58 @@
 
 /* formation  */
 
-.tableauSize{
+.tableauSize {
     width: 5rem;
 }
 
-.FormularSize{
+.FormularSize {
     width: 23rem;
 }
 
-.spanSize{
+.spanSize {
     width: 5rem;
 }
 
 /* test */
+
+.profilPicture {
+    width: 20rem;
+    height: auto;
+}
+
+
+.Textcolor {
+    background-color: rgb(31, 80, 123);
+    color: white;
+}
+
+.textColor2 {
+    color: rgb(31, 80, 123);
+}
+
+.footerSize {
+    height: 7rem;
+}
+
+/* test */
+
+
+.close {
+    font-size: 1.5rem;
+}
+
+.galery:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+ .galery {
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.galeryImg{
+    width: 100%;
+    height: auto;
+}
 
