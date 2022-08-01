@@ -1,11 +1,12 @@
-/* Header */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu&display=swap');
 
+
+/* Header */
 
 header {
     height: 28rem;
     background-image: url("../img/louer_avion_taxi_aérien.jpg");
 }
-
 /* fin Header */
 
 .presentationColor {
@@ -57,9 +58,7 @@ header {
 /* ---fin NavBar--- */
 
 /* body */
-body {
-    background-color: rgb(231, 231, 239);
-}
+
 
 /* ---premier block---  */
 
@@ -186,4 +185,14 @@ body {
     width: 100%;
     height: auto;
 }
+
+
+.fontText{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.fontTitle{
+    font-family: 'Archivo Black', sans-serif;
+}
+
 
