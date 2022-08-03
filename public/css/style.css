@@ -121,10 +121,10 @@ header {
 }
 
 .espaceFly {
-
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
+
 
 /* fly fin */
 
@@ -193,6 +193,19 @@ header {
 
 .fontTitle{
     font-family: 'Archivo Black', sans-serif;
+}
+
+.backgroundFly{
+    background:linear-gradient( rgb(49, 127, 196),rgb(49, 127, 196)) , url('../img/imageFond.jpg');
+    background-position: center;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+
+.textFly{
+    margin-top: 1rem;  
 }
 
 

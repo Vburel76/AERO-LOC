@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center border border-dark imgRate">
+            <div class="row justify-content-center  imgRate">
                 <div class="col-lg-10 Textcolor p-3">
                     <p class="text-center mb-5 fs-5 text-light fontTitle ">De quoi est constitué le prix de la location d'un avion ?</p>
                     <li class="text-light fontText">Premièrement la location de l'avion coque nue (c'est a dire sans pilote)</li>
@@ -106,8 +106,8 @@
                 </div>
             </div>
 
-            <div class="row  mt-4 m-0 p-0 justify-content-center ">
-                <h3 class=" col-lg-6 col-10  p-2 text-center fontTitle">Avis clients ou galerie Photo</h3>
+            <div class="row  mt-4 m-0 p-0 justify-content-center presentationColor ">
+                <h3 class=" col-lg-6 col-10  p-2 text-center fontTitle">Galerie Photo</h3>
             </div>
 
             <div class="row m-0 p-0 justify-content-center mb-3 mt-3">
