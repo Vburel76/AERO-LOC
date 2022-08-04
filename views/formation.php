@@ -1,14 +1,41 @@
 <?php include '../elements/meta.php' ?>
 
 <body>
-    <header class="text-center m-3">
-        <h1>Aero-Loc</h1>
-    </header>
-
     <?php include '../elements/navBar.php' ?>
 
     <h1 class="text-center mt-4">Les formations</h1>
 
+    <p>Quesque le PPL ? </p>
+
+    <p>La licence PPL (Private Pilot Licence) est une formation récente accessible dès 45 heures de vol.
+        Cette licence européenne confère à son détenteur les mêmes privilèges que la LAPL sans la limitation du nombre de passagers et sans la limitation de la masse de l’appareil (>2 tonnes).
+        C’est aujourd’hui la licence de pilote à caractère non professionnel la plus répandue.
+        La PPL(A) est une licence européenne qui vous permet d’évoluer vers d’autres qualifications.
+        La formation de pilote privé est dispensée par un instructeur qualifié.</p>
+
+    <p>Durée de la formation</p>
+
+    <p>La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
+
+
+    <p>Conditions d'admission pour la formation</p>
+
+    <p>Un certain nombres de conditions doivent etre remplir pour pouvoir commencer la formation.</p>
+
+    <div class="row">
+        <div class="col">
+            <i class="bi bi-globe"></i>
+            <p>être francais</p>
+        </div>
+        <div class="col">
+            <i class="bi bi-check2-circle"></i>
+            <p>avoir l'age minimum requis</p>
+        </div>
+        <div class="col">
+            <i class="bi bi-heart-pulse"></i>
+            <p>être apte médicalement</p>
+        </div>
+    </div>
     <div class="text-center mt-5">
         <p class="fs-4">Préparez vous pour la formation théorique</p>
 
