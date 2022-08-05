@@ -5,54 +5,52 @@
 
     <h1 class="text-center mt-4">Les formations</h1>
 
-    <p>Quesque le PPL ? </p>
+    <div class="row justify-content-center formationBackground m-0 p-0">
+        <div class="col-lg-8 col-12 text-light">
+            <p class="text-center fs-3">Quesque le PPL ?</p>
+            <br>
+            <p class="fs-4">La licence PPL (Private Pilot Licence) est une formation récente accessible dès 45 heures de vol.
+                Cette licence européenne confère à son détenteur les mêmes privilèges que la LAPL sans la limitation du nombre de passagers et sans la limitation de la masse de l’appareil (>2 tonnes).
+                C’est aujourd’hui la licence de pilote à caractère non professionnel la plus répandue.
+                La PPL(A) est une licence européenne qui vous permet d’évoluer vers d’autres qualifications.
+                La formation de pilote privé est dispensée par un instructeur qualifié.</p>
 
-    <p>La licence PPL (Private Pilot Licence) est une formation récente accessible dès 45 heures de vol.
-        Cette licence européenne confère à son détenteur les mêmes privilèges que la LAPL sans la limitation du nombre de passagers et sans la limitation de la masse de l’appareil (>2 tonnes).
-        C’est aujourd’hui la licence de pilote à caractère non professionnel la plus répandue.
-        La PPL(A) est une licence européenne qui vous permet d’évoluer vers d’autres qualifications.
-        La formation de pilote privé est dispensée par un instructeur qualifié.</p>
+            <p class="fs-4">Durée de la formation</p>
 
-    <p>Durée de la formation</p>
-
-    <p>La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
-
-
-    <p>Conditions d'admission pour la formation</p>
-
-    <p>Un certain nombres de conditions doivent etre remplir pour pouvoir commencer la formation.</p>
-
-    <div class="row">
-        <div class="col">
-            <i class="bi bi-globe"></i>
-            <p>être francais</p>
-        </div>
-        <div class="col">
-            <i class="bi bi-check2-circle"></i>
-            <p>avoir l'age minimum requis</p>
-        </div>
-        <div class="col">
-            <i class="bi bi-heart-pulse"></i>
-            <p>être apte médicalement</p>
+            <p class="fs-4">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
         </div>
     </div>
-    <div class="text-center mt-5">
-        <p class="fs-4">Préparez vous pour la formation théorique</p>
 
-        <p>La formation théorique est accessible sous reserve de validation médicale.</p>
-        <p>Vous devez présenter l'examen pratique de vol dans les 24 mois suivants l'optention de l'examen théorique</p>
+
+
+
+    <p class="fs-3 text-center mt-4">Conditions d'admission pour la formation</p>
+
+    <p class="text-center mt-4">Un certain nombres de conditions doivent etre remplir pour pouvoir commencer la formation.</p>
+
+    <div class="row justify-content-evenly mt-5 m-0 p-0">
+        <div class="col-lg-3 text-center">
+            <p class="border border-dark"><i class="bi bi-globe fs-4 m-2"></i>être francais</p>
+        </div>
+        <div class="col-lg-3 text-center">
+            <p class="border border-dark"><i class="bi bi-check2-circle fs-4 m-2"></i>avoir l'age minimum requis</p>
+        </div>
+        <div class="col-lg-3 text-center">
+            <p class="border border-dark"><i class="bi bi-heart-pulse fs-4 m-2"></i>être apte médicalement</p>
+        </div>
     </div>
 
 
 
-    <p class="text-center mt-5 fs-5">Conditions d'admission pour la formation</p>
+    <div class="row m-0 p-0">
+        (image)
+    </div>
 
-    <div class="row m-0 p-0 justify-content-center">
-        <div class="col-lg-2">
-            <p class="text-center">Etre Français</p>
-        </div>
-        <div class="col-lg-2">
-            <p class="text-center">Etre majeur</p>
+    <div class="row justify-content-center m-0 p-0">
+        <div class="col-lg-10 mt-5 ">
+            <p class="fs-4 text-center">Déroulé de la formation</p>
+            <p>La formation commence par une partie théorique de plusieurs heures et qui s'effectue dans une salle de cours avec un formateur assermenté, cette partie theorique fera l'objet d'une évaluation.Par la suite la partie pratique se déroulare tous d'abord en simulateur et ensuite en avion, la aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
+
         </div>
     </div>
 
@@ -170,7 +168,7 @@
             <label for="floatingTextarea  ">Comments</label>
         </div>
 
-        <div class=" row d-flex justify-content-center border border-dark mt-3">
+        <div class=" row d-flex justify-content-center border border-dark mt-3 m-0 p-0">
             <button type="button" class="btn col-lg-3 btn-primary buttonSize">Envoyer</button>
         </div>
 

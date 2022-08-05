@@ -208,4 +208,12 @@ header {
     margin-top: 1rem;  
 }
 
+.formationBackground{
+    background-image : url('../img/DSC01106.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35rem;
+    
+}
+
 
