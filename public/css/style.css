@@ -133,6 +133,7 @@ header {
 
 .tableauSize {
     width: 5rem;
+    color:  rgb(31, 80, 123);
 }
 
 .FormularSize {
@@ -215,5 +216,10 @@ header {
     height: 35rem;
     
 }
+
+.borderColor{
+    border: 3px solid  rgb(31, 80, 123);
+}
+
 
 
