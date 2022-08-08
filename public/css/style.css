@@ -120,6 +120,15 @@ header {
     height: auto;
 }
 
+.imgFormation{
+    width: 60%;
+    height: auto;
+}
+
+.imgLocation{
+    width: 100%;
+}
+
 .espaceFly {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -220,6 +229,10 @@ header {
 .borderColor{
     border: 3px solid  rgb(31, 80, 123);
 }
+
+.cardColor{
+    border: 2px solid  rgb(31, 80, 123) ;
+} 
 
 
 

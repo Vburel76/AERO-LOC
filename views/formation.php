@@ -41,6 +41,11 @@
     </div>
 
 
+    <div class="row text-center justify-content-center mt-5">
+        <div class="col-lg-10">
+            <img class="imgFormation" src="../public/img/formationImg.jpg" alt="">
+        </div>
+    </div>
     <div class="row justify-content-center m-0 p-0">
         <div class="col-lg-10 mt-5 ">
             <p class="fs-3 text-center textColor2 fontTitle">Déroulé de la formation</p>
