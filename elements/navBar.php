@@ -30,7 +30,7 @@
                     <a class="nav-link fs-4 textNavbar " href="location.php">Location</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 textNavbar " href="#">Contact</a>
+                    <a class="nav-link fs-4 textNavbar " href="rss.php">Contact</a>
                 </li>
             </ul>
 
