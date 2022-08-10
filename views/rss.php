@@ -11,17 +11,21 @@ require_once "../controllers/rss-controllers.php";
 <body>
     <?php include '../elements/navBar.php' ?>
 
+    <div class="m-4">
+        <p class="fs-4 fontTitle textColor2 text-center">Actualitée</p>
+    </div>
+
 
     <div class="row m-0 p-0 justify-content-evenly">
-            <?php
-            for ($i = 1; $i <= 6; $i++) { ?>
-                <div class="rounded border border-secondary col-lg-10 m-2 bg-light text-center">
-                    <img src="<?= $flux1[$i]->enclosure['url'] ?>" alt="<?= $flux1[$i]->enclosure['url'] ?>" class="imgSize my-2">
-                    <p class="text-start px-1"><b><?= $flux1[$i]->title ?></b></p>
-                    <p class="text-start px-1"><?= strftime($date_format, strtotime($flux1[$i]->pubDate)) ?></p>
-                    <a href="<?= $flux1[$i]->link ?>" target="_blank" class="btn btn-success text-center mb-3"><u>Ouvrir l'article</u></a>
-                </div>
-            <?php } ?>
+        <?php
+        for ($i = 1; $i <= 6; $i++) { ?>
+            <div class="rounded cardColor col-lg-8  col-10 m-2 bg-light text-center">
+                <img src="<?= $flux1[$i]->enclosure['url'] ?>" alt="<?= $flux1[$i]->enclosure['url'] ?>" class="imgSize my-2">
+                <p class="text-start px-1"><b><?= $flux1[$i]->title ?></b></p>
+                <p class="text-start px-1"><?= strftime($date_format, strtotime($flux1[$i]->pubDate)) ?></p>
+                <a href="<?= $flux1[$i]->link ?>" target="_blank" class="btn Textcolor text-center mb-3">Ouvrir l'article</a>
+            </div>
+        <?php } ?>
 
     </div>
 

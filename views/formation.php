@@ -3,7 +3,7 @@
 <body>
     <?php include '../elements/navBar.php' ?>
 
-    <h1 class="text-center mt-4 textColor2 fontTitle">Les formations</h1>
+
 
     <div class="row justify-content-center formationBackground m-0 p-0">
         <div class="col-lg-8 col-12 text-light">
@@ -21,7 +21,7 @@
         </div>
     </div>
 
-
+    <h1 class="text-center mt-4 textColor2 fontTitle">Les formations</h1>
 
 
     <p class="fs-3 text-center mt-4 textColor2 fontTitle">Conditions d'admission pour la formation</p>

@@ -30,7 +30,7 @@
                     <a class="nav-link fs-4 textNavbar " href="location.php">Location</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 textNavbar " href="rss.php">Contact</a>
+                    <a class="nav-link fs-4 textNavbar " href="rss.php">Actu</a>
                 </li>
             </ul>
 
@@ -40,7 +40,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="compte.php">Mon profil</a></li>
-                    <li><a class="dropdown-item" href="#">paramètre</a></li>
+                    <li><a class="dropdown-item" href="#">contact</a></li>
                     <li><a class="dropdown-item" href="#">Connection/Deconnection</a></li>
                 </ul>
             </div>

@@ -4,7 +4,7 @@ $date_format = '%A %d %B %Y à %H:%M';
 setlocale(LC_TIME, "fr_FR", "fra");
 
 $rssArray = [
-    "http://feeds.aeroweb-fr.net/aerowebfrnet_actualite",
+    "https://www.francetvinfo.fr/economie/aeronautique.rss",
     
 ];
 
