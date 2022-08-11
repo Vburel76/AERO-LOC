@@ -40,7 +40,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="compte.php">Mon profil</a></li>
-                    <li><a class="dropdown-item" href="#">contact</a></li>
+                    <li><a class="dropdown-item" href="contact.php">contact</a></li>
                     <li><a class="dropdown-item" href="#">Connection/Deconnection</a></li>
                 </ul>
             </div>
