@@ -12,12 +12,12 @@ require_once '../data/table.php';
     <?php if (array_key_exists($_GET['id'], $tableFly)) { ?>
         <div class="container cardColor mt-5 mb-5">
             <div class="row m-3">
-                <div class="col-lg-6">
-                    <div class=" text-center mt-4">
-                        <img class="imageFlotteVal" src="../public/img/<?= $tableFly[$_GET['id']]['planeImgVal'] ?>" alt="">
+                <div class="col-lg-6 col-12">
+                    <div class=" text-center mt-4 d-flex justify-content-center  ">
+                            <img class="imageFlotteVal" src="../public/img/<?= $tableFly[$_GET['id']]['planeImgVal'] ?>" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 ">
+                <div class="col-lg-6 col-12">
                     <div class="row">
                         <p class="textColor2 fontTitle"><?= $tableFly[$_GET['id']]['title'] ?></p>
 

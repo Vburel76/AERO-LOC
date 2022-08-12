@@ -116,7 +116,7 @@ header {
 }
 
 .imageFlotteVal {
-    width: 30rem;
+    width: 100%;
     height: auto;
 }
 
@@ -146,8 +146,9 @@ header {
 }
 
 .FormularSize {
-    width: 23rem;
+    width: 100%;
 }
+
 
 .spanSize {
     width: 5rem;
@@ -222,7 +223,7 @@ header {
     background-image : url('../img/DSC01106.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 35rem;
+    height: 38rem;
     
 }
 

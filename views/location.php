@@ -5,9 +5,10 @@ require_once '../data/table.php';
 <?php include '../elements/meta.php' ?>
 
 <body>
-    <header class="text-center">
+    <header class="text-center d-none">
         Aero-Loc
     </header>
+
     <?php include '../elements/navBar.php' ?>
 
     <section class="row m-0 p-5 justify-content-center">

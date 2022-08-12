@@ -6,10 +6,12 @@
 
 
     <div class="row justify-content-center formationBackground m-0 p-0">
-        <div class="col-lg-8 col-12 text-light">
+        <div class="col-lg-8 col-12 text-light p-3">
             <p class="text-center fs-3 fontTitle">Quesque le PPL ?</p>
+
             <br>
-            <p class="fs-4 fontText">La licence PPL (Private Pilot Licence) est une formation récente accessible dès 45 heures de vol.
+            
+            <p class="fs-5 fontText ">La licence PPL (Private Pilot Licence) est une formation récente accessible dès 45 heures de vol.
                 Cette licence européenne confère à son détenteur les mêmes privilèges que la LAPL sans la limitation du nombre de passagers et sans la limitation de la masse de l’appareil (>2 tonnes).
                 C’est aujourd’hui la licence de pilote à caractère non professionnel la plus répandue.
                 La PPL(A) est une licence européenne qui vous permet d’évoluer vers d’autres qualifications.
@@ -17,7 +19,7 @@
 
             <p class="fs-4 fontTitle">Durée de la formation</p>
 
-            <p class="fs-4 fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
+            <p class="fs-5 fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
         </div>
     </div>
 
@@ -29,13 +31,13 @@
     <p class="text-center mt-4 fontText">Un certain nombres de conditions doivent etre remplir pour pouvoir commencer la formation.</p>
 
     <div class="row justify-content-evenly mt-5 m-0 p-0">
-        <div class="col-lg-3 text-center Textcolor">
+        <div class="col-lg-3 col-8 mt-1 text-center Textcolor">
             <p class=" m-2 fontText"><i class="bi bi-globe fs-4 m-2"></i>être francais</p>
         </div>
-        <div class="col-lg-3 text-center Textcolor">
+        <div class="col-lg-3 col-8 mt-1 text-center Textcolor">
             <p class=" m-2 fontText"><i class="bi bi-check2-circle fs-4 m-2"></i>avoir l'age minimum requis</p>
         </div>
-        <div class="col-lg-3 text-center Textcolor">
+        <div class="col-lg-3 col-8 mt-1 text-center Textcolor">
             <p class=" m-2 fontText"><i class="bi bi-heart-pulse fs-4 m-2"></i>être apte médicalement</p>
         </div>
     </div>
@@ -58,7 +60,7 @@
     <p class="text-center mt-5 fs-4 textColor2 fontTitle">Programme de la formation théorique</p>
 
     <div class="row m-0 p-0 justify-content-center">
-        <div class="col-lg-8 borderColor">
+        <div class="col-lg-8 col-11 borderColor">
             <table class="table">
                 <thead>
                     <tr>
@@ -146,7 +148,7 @@
 
 
     <div class="row m-0 p-0 justify-content-center ">
-        <div class="col-lg-3  m-2">
+        <div class="col-lg-3 col-11   m-2">
             <div class="input-group flex-nowrap  FormularSize">
                 <span class="input-group-text spanSize fontText" id="addon-wrapping">Nom</span>
                 <input type="text" class="form-control " aria-label="Username" aria-describedby="addon-wrapping">
@@ -164,8 +166,8 @@
                 <input type="text" class="form-control " aria-label="Username" aria-describedby="addon-wrapping">
             </div>
         </div>
-        <div class="form-floating col-lg-3 m-2">
-            <textarea class=" form-control" style="width: 23rem; height:13.5rem" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <div class="form-floating col-lg-3 col-11 m-2">
+            <textarea class=" form-control" style="width: 100%; height:13.5rem" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea  ">Message</label>
         </div>
 

@@ -4,7 +4,7 @@
     <?php include '../elements/navBar.php' ?>
 
     <div class="row m-3 p-0 justify-content-center">
-        <div class="col-md-8 order-md-1">
+        <div class="col-lg-8 col-10">
             <p class="mb-3 fs-4 fontTitle textColor2 text-center">Formulaire de contact</p>
             <form>
                 <div class="row">
