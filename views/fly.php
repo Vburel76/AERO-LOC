@@ -48,7 +48,7 @@ require_once '../data/table.php';
                         <div class="card-body col-lg-9  col-9  ">
                             <p class="card-text fs-2 mx-3 fontTitle"><?= $value['title'] ?></p>
                             <div class="fs-4 mx-3 fontText">
-                                <p>Le Robin DR400 est un avion de tourisme monomoteur très utilisé dans les aéroclubs, produit par la société Robin Aircraft, anciennement appelée Avions Pierre Robin.</p>
+                                <p><?= $value['text_loc'] ?></p>
                             </div>
                             <div class="row justify-content-evenly fontText  m-0 p-0">
                                 <ul class="col-lg-3 col-11   mx-3 ">
@@ -80,7 +80,7 @@ require_once '../data/table.php';
                         <div class="card-body col-lg-9 col-9  ">
                             <p class="card-text fs-2 mx-1 fontTitle"><?= $value['title'] ?></p>
                             <div class="fs-4 mx-1 fontText">
-                                <p>Le Robin DR400 est un avion de tourisme monomoteur très utilisé dans les aéroclubs, produit par la société Robin Aircraft, anciennement appelée Avions Pierre Robin.</p>
+                                <p><?= $value['text_loc'] ?></p>
                             </div>
                             <div class="row justify-content-evenly fontText m-0 p-0">
                                 <ul class="col-lg-4 col-11  ">

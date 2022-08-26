@@ -3,10 +3,11 @@
 
 $tableFly = [
     [
-        "planeImg" => "Robin DR400.jpg",
-        "planeImgVal" => "Robin DR400-val.jpg",
+        "planeImg" => "robin_dr400.jpg",
+        "planeImgVal" => "robin_DR400-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Robin DR400-loc.jpg",
+        "text_loc" => "Le Robin dr400 est un avion de tourisme monomoteur très utilisé dans les aéroclubs, produit par la société Robin Aircraft, anciennement appelée Avions Pierre Robin.",
+        "planeImgLoc" => "robin_dr400-loc.jpg",
         "title" => "Robin DR400",
         "size"  => " 9 m",
         "place" => "4",
@@ -16,10 +17,11 @@ $tableFly = [
         "speed" => "303 Km/h"
     ],
     [
-        "planeImg" => "Socata TBM-700.jpg",
-        "planeImgVal" => "Socata TBM-700-val.jpg",
+        "planeImg" => "socata_tbm-700.jpg",
+        "planeImgVal" => "socata_tbm-700-val.jpg",
         "textCard" => "Appareil à partir de de 650 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Socata TBM-700-loc.jpg",
+        "text_loc" => "Le TBM 700 est un avion d'affaires français produit par Socata. Il s'agit d'un monomoteur turbopropulsé à aile basse conçu par Socata et Mooney.",
+        "planeImgLoc" => "socata_tbm-700-loc.jpg",
         "title" => "Socata TBM-700",
         "size"  => " 10 m",
         "place" => "6",
@@ -29,10 +31,11 @@ $tableFly = [
         "speed" => "520 Km/h"
     ],
     [
-        "planeImg" => "G120A.jpg",
-        "planeImgVal" => "G120A-val.jpg",
+        "planeImg" => "g120a.jpg",
+        "planeImgVal" => "g120a-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "G120A-loc.jpg",
+        "text_loc" => "Le Grob G 120A est un avion biplace monomoteur d'entraînement et de voltige aérienne, fabriqué par la société allemande Grob Aircraft. Basé sur le Grob G 115, il est spécialement conçu pour l'entrainement des pilotes militaires et civils.",
+        "planeImgLoc" => "g120a-loc.jpg",
         "title" => "G120A",
         "size"  => " 10 m",
         "place" => "4",
@@ -42,10 +45,11 @@ $tableFly = [
         "speed" => "435 Km/h"
     ],
     [
-        "planeImg" => "Cirrus SR-22.jpg",
-        "planeImgVal" => "Cirrus SR-22-val.jpg",
+        "planeImg" => "cirrus_SR-22.jpg",
+        "planeImgVal" => "cirrus_SR-22-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Cirrus SR-22-loc.jpg",
+        "text_loc" => "Le Cirrus SR22 est un avion monomoteur léger originellement quadriplace produit par le constructeur aéronautique américain Cirrus Design à partir de 2001.",
+        "planeImgLoc" => "cirrus_SR-22-loc.jpg",
         "title" => "Cirrus SR-22",
         "size"  => " 11 m",
         "place" => "5",
@@ -55,10 +59,11 @@ $tableFly = [
         "speed" => "333 Km/h"
     ],
     [
-        "planeImg" => "Cessna 172.jpg",
-        "planeImgVal" => "Cessna 172-val.jpg",
+        "planeImg" => "cessna_172.jpg",
+        "planeImgVal" => "cessna_172-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Cessna 172-loc.jpg",
+        "text_loc" => "Le Cessna 172 Skyhawk est un avion de tourisme monomoteur à quatre places, construit par la société Cessna depuis 1955.",
+        "planeImgLoc" => "cessna_172-loc.jpg",
         "title" => "Cessna 172",
         "size"  => " 11 m",
         "place" => "4",
@@ -68,10 +73,11 @@ $tableFly = [
         "speed" => "302 Km/h"
     ],
     [
-        "planeImg" => "Cessna 182.jpg",
-        "planeImgVal" => "Cessna 182-val.jpg",
+        "planeImg" => "cessna_182.jpg",
+        "planeImgVal" => "cessna_182-val.jpg",
         "textCard" => "Appareil à partir de de 450 € ,prix du carburant en fonction de l'avion et de la destination.",
-        "planeImgLoc" => "Cessna 182-loc.jpg",
+        "text_loc" => "Le Cessna 182 Skylane est un avion de tourisme à quatre places, monomoteur, construit par la société Cessna à partir de 1956.",
+        "planeImgLoc" => "cessna_182-loc.jpg",
         "title" => "Cessna 182",
         "size"  => " 11 m",
         "place" => "4",

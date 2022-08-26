@@ -242,3 +242,28 @@ header {
     }
 
 
+    /* login */
+    .tailleInput{
+        width: 100%;
+    }
+
+    .fontStyle{
+        font-style: italic; 
+    }
+
+    .btnSize{
+        width: 100%;
+        color: white;
+    }
+
+    .fontColor{
+        background-color: rgb(31, 80, 123);
+        font-weight: bold;
+    }
+
+    .roundColor{
+        border: 2px solid  rgb(31, 80, 123);
+    }
+
+/* fin login */
+

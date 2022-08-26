@@ -11,7 +11,7 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#">Mon profil</a></li>
-                <li><a class="dropdown-item" href="#">paramètre</a></li>
+                <li><a class="dropdown-item" href="contact.php">contact</a></li>
                 <li><a class="dropdown-item" href="#">Connection/Deconnection</a></li>
             </ul>
         </div>
