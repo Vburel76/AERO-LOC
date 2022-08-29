@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 
 require_once '../config.php';
 require_once '../models/database.php';
-
+require_once '../models/users.php';
 
 
 $showForm = true;
@@ -56,8 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($_POST['password'] == '') {
             $error['password'] = "champ obligatoire";
+        } else if ($_POST['confirmPassword'] == '' &&  $_POST['password'] != '') {
+            $error['confirmPassword'] = 'champ obligatoire';
+        } else if ($_POST['confirmPassword'] != $_POST['password']) {
+            $error['password'] = "mot de passe différent";
         }
     }
+
 
     if (count($errors) == 0) {
 
@@ -67,16 +72,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_user_mail = htmlspecialchars($_POST['mail']);
         $_user_phone = htmlspecialchars($_POST['mobile']);
         $_user_password = htmlspecialchars($_POST['password']);
-        
+
         // j'instancie un objet $patientsObj avec la class Patients
-        $usersObj = new Users();
+        $userObj = new Users();
 
         // Je fais appelle à la méthode addPatient pour ajouter mon patient : Attention bien respecter l'ordre des paramètres
-        $patientsObj->addPatient($lastname, $firstname, $phoneNumber, $address, $mail);
+        $userObj->addUser($_user_lastname, $_user_firstname,$_user_phone, $_user_password,$_user_mail);
 
         // Si tout est ok, nous retournons sur une page données
-        header('Location: dashboard.php');
-
+        header('Location: login.php');
     }
-
 }

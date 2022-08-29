@@ -37,6 +37,9 @@ require_once '../controllers/controller-formulaire.php';
                         <label for="password" class="">Mot de passe</label><span class="ms-2 text-danger"><?= isset($error['password']) ? $error['password'] : '' ?></span>
                         <input id="password" name="password" class="tailleInput" type="text" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
 
+                        <label for="confirmPassword" class="">Confirmation mot de passe</label><span class="ms-2 text-danger"><?= isset($error['confirmPassword']) ? $error['confirmPassword'] : '' ?></span>
+                        <input id="confirmPassword" name="confirmPassword" class="tailleInput" type="text">
+
 
                     </div>
 
