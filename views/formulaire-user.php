@@ -17,27 +17,27 @@ require_once '../controllers/controller-formulaire.php';
             <div class="col-lg-6">
                 <div class="row justify-content-center m-0 p-0 pt-2 rounded roundColor">
                     <div class="col-lg-5 p-1 rounded">
-                        <label for="firstname">Nom</label><span class="ms-2 text-danger"><?= isset($error['firstname']) ? $error['firstname'] : '' ?>
+                        <label for="firstname">Nom</label><span class="ms-2 text-danger"><?= isset($errors['firstname']) ? $errors['firstname'] : '' ?>
                         </span>
                         <input id="firstname" name="firstname" class="tailleInput " type="text" value="<?= isset($_POST['firstname']) ? $_POST['firstname'] : '' ?>">
 
-                        <label for="lastname" class="mt-2">Prénom</label><span class="ms-2 text-danger"><?= isset($error['lastname']) ? $error['lastname'] : '' ?></span>
+                        <label for="lastname" class="mt-2">Prénom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>
                         <input id="lastname" name="lastname" class="tailleInput" type="text" value="<?= isset($_POST['lastname']) ? $_POST['lastname'] : '' ?>">
 
 
-                        <label for="mail" class="mt-2">Mail</label><span class="ms-2 text-danger"><?= isset($error['mail']) ? $error['mail'] : '' ?></span>
+                        <label for="mail" class="mt-2">Mail</label><span class="ms-2 text-danger"><?= isset($errors['mail']) ? $errors['mail'] : '' ?></span>
                         <input name="mail" id="mail" class="tailleInput" type="email" value="<?= isset($_POST['mail']) ? $_POST['mail'] : '' ?>">
 
 
-                        <label for="mobile">Mobile</label><span class="ms-2 text-danger"><?= isset($error['mobile']) ? $error['mobile'] : '' ?></span>
+                        <label for="mobile">Mobile</label><span class="ms-2 text-danger"><?= isset($errors['mobile']) ? $errors['mobile'] : '' ?></span>
                         <input id="mobile" name="mobile" class="tailleInput" type="tel" value="<?= isset($_POST['mobile']) ? $_POST['mobile'] : '' ?>">
 
 
 
-                        <label for="password" class="">Mot de passe</label><span class="ms-2 text-danger"><?= isset($error['password']) ? $error['password'] : '' ?></span>
+                        <label for="password" class="">Mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
                         <input id="password" name="password" class="tailleInput" type="text" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
 
-                        <label for="confirmPassword" class="">Confirmation mot de passe</label><span class="ms-2 text-danger"><?= isset($error['confirmPassword']) ? $error['confirmPassword'] : '' ?></span>
+                        <label for="confirmPassword" class="">Confirmation mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['confirmPassword']) ? $errors['confirmPassword'] : '' ?></span>
                         <input id="confirmPassword" name="confirmPassword" class="tailleInput" type="text">
 
 

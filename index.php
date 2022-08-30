@@ -1,2 +1,2 @@
 <?php
-header("location: views/formulaire-user.php");
+header("location: views/login.php");

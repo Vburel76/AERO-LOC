@@ -6,6 +6,7 @@ require_once '../models/database.php';
 require_once '../models/users.php';
 
 
+
 $showForm = true;
 $errors = [];
 $regexName = "/^[a-zA-Zéèêë]+$/";
@@ -19,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['firstname'])) {
 
         if ($_POST['firstname'] == '') {
-            $error['firstname'] = "champ obligatoire";
+            $errors['firstname'] = "champ obligatoire";
         } else if (!preg_match($regexName, $_POST['firstname'])) {
-            $error['firstname'] = "Mauvais format";
+            $errors['firstname'] = "Mauvais format";
         }
     }
 
@@ -29,16 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['lastname'])) {
 
         if ($_POST['lastname'] == '') {
-            $error['lastname'] = "champ obligatoire";
+            $errors['lastname'] = "champ obligatoire";
         }
     }
 
     if (isset($_POST['mobile'])) {
 
         if ($_POST['mobile'] == '') {
-            $error['mobile'] = "champ obligatoire";
+            $errors['mobile'] = "champ obligatoire";
         } else if (!preg_match($regexPhone, $_POST['mobile'])) {
-            $error['mobile'] = "Mauvais format";
+            $errors['mobile'] = "Mauvais format";
         }
     }
 
@@ -46,20 +47,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['mail'])) {
 
         if ($_POST['mail'] == '') {
-            $error['mail'] = "champ obligatoire";
+            $errors['mail'] = "champ obligatoire";
         } else if (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
-            $error['mail'] = "Mauvais format";
+            $errors['mail'] = "Mauvais format";
         }
     }
 
     if (isset($_POST['password'])) {
 
         if ($_POST['password'] == '') {
-            $error['password'] = "champ obligatoire";
+            $errors['password'] = "champ obligatoire";
         } else if ($_POST['confirmPassword'] == '' &&  $_POST['password'] != '') {
-            $error['confirmPassword'] = 'champ obligatoire';
+            $errors['confirmPassword'] = 'champ obligatoire';
         } else if ($_POST['confirmPassword'] != $_POST['password']) {
-            $error['password'] = "mot de passe différent";
+            $errors['password'] = "mot de passe différent";
         }
     }
 
@@ -71,13 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_user_firstname = htmlspecialchars($_POST['firstname']);
         $_user_mail = htmlspecialchars($_POST['mail']);
         $_user_phone = htmlspecialchars($_POST['mobile']);
-        $_user_password = htmlspecialchars($_POST['password']);
+        $_user_password = password_hash($_POST['password'],PASSWORD_DEFAULT);
 
         // j'instancie un objet $patientsObj avec la class Patients
         $userObj = new Users();
 
         // Je fais appelle à la méthode addPatient pour ajouter mon patient : Attention bien respecter l'ordre des paramètres
-        $userObj->addUser($_user_lastname, $_user_firstname,$_user_phone, $_user_password,$_user_mail);
+        $userObj->addUser($_user_lastname, $_user_firstname,$_user_mail,$_user_phone, $_user_password);
 
         // Si tout est ok, nous retournons sur une page données
         header('Location: login.php');

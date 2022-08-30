@@ -19,16 +19,16 @@ require_once '../controllers/controller-login.php';
             <div class="col-lg-3  p-5 rounded roundColor  ">
                 <label for="login">Identifiant</label>
                 <span class="ms-2 text-danger">
-                    <?= isset($error['login']) ? $error['login'] : '' ?>
+                    <?= isset($errors['login']) ? $errors['login'] : '' ?>
                 </span>
                 <input id="login" name="login" class="tailleInput " type="text" value="<?= isset($_POST['login']) ? $_POST['login'] : '' ?>">
 
-                <label class="mt-4">Mot de passe</label><span class="ms-2 text-danger"><?= isset($error['password']) ? $error['password'] : '' ?></span>
+                <label class="mt-4">Mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
                 <input name="password" class="tailleInput" type="password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
 
                 <div class="row justify-content-center m-0 p-0">
                     <div class="col-lg-11  mt-1 ">
-                        <p class="text-danger text-center fontStyle"><?= isset($error['connection']) ? $error['connection'] : '' ?></p>
+                        <p class="text-danger text-center fontStyle"><?= isset($error['connection']) ? $errors['connection'] : '' ?></p>
                         <input type="submit" class="btn fontColor btnSize" value="Connection">
                     </div>
                 </div>

@@ -4,7 +4,7 @@ require_once '../models/database.php';
 require_once '../models/users.php';
 
 $showForm = true;
-$error = [];
+$errors = [];
 $regexName = "/^[a-zA-Zéèêë]+$/";
 
 
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['login'])) {
 
         if ($_POST['login'] == '') {
-            $error['login'] = "champ obligatoire";
+            $errors['login'] = "champ obligatoire";
         }
     }
 
@@ -22,9 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['password'])) {
 
         if ($_POST['password'] == '') {
-            $error['password'] = "champ obligatoire";
+            $errors['password'] = "champ obligatoire";
         }
     }
+
 
     if (count($error) == 0) {
 
@@ -43,5 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             $error['connection'] = 'Identifiant ou mot de passe  incorecte';
         }
+
+        $userObj = new Users();
+
+        
     }
 }

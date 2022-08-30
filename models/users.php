@@ -114,15 +114,15 @@ class Users extends DataBase
     }
 
 
-    public function addUser(string $_user_lastname, string $_user_firstname, string $_user_phone, string $_user_password, string $_user_mail): void
+    public function addUser(string $_user_lastname, string $_user_firstname,string $_user_mail, string $_user_phone, string $_user_password): void
     {
         // création d'une instance pdo via la fonction du parent
         $pdo = parent::connectDb();
 
         // j'écris la requête me permettant d'insérer un patient dans la table patients
         // je mets en place des marqueurs nominatifs pour faciliter la manipulation des paramètres : :lastname, :firstname, :phonenumber, :address, :mail
-        $sql = "INSERT INTO `user` (`user_lastname`,`user_firstname`, `user_phone`, `user_password`, `user_mail`)
-        VALUES (:lastname, :firstname, :phonenumber, :password, :mail)";
+        $sql = "INSERT INTO `user` (`user_lastname`,`user_firstname`,`user_mail`, `user_phone`, `user_password`,`user_validate`,`role_id`)
+        VALUES (:lastname, :firstname,:mail,:phonenumber, :password,0,3)";
 
         // je prépare la requête que je stock dans $query à l'aide de la méthode ->prepare()
         $query = $pdo->prepare($sql);
@@ -130,11 +130,67 @@ class Users extends DataBase
         // je lie les valeurs des paramètres aux marqueurs nominatifs respectifs à l'aide de la méthode ->bindValue()
         $query->bindValue(':lastname', $_user_lastname, PDO::PARAM_STR);
         $query->bindValue(':firstname', $_user_firstname, PDO::PARAM_STR);
+        $query->bindValue(':mail', $_user_mail, PDO::PARAM_STR);
         $query->bindValue(':phonenumber', $_user_phone, PDO::PARAM_STR);
         $query->bindValue(':password', $_user_password, PDO::PARAM_STR);
-        $query->bindValue(':mail', $_user_mail, PDO::PARAM_STR);
+
+        
+        // une fois le mail récupéré, j'execute la requête à l'aide de la méthode ->execute()
+        $query->execute();
+    }
+
+    public function checkIfMailExists(string $mail): bool
+    {
+        // création d'une instance pdo via la fonction du parent
+        $pdo = parent::connectDb();
+
+        // j'écris la requête me permettant d'aller chercher le mail dans la table users
+        // je mets en place un marqueur nominatif :mail
+        $sql = "SELECT `user_mail` FROM `user` WHERE `user_mail` = :mail";
+        
+        // je prépare la requête que je stock dans $query à l'aide de la méthode ->prepare()
+        $query = $pdo->prepare($sql);
+
+        // je lie la valeur du paramètre $mail au marqueur nominatif :mail à l'aide de la méthode ->bindValue()
+        $query->bindValue(':mail', $mail, PDO::PARAM_STR);
 
         // une fois le mail récupéré, j'execute la requête à l'aide de la méthode ->execute()
         $query->execute();
+
+        // je stock dans $result les données récupèrées à l'aide de la méthode ->fetch()
+        $result = $query->fetchAll();
+
+        // je fais un test pour savoir si $result est vide
+        if (count($result) != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function checkPassword(string $mail) : array
+    {
+
+        // 1) connection a la base de donnée
+        $pdo = parent::connectDb() ;
+
+        // 2) j'ecris la requete pour aller chercher le password
+        $sql = "SELECT * FROM `user` WHERE `user_mail` = :mail";  
+
+        // 3) je prepare la requete 
+        $query= $pdo->prepare($sql);
+
+        // 4) je lie ':password' à $password
+        $query->bindValue(':mail', $mail, PDO::PARAM_STR);
+
+        // 5) j'execute la requete 
+        $query->execute();
+
+        // 6) je stock le resultat dans une variable
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+
+        // 7) j'effectue les vérifications 
+        return $result;
+
     }
 }
