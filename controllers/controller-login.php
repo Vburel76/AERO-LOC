@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 
-    if (count($error) == 0) {
+    if (count($errors) == 0) {
 
         $userObj = new Users();
 
@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['user'] = $usersInfo;
                 header("Location: landing.php");
             } else {
-                $error['connection'] = 'Identifiant ou mot de passe  incorecte';
+                $errors['connection'] = 'Identifiant ou mot de passe  incorecte';
             }
         } else {
-            $error['connection'] = 'Identifiant ou mot de passe  incorecte';
+            $errors['connection'] = 'Identifiant ou mot de passe  incorecte';
         }
 
         $userObj = new Users();

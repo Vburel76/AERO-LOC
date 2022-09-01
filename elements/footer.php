@@ -1,5 +1,5 @@
-<div class="border border-dark Textcolor footerSize p-3">
-        <footer class=" row m-0 p-0 d-flex flex-wrap justify-content-between align-items-center  ">
+<div class="border border-dark Textcolor footerSize p-3 mt-auto">
+        <footer class=" row m-0 p-0 d-flex flex-wrap justify-content-between align-items-center   ">
             <div class="col-12 col-lg-4 d-flex justify-content-center  mt-2">
                 <span class=" mb-md-0 text-muted col-12  text-center">&copy; 2022 Company, Inc</span>
             </div>

@@ -261,6 +261,19 @@ header {
         font-weight: bold;
     }
 
+    /* admin button */
+    .fontTheme{
+      color: rgb(31, 80, 123);
+      border: 3px solid rgb(31, 80, 123) ;
+      font-weight: bold;
+      width: 15rem;
+      
+    }
+    .fontTheme:hover{
+        background-color: rgb(31, 80, 123);
+        color: white;
+    }
+
     .roundColor{
         border: 2px solid  rgb(31, 80, 123);
     }
