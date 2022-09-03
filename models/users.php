@@ -14,30 +14,30 @@ class Users extends DataBase
     private int $_role_id;
 
 
-    
+
     public function get_user_id()
     {
         return $this->_user_id;
-    } 
+    }
     public function set_user_id($_user_id)
     {
         $this->_user_id = $_user_id;
         return $this;
     }
 
-    
+
     public function get_user_lastname()
     {
         return $this->_user_lastname;
     }
-    
+
     public function set_user_lastname($_user_lastname)
     {
         $this->_user_lastname = $_user_lastname;
         return $this;
     }
 
-    
+
     public function get_user_firstname()
     {
         return $this->_user_firstname;
@@ -58,8 +58,8 @@ class Users extends DataBase
         $this->_user_mail = $_user_mail;
         return $this;
     }
- 
-    
+
+
     public function get_user_phone()
     {
         return $this->_user_phone;
@@ -70,7 +70,7 @@ class Users extends DataBase
         return $this;
     }
 
- 
+
     public function get_user_password()
     {
         return $this->_user_password;
@@ -91,18 +91,18 @@ class Users extends DataBase
         return $this;
     }
 
-    
+
     public function get_user_validate()
     {
         return $this->_user_validate;
-    } 
+    }
     public function set_user_validate($_user_validate)
     {
         $this->_user_validate = $_user_validate;
         return $this;
     }
 
-    
+
     public function get_role_id()
     {
         return $this->_role_id;
@@ -114,30 +114,26 @@ class Users extends DataBase
     }
 
 
-    public function addUser(string $_user_lastname, string $_user_firstname,string $_user_mail, string $_user_phone, string $_user_password): void
+    // Methode pour ajouter un utilisateur a l'aide d'un formulaire 
+
+    public function addUser(string $_user_lastname, string $_user_firstname, string $_user_mail, string $_user_phone, string $_user_password): void
     {
-        // création d'une instance pdo via la fonction du parent
         $pdo = parent::connectDb();
 
-        // j'écris la requête me permettant d'insérer un patient dans la table patients
-        // je mets en place des marqueurs nominatifs pour faciliter la manipulation des paramètres : :lastname, :firstname, :phonenumber, :address, :mail
         $sql = "INSERT INTO `user` (`user_lastname`,`user_firstname`,`user_mail`, `user_phone`, `user_password`,`user_validate`,`role_id`)
         VALUES (:lastname, :firstname,:mail,:phonenumber, :password,0,3)";
 
-        // je prépare la requête que je stock dans $query à l'aide de la méthode ->prepare()
         $query = $pdo->prepare($sql);
 
-        // je lie les valeurs des paramètres aux marqueurs nominatifs respectifs à l'aide de la méthode ->bindValue()
         $query->bindValue(':lastname', $_user_lastname, PDO::PARAM_STR);
         $query->bindValue(':firstname', $_user_firstname, PDO::PARAM_STR);
         $query->bindValue(':mail', $_user_mail, PDO::PARAM_STR);
         $query->bindValue(':phonenumber', $_user_phone, PDO::PARAM_STR);
         $query->bindValue(':password', $_user_password, PDO::PARAM_STR);
 
-        
-        // une fois le mail récupéré, j'execute la requête à l'aide de la méthode ->execute()
         $query->execute();
     }
+
 
     public function checkIfMailExists(string $mail): bool
     {
@@ -147,17 +143,13 @@ class Users extends DataBase
         // j'écris la requête me permettant d'aller chercher le mail dans la table users
         // je mets en place un marqueur nominatif :mail
         $sql = "SELECT `user_mail` FROM `user` WHERE `user_mail` = :mail";
-        
-        // je prépare la requête que je stock dans $query à l'aide de la méthode ->prepare()
+
         $query = $pdo->prepare($sql);
 
-        // je lie la valeur du paramètre $mail au marqueur nominatif :mail à l'aide de la méthode ->bindValue()
         $query->bindValue(':mail', $mail, PDO::PARAM_STR);
 
-        // une fois le mail récupéré, j'execute la requête à l'aide de la méthode ->execute()
         $query->execute();
 
-        // je stock dans $result les données récupèrées à l'aide de la méthode ->fetch()
         $result = $query->fetchAll();
 
         // je fais un test pour savoir si $result est vide
@@ -168,17 +160,17 @@ class Users extends DataBase
         }
     }
 
-    public function checkPassword(string $mail) : array
+    public function checkPassword(string $mail): array
     {
 
         // 1) connection a la base de donnée
-        $pdo = parent::connectDb() ;
+        $pdo = parent::connectDb();
 
         // 2) j'ecris la requete pour aller chercher le password
-        $sql = "SELECT * FROM `user` WHERE `user_mail` = :mail";  
+        $sql = "SELECT * FROM `user` WHERE `user_mail` = :mail";
 
         // 3) je prepare la requete 
-        $query= $pdo->prepare($sql);
+        $query = $pdo->prepare($sql);
 
         // 4) je lie ':password' à $password
         $query->bindValue(':mail', $mail, PDO::PARAM_STR);
@@ -191,6 +183,35 @@ class Users extends DataBase
 
         // 7) j'effectue les vérifications 
         return $result;
+    }
 
+    // methode pour retourner les informations de tous les users
+
+    public function returnUsers()
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "SELECT * FROM `user`";
+
+        $query = $pdo->query($sql);
+
+        $query->execute();
+
+        $result = $query->fetchAll();
+
+        return $result;
+    }
+
+    public function deleteUser(string $userid): void
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "DELETE	FROM `user` WHERE `user_id` =:user_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':user_id', $userid, PDO::PARAM_STR);
+
+        $query->execute();
     }
 }

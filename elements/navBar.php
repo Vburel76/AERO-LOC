@@ -17,6 +17,7 @@ session_start();
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#">Mon profil</a></li>
                 <li><a class="dropdown-item" href="contact.php">contact</a></li>
+                <li><a class="dropdown-item" href="admin.php">admin</a></li>
                 <?php if (isset($_SESSION['user'])) { ?>
                     <li><a type="button" class="dropdown-item" href="logout.php">Connection/Deconnection</a></li>
                 <?php } ?>
@@ -48,6 +49,7 @@ session_start();
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="compte.php">Mon profil</a></li>
                     <li><a class="dropdown-item" href="contact.php">contact</a></li>
+                    <li><a class="dropdown-item" href="admin.php">admin</a></li>
                     <?php if (isset($_SESSION['user'])) { ?>
                         <li><a  class="dropdown-item" href="logout.php">Connection/Deconnection</a></li>
                     <?php } ?>

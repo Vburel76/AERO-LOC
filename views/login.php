@@ -14,6 +14,8 @@ require_once '../controllers/controller-login.php';
         Aero-Loc
     </header>
 
+    <a href="formulaire-user.php">Crée un compte</a>
+
     <form action="#" method="POST">
         <div class="row justify-content-center m-4 p-0 ">
             <div class="col-lg-3  p-5 rounded roundColor  ">
@@ -28,7 +30,7 @@ require_once '../controllers/controller-login.php';
 
                 <div class="row justify-content-center m-0 p-0">
                     <div class="col-lg-11  mt-1 ">
-                        <p class="text-danger text-center fontStyle"><?= isset($error['connection']) ? $errors['connection'] : '' ?></p>
+                        <p class="text-danger text-center fontStyle"><?= isset($errors['connection']) ? $errors['connection'] : '' ?></p>
                         <input type="submit" class="btn fontColor btnSize" value="Connection">
                     </div>
                 </div>
