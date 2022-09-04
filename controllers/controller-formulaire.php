@@ -74,13 +74,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_user_phone = htmlspecialchars($_POST['mobile']);
         $_user_password = password_hash($_POST['password'],PASSWORD_DEFAULT);
 
-        // j'instancie un objet $patientsObj avec la class Patients
         $userObj = new Users();
 
-        // Je fais appelle à la méthode addPatient pour ajouter mon patient : Attention bien respecter l'ordre des paramètres
         $userObj->addUser($_user_lastname, $_user_firstname,$_user_mail,$_user_phone, $_user_password);
 
-        // Si tout est ok, nous retournons sur une page données
         header('Location: login.php');
     }
 }

@@ -17,12 +17,12 @@ require_once '../controllers/controller-formulaire.php';
             <div class="col-lg-6">
                 <div class="row justify-content-center m-0 p-0 pt-2 rounded roundColor">
                     <div class="col-lg-5 p-1 rounded">
-                        <label for="firstname">Nom</label><span class="ms-2 text-danger"><?= isset($errors['firstname']) ? $errors['firstname'] : '' ?>
+                        <label for="lastname">Nom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?>
                         </span>
-                        <input id="firstname" name="firstname" class="tailleInput " type="text" value="<?= isset($_POST['firstname']) ? $_POST['firstname'] : '' ?>">
+                        <input id="lastname" name="lastname" class="tailleInput " type="text" value="<?= isset($_POST['lastname']) ? $_POST['lastname'] : '' ?>">
 
-                        <label for="lastname" class="mt-2">Prénom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>
-                        <input id="lastname" name="lastname" class="tailleInput" type="text" value="<?= isset($_POST['lastname']) ? $_POST['lastname'] : '' ?>">
+                        <label for="firstname" class="mt-2">Prénom</label><span class="ms-2 text-danger"><?= isset($errors['firstname']) ? $errors['firstname'] : '' ?></span>
+                        <input id="firstname" name="firstname" class="tailleInput" type="text" value="<?= isset($_POST['firstname']) ? $_POST['firstname'] : '' ?>">
 
 
                         <label for="mail" class="mt-2">Mail</label><span class="ms-2 text-danger"><?= isset($errors['mail']) ? $errors['mail'] : '' ?></span>

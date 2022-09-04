@@ -137,13 +137,10 @@ class Users extends DataBase
 
     public function checkIfMailExists(string $mail): bool
     {
-        // création d'une instance pdo via la fonction du parent
         $pdo = parent::connectDb();
 
-        // j'écris la requête me permettant d'aller chercher le mail dans la table users
-        // je mets en place un marqueur nominatif :mail
         $sql = "SELECT `user_mail` FROM `user` WHERE `user_mail` = :mail";
-
+        
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':mail', $mail, PDO::PARAM_STR);
@@ -152,7 +149,6 @@ class Users extends DataBase
 
         $result = $query->fetchAll();
 
-        // je fais un test pour savoir si $result est vide
         if (count($result) != 0) {
             return true;
         } else {
@@ -160,29 +156,23 @@ class Users extends DataBase
         }
     }
 
-    public function checkPassword(string $mail): array
+    public function checkPassword(string $mail) : array
     {
 
-        // 1) connection a la base de donnée
-        $pdo = parent::connectDb();
+        $pdo = parent::connectDb() ;
 
-        // 2) j'ecris la requete pour aller chercher le password
-        $sql = "SELECT * FROM `user` WHERE `user_mail` = :mail";
+        $sql = "SELECT * FROM `user` WHERE `user_mail` = :mail";  
 
-        // 3) je prepare la requete 
-        $query = $pdo->prepare($sql);
+        $query= $pdo->prepare($sql);
 
-        // 4) je lie ':password' à $password
         $query->bindValue(':mail', $mail, PDO::PARAM_STR);
 
-        // 5) j'execute la requete 
         $query->execute();
 
-        // 6) je stock le resultat dans une variable
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        // 7) j'effectue les vérifications 
         return $result;
+
     }
 
     // methode pour retourner les informations de tous les users
@@ -213,5 +203,22 @@ class Users extends DataBase
         $query->bindValue(':user_id', $userid, PDO::PARAM_STR);
 
         $query->execute();
+    }
+
+    public function returnOneUser($user_id)
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "SELECT `user_id`,`user_lastname`,`user_firstname`,`user_mail`,`user_phone`,`role_name` FROM `user`INNER JOIN `role` ON `role_id_role` = `role_id` WHERE `user_id` =:user_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+
+        $query->execute();
+
+        $result = $query->fetchAll();
+
+        return $result;
     }
 }
