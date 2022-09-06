@@ -1,4 +1,6 @@
-<?php include '../elements/meta.php' ?>
+<?php include '../elements/meta.php';
+var_dump($_SESSION);
+?>
 
 <body>
 

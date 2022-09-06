@@ -1,7 +1,7 @@
 <?php include '../elements/meta.php' ?>
 
 <body class="d-flex flex-column min-vh-100">
-
+<a href="landing.php">Retour</a>
 <h1 class="text-center">ADMIN</h1>
 
     <div class="row justify-content-center m-0 p-0">

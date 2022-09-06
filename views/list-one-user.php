@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 require_once('../controllers/controller-list-one-user.php');
 require_once('../config.php');
 require_once('../models/database.php');
@@ -31,17 +33,17 @@ require_once('../models/users.php');
                     </tr>
                 </thead>
                 <tbody class="p-5">
-                    <?php
-                    foreach ($users as $value) { ?>
+                    
+                    
                         <tr>
-                            <th class="pt-3"><?= $value['user_id'] ?></th>
-                            <td class="pt-3"><?= $value['user_lastname'] ?></td>
-                            <td class="pt-3"><?= $value['user_firstname'] ?></td>
-                            <td class="pt-3"><?= $value['user_phone'] ?></td> 
-                            <td class="pt-3"><?= $value['user_mail'] ?></td>
-                            <td class="pt-3"><?= $value['role_name'] ?></td> 
+                            <th class="pt-3"><?= $users['user_id'] ?></th>
+                            <td class="pt-3"><?= $users['user_lastname'] ?></td>
+                            <td class="pt-3"><?= $users['user_firstname'] ?></td>
+                            <td class="pt-3"><?= $users['user_phone'] ?></td> 
+                            <td class="pt-3"><?= $users['user_mail'] ?></td>
+                            <td class="pt-3"><?= $users['role_name'] ?></td> 
                         </tr>
-                    <?php } ?>
+                    
 
                 </tbody>
             </table>

@@ -35,7 +35,7 @@ require_once('../controllers/controller-list-user.php');
                             <td class="pt-3"><?= $value['user_lastname'] ?></td>
                             <td class="pt-3"><?= $value['user_firstname'] ?></td>
                             <td class="pt-3"><?= $value['user_phone'] ?></td>
-                            <td><a href="" class="btn btn-primary">+ info</a></td>
+                            <td><a href="modif-user.php?users=<?= $value['user_id'] ?>" class="btn btn-primary">modification</a></td>
                             <td><a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn btn-secondary">+ d'info</a></td>
                             <td>
                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>

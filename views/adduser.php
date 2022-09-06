@@ -1,7 +1,10 @@
 <?php include '../elements/meta.php' ?>
 
 <?php
-session_start();
+if (!isset($_SESSION['user'])) {
+    session_start();
+}
+
 require_once '../controllers/controller-user.php';
 ?>
 

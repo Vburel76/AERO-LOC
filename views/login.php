@@ -1,9 +1,15 @@
 <?php include '../elements/meta.php' ?>
 
 <?php 
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 require_once '../controllers/controller-login.php';
+
+$_POST['login'] = 'vburel76@gmail.com';
+$_POST['password'] = 'valentin';
+
 ?>
 
 

@@ -36,7 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $usersInfo = $userObj->checkPassword($_POST['login']);
 
             if (password_verify($_POST['password'], $usersInfo['user_password'])) {
-                $_SESSION['user'] = $usersInfo;
+                $_SESSION['user'] = $usersInfo;                
+                unset($_SESSION['user']['user_password']);
+                //var_dump( $_SESSION);
                 header("Location: landing.php");
             } else {
                 $errors['connection'] = 'Identifiant ou mot de passe  incorecte';

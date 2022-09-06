@@ -4,6 +4,8 @@ if (!isset($_SESSION['user'])) {
   exit;  
 }
 
+var_dump($_GET);
+
 require_once '../config.php';
 require_once '../models/database.php';
 require_once '../models/users.php';
