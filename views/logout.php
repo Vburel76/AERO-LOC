@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (!isset($_SESSION['user'])) {
+    session_start();
+}
 require_once('../controllers/controller-logout.php');
 ?>
 <?php include '../elements/meta.php' ?>

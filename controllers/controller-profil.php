@@ -19,7 +19,7 @@ $regexPhone = "/^[0-9]{10}+$/";
 $roleObj = new Role();
 $roleArray = $roleObj->getAllRole();
 
-
+var_dump($_SESSION);
 
 
 
@@ -55,25 +55,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
+    if(isset($_POST['lastpassword']) && !empty($_POST['lastpassword']) ){
+        if (password_verify($_POST['lastpassword'], $_SESSION['user']['user_password'])) {
+           echo "bon mot de passe";
+        }else{
+            $errors['lastpassword'] = "mauvais mot de passe";
+        }
+    }
 
+    if (isset($_POST['password'])) {
 
-
-
+        if ($_POST['password'] == '') {
+            $errors['password'] = "champ obligatoire";
+        } else if ($_POST['confirmPassword'] == '' &&  $_POST['password'] != '') {
+            $errors['confirmPassword'] = 'champ obligatoire';
+        } else if ($_POST['confirmPassword'] != $_POST['password']) {
+            $errors['password'] = "mot de passe différent";
+        }
+    }
 
 
 
     if (count($errors) == 0) {
 
         // Je stock les valeurs des inputs dans des variables en effectuant un htmlspecialchars afin de m'assurer que les données soient safe
-        $lasnameUser = htmlspecialchars($_POST['lastnameUser']);
+        $lasnameUser = htmlspecialchars($_POST['lastname']);
         $firstnameUser = htmlspecialchars($_POST['firstname']);
+        $passwordUser = password_hash($_POST['password'],PASSWORD_DEFAULT);
         $phoneNumberUser = htmlspecialchars($_POST['mobile']);
-        $roleUser = htmlspecialchars($_POST['selectUser']);
-        $usersId = htmlspecialchars($_GET['users']);
+        $usersId = htmlspecialchars($_SESSION['user']['user_id']);
 
         $usersModif = new Users();
 
-        $usersModif->modifUser($lasnameUser, $firstnameUser, $phoneNumberUser, $roleUser, $usersId);
+        $usersModif->modifUser($lasnameUser, $firstnameUser,$passwordUser, $phoneNumberUser,2, $usersId);
     }
 }
 $userObj = new Users();

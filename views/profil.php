@@ -20,23 +20,23 @@ require_once '../controllers/controller-profil.php';
                 <div class="row justify-content-center m-0 p-0 pt-2 rounded roundColor">
                     <div class="col-lg-5 p-1 rounded">
                         <label for="lastname">Nom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>
-                        <input id="lastname" name="lastname" class="tailleInput " type="text" >
+                        <input id="lastname" name="lastname" class="tailleInput " type="text" value="<?= $infoUser['user_lastname']?>" >
 
                         <label for="firstname" class="mt-2">Prénom</label><span class="ms-2 text-danger"><?= isset($errors['firstname']) ? $errors['firstname'] : '' ?></span>
-                        <input id="firstname" name="firstname" class="tailleInput" type="text" >
+                        <input id="firstname" name="firstname" class="tailleInput" type="text" value="<?= $infoUser['user_firstname']?>" >
 
 
                         <label for="mobile">Mobile</label><span class="ms-2 text-danger"><?= isset($errors['mobile']) ? $errors['mobile'] : '' ?></span>
-                        <input id="mobile" name="mobile" class="tailleInput" type="tel" >
+                        <input id="mobile" name="mobile" class="tailleInput" type="tel" value="<?= $infoUser['user_phone']?>"  >
 
-                        <label for="mobile">Ancien mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['mobileUser']) ? $errors['mobileUser'] : '' ?></span>
-                        <input id="mobile" name="mobile" class="tailleInput" type="password" >
+                        <label for="lastpassword">Ancien mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['lastpassword']) ? $errors['lastpassword'] : '' ?></span>
+                        <input id="lastpassword" name="lastpassword" class="tailleInput" type="password" >
 
-                        <label for="mobile">Nouveau mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
-                        <input id="mobile" name="mobile" class="tailleInput" type="password" >
+                        <label for="password">Nouveau mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
+                        <input id="password" name="password" class="tailleInput" type="password" >
 
-                        <label for="mobile">Confirmer le nouveau mot de passe </label><span class="ms-2 text-danger"><?= isset($errors['confirmPassword']) ? $errors['confirmPassword'] : '' ?></span>
-                        <input id="mobile" name="mobile" class="tailleInput" type="password">
+                        <label for="confirmPassword">Confirmer le nouveau mot de passe </label><span class="ms-2 text-danger"><?= isset($errors['confirmPassword']) ? $errors['confirmPassword'] : '' ?></span>
+                        <input id="confirmPassword" name="confirmPassword" class="tailleInput" type="password">
 
 
 

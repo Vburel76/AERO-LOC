@@ -1,14 +1,16 @@
 <?php include '../elements/meta.php' ?>
 
 <?php 
-if (!isset($_SESSION)) {
-    session_start();
+
+
+if (!isset($_SESSION['user'])) {
 }
+var_dump($_SESSION);
 
 require_once '../controllers/controller-login.php';
 
-$_POST['login'] = 'vburel76@gmail.com';
-$_POST['password'] = 'valentin';
+// $_POST['login'] = 'vburel25@gmail.com';
+// $_POST['password'] = 'valentin';
 
 ?>
 

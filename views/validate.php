@@ -23,7 +23,7 @@ require_once '../data/table.php';
 
                         <p class="fontText">En fonction de votre expérience, vous pourrez être lâché sur nos machines après un éventuel ré-entrainement et un test réalisé par un de nos instructeurs.</p>
                     </div>
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center mt-5">
                         <div class="col-lg-5">
                             <label class="fontText textColor2" for="start">Date de départ :</label><br>
                             <input class="mt-3 fs-4" type="date" id="start" name="trip-start" min=<?php echo date('Y-m-d'); ?> </div>
@@ -49,22 +49,9 @@ require_once '../data/table.php';
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-5 mt-3">
-                            <label class="fontText textColor2">Nom :</label><br>
-                            <div class="mt-2">
-                                <input type="text" class="form-control" type="text" autocomplete="off" name="startAirport" placeholder="Votre Nom" data-next-input="date">
-                            </div>
-                        </div>
-                        <div class="col-lg-5 mt-3">
-                            <label class="fontText textColor2">Prénom :</label><br>
-                            <div class="mt-2">
-                                <input type="text" class="form-control" type="text" autocomplete="off" name="startAirport" placeholder="Votre Prénom" data-next-input="date">
-                            </div>
-                        </div>
-                    </div>
+                    
 
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end mt-5">
                         <a class="btn Textcolor mt-5 m-2">Annuler</a>
                         <a class="btn Textcolor mt-5 m-2">Valider</a>
                     </div>
