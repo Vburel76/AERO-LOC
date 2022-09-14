@@ -30,6 +30,7 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 2;
    
 }
 
@@ -233,6 +234,8 @@ header {
 
 .cardColor{
     border: 2px solid  rgb(31, 80, 123) ;
+    z-index: 1;
+
 } 
 
 
@@ -279,4 +282,21 @@ header {
     }
 
 /* fin login */
+
+.pictureLocation{
+    width: 100px;
+}
+
+.pictureOneLocation{
+    width: 25rem;
+}
+.pictureCard{
+    width: 100%;
+}
+
+.pictureModif{
+    width: 150px;
+}
+
+
 

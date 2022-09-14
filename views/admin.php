@@ -6,12 +6,12 @@
 
     <div class="row justify-content-center m-0 p-0">
         <div class="col-lg-5 border border-dark m-5 text-center ">
-            <a type="button" href="addplane.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter un avion </a>
-            <a type="button" href="addpatient.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des avions</a>
+            <a type="button" href="addLoc.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter une location </a>
+            <a type="button" href="list-location.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion les locations</a>
             <a type="button" href="adduser.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter utilisateur</a>
             <a type="button" href="user-list.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">gestion des utilisateurs</a>
-            <a type="button" href="addlocplane.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter location</a>
-            <a type="button" href="addpatient.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des locations</a>
+            <a type="button" href="add-plane.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter avion</a>
+            <a type="button" href="plane-list.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des avions</a>
             
             
         </div>

@@ -3,7 +3,7 @@
 require_once '../helpers/form.php';
 require_once '../config.php';
 require_once '../models/database.php';
-require_once '../models/planeLocation.php';
+require_once '../models/plane.php';
 
 
 $showForm = true;
@@ -28,7 +28,7 @@ var_dump($_POST);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // je stock dans une variable intermédiaire le resultat de la méthode verifyImage()
-    $resultVerifyImg = Form::verifyImg('fileToUpload',$paramUpload);
+    $resultVerifyImg = Form::verifyImg('fileToUpload', $paramUpload);
 
     if ($resultVerifyImg['permissionToUpload'] === false) {
         $errors['fileToUpload'] = $resultVerifyImg['errorMessage'];
@@ -38,10 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($_POST['namelocPlane'] == '') {
             $errors['namelocPlane'] = "champ obligatoire";
-        } else if (!preg_match($regexletter, $_POST['namelocPlane'])) {
-            $errors['namelocPlane'] = "Mauvais format";
         }
     }
+
 
 
     if (isset($_POST['sizelocPlane'])) {
@@ -95,29 +94,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($_POST['descriptionlocPlane'] == '') {
             $errors['descriptionlocPlane'] = "champ obligatoire";
-        } else if (!preg_match($regexletter, $_POST['descriptionlocPlane'])) {
-            $errors['descriptionlocPlane'] = "Mauvais format";
+        }
+    }
+
+    if (isset($_POST['presentationlocPlane'])) {
+
+        if ($_POST['presentationlocPlane'] == '') {
+            $errors['presentationlocPlane'] = "champ obligatoire";
         }
     }
 
     if (count($errors) == 0) {
 
-        // Je stock les valeurs des inputs dans des variables en effectuant un htmlspecialchars afin de m'assurer que les données soient safe
-        $_plane_name = htmlspecialchars($_POST['lastname']);
-        $_plane_size = htmlspecialchars($_POST['firstname']);
-        $_plane_scode = htmlspecialchars($_POST['mail']);
-        $_plane_autonomy = htmlspecialchars($_POST['mobile']);
-        $_plane_altitude = htmlspecialchars($_POST['password']);
-        $_speed = htmlspecialchars($_POST['password']);
-        $_plane_text_card = htmlspecialchars($_POST['password']);
-        $_plane_picture_val = htmlspecialchars($_POST['password']);
+        $resultUploadImage = Form::uploadImage('fileToUpload', $paramUpload);
 
-        $userObj = new PlaneLoc();
+        if ($resultUploadImage['success'] === true) {
+            // Je stock les valeurs des inputs dans des variables en effectuant un htmlspecialchars afin de m'assurer que les données soient safe
+            $_plane_name = htmlspecialchars($_POST['namelocPlane']);
+            $_plane_size = htmlspecialchars($_POST['sizelocPlane']);
+            $_plane_scode = htmlspecialchars($_POST['scopelocPlane']);
+            $_plane_autonomy = htmlspecialchars($_POST['autonomylocPlane']);
+            $_plane_altitude = htmlspecialchars($_POST['altitudelocPlane']);
+            $_speed = htmlspecialchars($_POST['speedlocPlane']);
+            $_plane_picture = $resultUploadImage['imageName'];
+            $_plane_description = htmlspecialchars($_POST['presentationlocPlane']);
+            $_plane_loc_description = htmlspecialchars($_POST['descriptionlocPlane']);
+            
 
-        $userObj->addLocPlane($_plane_name,$_plane_size,$_plane_scode, $_plane_autonomy,$_plane_altitude, $_speed, $_plane_text_card,$_plane_picture_val);
+            $planeObj = new Plane();
 
-        header('Location: admin.php');
+            $planeObj->addPlane( $_plane_name,  $_plane_size, $_plane_scode, $_plane_autonomy, $_plane_altitude, $_speed, $_plane_picture, $_plane_description, $_plane_loc_description);
+
+            header('Location: admin.php');
+
+
+
+            
+        } else {
+            $errors['fileToUpload'] = $resultUploadImage['messageError'];
+        }
     }
-
-
 }

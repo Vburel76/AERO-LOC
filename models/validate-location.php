@@ -1,7 +1,7 @@
 <?php
 
 
-class Validates extends DataBase
+class Validate extends DataBase
 {
     private int $_location_id;
     private string $_location_start;
@@ -9,8 +9,8 @@ class Validates extends DataBase
     private string $_location_departure;
     private string $_location_arrival;
     private string $_location_validate;
-    private string $_user_id;
-    private string $_plane_id;
+    private int $_user_id;
+    private int $_plane_id;
 
     public function get_location_id()
     {
@@ -99,19 +99,51 @@ class Validates extends DataBase
     {
         $pdo = parent::connectDb();
 
-        $sql = "INSERT INTO `user` (`user_lastname`,`user_firstname`,`user_mail`, `user_phone`, `user_password`,`user_validate`,`role_id_role`)
-        VALUES (:lastname, :firstname,:mail,:phonenumber, :password,0,3)";
+        $sql = "INSERT INTO `location` (`location_start`,`location_end`,`location_departure`, `location_arrival`,`user_id`,`plane_id`)
+        VALUES (:start, :end, :departure, :arrival, :userId, :planeId)";
 
         $query = $pdo->prepare($sql);
 
-        $query->bindValue(':lastname', $_user_lastname, PDO::PARAM_STR);
-        $query->bindValue(':firstname', $_user_firstname, PDO::PARAM_STR);
-        $query->bindValue(':mail', $_user_mail, PDO::PARAM_STR);
-        $query->bindValue(':phonenumber', $_user_phone, PDO::PARAM_STR);
-        $query->bindValue(':password', $_user_password, PDO::PARAM_STR);
+        $query->bindValue(':start', $_location_start, PDO::PARAM_STR);
+        $query->bindValue(':end', $_location_end, PDO::PARAM_STR);
+        $query->bindValue(':departure', $_location_departure, PDO::PARAM_STR);
+        $query->bindValue(':arrival', $_location_arrival, PDO::PARAM_STR);
+        $query->bindValue(':userId', $_user_id, PDO::PARAM_INT);
+        $query->bindValue(':planeId', $_plane_id, PDO::PARAM_INT);
         
+        $query->execute();
+    }
+
+    public function returnValidate()
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "SELECT * FROM `location` INNER JOIN `user` ON `user_id_user` = `user_id` INNER JOIN `plane` ON `plane_id_plane` = `plane_id`";
+
+        $query = $pdo->query($sql);
 
         $query->execute();
+
+        $result = $query->fetchAll();
+
+        return $result;
+    }
+
+    public function returnOnelocation($location_id)
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "SELECT * FROM `location` INNER JOIN `user` ON `user_id_user` = `user_id` INNER JOIN `plane` ON `plane_id_plane` = `plane_id` WHERE `location_id` =:location_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':location_id', $location_id, PDO::PARAM_STR);
+
+        $query->execute();
+
+        $result = $query->fetchAll();
+
+        return $result[0];
     }
 
 }

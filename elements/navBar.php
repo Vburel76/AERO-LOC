@@ -32,7 +32,7 @@
                     <a class="nav-link fs-4 textNavbar " href="formation.php">Formation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 textNavbar " href="location.php">Location</a>
+                    <a class="nav-link fs-4 textNavbar " href="pagePlane.php">Location</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fs-4 textNavbar " href="rss.php">Actu</a>

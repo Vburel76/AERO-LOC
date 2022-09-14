@@ -4,12 +4,12 @@
 if (!isset($_SESSION['user'])) {
     session_start();
 }
-require_once '../controllers/controller-locplane.php';
+require_once '../controllers/controller-addplane.php';
 ?>
 
 <body class="d-flex flex-column min-vh-100">
 
-    <h1 class="text-center mt-5">AJOUTER UN AVION A LA LOCATION</h1>
+    <h1 class="text-center mt-5">AJOUTER UN AVION</h1>
 
     <form class="mt-5" action="#" method="POST" novalidate enctype="multipart/form-data">
         <div class="row justify-content-center m-0 p-0 ">
@@ -45,8 +45,11 @@ require_once '../controllers/controller-locplane.php';
 
 
 
-                            <label for="descriptionlocPlane" class="">description</label><span class="ms-2 text-danger"><?= isset($errors['descriptionlocPlane']) ? $errors['descriptionlocPlane'] : '' ?></span>
-                            <input id="descriptionlocPlane" name="descriptionlocPlane" class="tailleInput" type="text">
+                            <label for="descriptionlocPlane" class="">description de la location</label><span class="ms-2 text-danger"><?= isset($errors['descriptionlocPlane']) ? $errors['descriptionlocPlane'] : '' ?></span>
+                            <textarea id="descriptionlocPlane" name="descriptionlocPlane" class="tailleInput" type="text"></textarea>
+
+                            <label for="presentationlocPlane" class="">presentation de l'avion</label><span class="ms-2 text-danger"><?= isset($errors['presentationlocPlane']) ? $errors['presentationlocPlane'] : '' ?></span>
+                            <textarea id="presentationlocPlane" name="presentationlocPlane" class="tailleInput" type="text"></textarea>
                         
 
 

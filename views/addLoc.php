@@ -1,13 +1,15 @@
 <?php include '../elements/meta.php' ?>
 
 <?php
-session_start();
-require_once '../controllers/controller-add-plane.php';
+if (!isset($_SESSION['user'])) {
+    session_start();
+}
+
 ?>
 
 <body class="d-flex flex-column min-vh-100">
 
-<h1 class="text-center mt-5">AJOUTER UN AVION</h1>
+<h1 class="text-center mt-5">AJOUTER UNE LOCATION</h1>
 
     <form class="mt-5" action="#" method="POST" novalidate>
         <div class="row justify-content-center m-0 p-0 ">

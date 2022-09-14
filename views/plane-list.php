@@ -1,0 +1,61 @@
+<?php
+session_start();
+require_once('../controllers/controllers-plane-list.php');
+?>
+
+<?php include '../elements/meta.php' ?>
+
+
+<body class="d-flex flex-column min-vh-100">
+    <a href="admin.php">Retour</a>
+
+    <p class="fs-2 text-center m-5">LISTE DES AVIONS</p>
+
+    <div class="row m-0 p-0 justify-content-center">
+        <div class="col-lg-8 text-center">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="pictureSize" scope="col">#</th>
+                        <th class="pictureSize" scope="col">image</th>
+                        <th class="pictureSize" scope="col">Nom</th>
+                        <th class="pictureSize" scope="col">Taille</th>
+                        <th class="pictureSize" scope="col"></th>
+                        <th class="pictureSize" scope="col"></th>
+                        <th class="pictureSize" scope="col"></th>
+
+                    </tr>
+                </thead>
+                <tbody class="p-5">
+                    <?php
+                    foreach ($planes as $value) { ?>
+                        <tr>
+                            <td class="align-middle"><?= $value['plane_id'] ?></td>
+                            <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="image d'avion"></td>
+                            <td class="align-middle "><?= $value['plane_name'] ?></td>
+                            <td class="align-middle"><?= $value['plane_loc_description'] ?></td>
+                            <td class="align-middle"><a href="modif-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn btn-warning">Modifier</a></td>
+                            <td class="align-middle"><a href="return-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn btn-primary">Info</a></td>
+                            <td>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#plane-<?= $value['plane_id'] ?>">Supprimer</button>
+                            </td>
+                        </tr>
+
+                    <?php } ?>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+    <?php include '../elements/footer.php' ?>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="../dist/js/lightbox-plus-jquery.js"></script>
+    <script src="../dist/js/lightbox.js"></script>
+</body>
+
+</html>
