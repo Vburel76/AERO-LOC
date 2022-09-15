@@ -146,4 +146,21 @@ class Validate extends DataBase
         return $result[0];
     }
 
+    public function modifLocValidate(string $locationStart, string $locationEnd,string $locationDeparture, string $locationArrival, int $locationId): void
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "UPDATE `location` SET `location_start`=:location_start ,`location_end`=:location_end ,`location_departure`=:location_departure,`location_arrival`=:location_arrival  WHERE `location_id` =:location_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':location_start', $locationStart, PDO::PARAM_STR);
+        $query->bindValue(':location_end', $locationEnd, PDO::PARAM_STR);
+        $query->bindValue(':location_departure', $locationDeparture, PDO::PARAM_STR);
+        $query->bindValue(':location_arrival', $locationArrival, PDO::PARAM_STR);
+        $query->bindValue(':location_id', $locationId, PDO::PARAM_INT);
+
+        $query->execute();
+    }
+
 }

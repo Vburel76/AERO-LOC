@@ -7,62 +7,69 @@ require_once('../controllers/controller-list-one-location.php');
 
 
 <body class="d-flex flex-column min-vh-100">
-    <a href="admin.php">Retour</a>
+    <div class="row">
+        <div class="col-lg-2 m-2">
+            <a href="list-location.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+        </div>
+    </div>
 
     <p class="fs-2 text-center m-5">LOCATIONS</p>
 
     <div class="row m-0 p-0 justify-content-center">
         <div class="col-lg-8 text-center">
 
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th class="pictureSize" scope="col">#</th>
-                        <th class="pictureSize" scope="col">Image</th>
-                        <th class="pictureSize" scope="col">Avion</th>
-                        <th class="pictureSize" scope="col">date de départ</th>
-                        <th class="pictureSize" scope="col">date d'arrivée</th>
-                        <th class="pictureSize" scope="col">Nom</th>
-                        <th class="pictureSize" scope="col">Prénom</th>
-                        <th class="pictureSize" scope="col"></th>
-
-                    </tr>
-                </thead>
-                <tbody class="p-5">
-
-                    <tr>
-                        <td class="align-middle"><?= $location['location_id'] ?></td>
-                        <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $location['plane_picture'] ?>" alt="" srcset=""></td>
-                        <td class="align-middle "><?= $location['plane_id'] ?></td>
-                        <td class="align-middle "><?= $location['location_start'] ?></td>
-                        <td class="align-middle"><?= $location['location_end'] ?></td>
-                        <td class="align-middle"><?= $location['user_lastname'] ?></td>
-                        <td class="align-middle"><?= $location['user_firstname'] ?></td>
-                    </tr>
-                </tbody>
-            </table>
-
             <div class="row">
-                <div class="col-lg-12 border border-dark">
+                <div class="col-lg-12  mb-5 rounded roundColor">
                     <div class="row">
-                        <div class="col-lg-6 border border-dark p-3">
-                            <img class="pictureOneLocation" src="../public/img/<?= $location['plane_picture'] ?>" alt="" srcset="">
+                        <div class="col-lg-6 p-3">
+                            <img class="pictureOneLocation text-center" src="../public/img/<?= $location['plane_picture'] ?>" alt="" srcset="">
                         </div>
 
-                        <div class="col-lg-6 border border-dark">
-                            <p class="fs-5">Detail sur l'avion:</p>
+                        <div class="col-lg-6 ">
+                            <p class="fs-5 fw-bold">Detail sur l'avion:</p>
 
-                            <p class="text-start">Modèle :</p>
+                            <div class="row mb-2">
+                                <div class="col-lg-4">
+                                    <p class="text-start fs-5 m-1 fw-bold text-center">Modèle :</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <p class=" fs-5 m-1 textColor2"> <?= $location['plane_name'] ?></p>
+                                </div>
+                            </div>
+
 
                             <div class="row justify-content-center">
-                                <div class="col-lg-6 border border-dark">
-                                    <p class="text-start">Date de depart : <?= $location['location_start']?></p>
-                                </div>
-                                <div class="col-lg-6 border border-dark">
-                                    <p class="text-start" >Date de depart : <?= $location['location_end']?></p>
-                                </div>
+                                <div class="col-lg-6 ">
+                                    <p class="text-start ">Date de depart : <?= $location['location_start'] ?></p>
+                                    <p class="text-start ">Lieu de depart : <?= $location['location_departure'] ?></p>
 
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <p class="text-start">Date d'arrivée : <?= $location['location_end'] ?></p>
+                                    <p class="text-start">Lieu d'arrivée : <?= $location['location_arrival'] ?></p>
+                                </div>
                             </div>
+                            <p class="fs-5 fw-bold ">Detail sur le client :</p>
+
+                            <div class="row m-0 p-0 justify-content-center rounded  roundColor">
+                                <div class="col-lg-5">
+                                    <p class="text-start  m-2 ">Nom : <?= $location['user_lastname'] ?></p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="text-start m-2">Prénom : <?= $location['user_firstname'] ?></p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end mt-3 ">
+                                <div class="col-lg-3">
+                                    <a href="modif-loc.php?locationId=<?= $location['location_id'] ?>" type="button" class="btn buttontheme ">modifier</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <a type="button" class="btn buttontheme">supprimer</a>
+                                </div>
+                            </div>
+
+
+
 
                         </div>
                     </div>

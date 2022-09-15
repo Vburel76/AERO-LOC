@@ -7,7 +7,11 @@ require_once('../controllers/controller-list-location.php');
 
 
 <body class="d-flex flex-column min-vh-100">
-    <a href="admin.php">Retour</a>
+    <div class="row">
+        <div class="col-lg-2 m-2">
+            <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+        </div>
+    </div>
 
     <p class="fs-2 text-center m-5">LISTE DES LOCATIONS</p>
 
@@ -39,11 +43,7 @@ require_once('../controllers/controller-list-location.php');
                             <td class="align-middle"><?= $value['location_end'] ?></td>
                             <td class="align-middle"><?= $value['user_lastname'] ?></td>
                             <td class="align-middle"><?= $value['user_firstname'] ?></td>
-                            <td class="align-middle"><a href="modif-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn btn-warning">Modifier</a></td>
                             <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn btn-primary">Info</a></td>
-                            <td class="align-middle">
-                                <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#plane-<?= $value['plane_id'] ?>">Supprimer</button>
-                            </td>
                         </tr>
 
                     <?php } ?>

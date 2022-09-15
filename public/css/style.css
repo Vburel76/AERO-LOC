@@ -298,5 +298,22 @@ header {
     width: 150px;
 }
 
+.buttontheme{
+    color: rgb(31, 80, 123);
+    border: 3px solid rgb(31, 80, 123) ;
+    font-weight: bold;
+}
+
+.buttontheme:hover{
+    background-color: rgb(31, 80, 123);
+    color: white;
+}
+
+.pictureModifLocation{
+    width: 18rem;
+}
+
+
+
 
 
