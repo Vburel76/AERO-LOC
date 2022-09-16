@@ -1,7 +1,7 @@
 <?php include '../elements/meta.php' ?>
 
 <body class="d-flex flex-column min-vh-100">
-    <div class="row">
+    <div class="row m-0 p-0">
         <div class="col-lg-2 m-2">
             <a href="landing.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
         </div>

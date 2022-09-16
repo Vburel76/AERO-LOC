@@ -1,14 +1,28 @@
 <?php 
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-  exit;  
+if (!isset($_SESSION['user']) || $_SESSION['user']['role_id_role'] != 1) {
+  header("Location: login.php");
+  exit;
 }
 
-var_dump($_POST);
+var_dump($_GET);
 require_once '../config.php';
 require_once '../models/database.php';
-require_once '../models/validate-location.php';
+require_once '../models/location.php';
 
-$attribut = new Validate();
+// si delete existe 
+if (isset($_GET['delete'])) {
+
+  // Je crée un nouvel objet de la classe validate
+  $attributDel = new Location();
+
+  // je crée une variable infoLocation qui contient les information d'une location
+  $infoLocation = $attributDel->returnOnelocation($_GET['delete']);
+
+  // je supprime la location avec la methode deleteLocation
+  $attributDel->deleteLocation($_GET['delete']);
+  header("Location: list-location.php");
+}
+
+$attribut = new Location();
 
 $location = $attribut->returnOnelocation($_GET['locationId']);

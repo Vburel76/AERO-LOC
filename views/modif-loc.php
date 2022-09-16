@@ -47,7 +47,7 @@ require_once '../controllers/controller-list-one-location.php';
                         </div>
                         <div class="row justify-content-center m-0 p-0">
                             <div class="col-lg-4 m-2">
-                                <input type="submit" class="btn fontColor btnSize p-1" value="annuler">
+                                <a href="list-one-location.php?locationId=<?= $location['location_id'] ?>" type="submit" class="btn fontColor btnSize p-1">annuler</a>
                             </div>
                             <div class="col-lg-4 m-2">
                                 <input href="list-location.php" type="submit" class="btn fontColor btnSize p-1" value="valider">

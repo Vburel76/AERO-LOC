@@ -64,15 +64,34 @@ require_once('../controllers/controller-list-one-location.php');
                                     <a href="modif-loc.php?locationId=<?= $location['location_id'] ?>" type="button" class="btn buttontheme ">modifier</a>
                                 </div>
                                 <div class="col-lg-3">
-                                    <a type="button" class="btn buttontheme">supprimer</a>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#location-<?= $location['location_id'] ?>">Supprimer</button>
                                 </div>
                             </div>
 
-
-
-
                         </div>
                     </div>
+
+                    
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="location-<?= $location['location_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez ? </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>
+                                        <form action="" method="POST">
+                                            <button type="button" class="btn btn-primary" name="delete" onclick="document.location='list-one-location.php?delete=<?= $location['location_id'] ?>'">oui</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
 
                 </div>
             </div>

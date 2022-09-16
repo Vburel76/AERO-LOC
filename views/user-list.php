@@ -7,7 +7,11 @@ require_once('../controllers/controller-list-user.php');
 
 
 <body class="d-flex flex-column min-vh-100">
-<a href="admin.php">Retour</a>
+    <div class="row">
+        <div class="col-lg-2 m-2">
+            <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+        </div>
+    </div>
 
     <p class="fs-2 text-center m-5">LISTE DES UTILISATEURS</p>
 
@@ -54,7 +58,7 @@ require_once('../controllers/controller-list-user.php');
             foreach ($users as $value) { ?>
 
                 <!-- Modal -->
-                <div class="modal fade" id="user-<?=$value['user_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="user-<?= $value['user_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">

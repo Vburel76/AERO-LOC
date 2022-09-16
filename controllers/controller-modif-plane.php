@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION['user']) || $_SESSION['user']['role_id_role'] != 1) {
+    header("Location: login.php");
+    exit;
+  }
 
 require_once '../helpers/form.php';
 require_once '../config.php';
@@ -127,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_plane_picture = $infoPlane['plane_picture'];
             $planeObj->modifplane($_plane_name, $_plane_size, $_plane_scode, $_plane_autonomy, $_plane_altitude, $_speed, $_plane_picture, $_plane_description, $_plane_loc_description, $_planeId);
 
-            header('Location: admin.php');
+            header('Location: plane-list.php');
         } else {
             $resultUploadImage = form::uploadImage('fileToUpload', $paramUpload);
 
@@ -143,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_plane_picture = $resultUploadImage['imageName'];
                 $planeObj->modifplane($_plane_name, $_plane_size, $_plane_scode, $_plane_autonomy, $_plane_altitude, $_speed, $_plane_picture, $_plane_description, $_plane_loc_description, $_planeId);
 
-                header('Location: admin.php');
+                header('Location: plane-list.php');
             }
         }
     }

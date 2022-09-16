@@ -1,5 +1,5 @@
 <?php
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user']) || $_SESSION['user']['role_id_role'] != 1) {
   header("Location: login.php");
   exit;
 }
@@ -8,7 +8,7 @@ var_dump($_POST);
 var_dump($_SESSION);
 require_once '../config.php';
 require_once '../models/database.php';
-require_once '../models/validate-location.php';
+require_once '../models/location.php';
 require_once '../models/plane.php';
 
 
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_user_id = intval($_SESSION['user']['user_id']);
     $_plane_id = intval($_GET['plane']);
 
-    $validateObj = new Validate();
+    $validateObj = new Location();
 
     $validateObj->addvalidate($_location_start, $_location_end, $_location_departure, $_location_arrival, $_user_id, $_plane_id);
 

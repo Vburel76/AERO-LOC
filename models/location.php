@@ -1,7 +1,7 @@
 <?php
 
 
-class Validate extends DataBase
+class Location extends DataBase
 {
     private int $_location_id;
     private string $_location_start;
@@ -12,6 +12,8 @@ class Validate extends DataBase
     private int $_user_id;
     private int $_plane_id;
 
+
+    // Mise en place des getters / setters 
     public function get_location_id()
     {
         return $this->_location_id;
@@ -32,7 +34,6 @@ class Validate extends DataBase
     {
         $this->_location_start = $_location_start;
     }
-
 
     public function get_location_end()
     {
@@ -94,12 +95,13 @@ class Validate extends DataBase
         $this->_plane_id = $_plane_id;
     }
 
-//  methode pour ajouter un rendez vous (en cours de création)
-    public function addvalidate(string $_location_start, string $_location_end, string $_location_departure, string $_location_arrival, string $_user_id,string $_plane_id ): void
+
+    //  methode pour ajouter un rendez vous (en cours de création)
+    public function addvalidate(string $_location_start, string $_location_end, string $_location_departure, string $_location_arrival, string $_user_id, string $_plane_id): void
     {
         $pdo = parent::connectDb();
 
-        $sql = "INSERT INTO `location` (`location_start`,`location_end`,`location_departure`, `location_arrival`,`user_id`,`plane_id`)
+        $sql = "INSERT INTO `location` (`location_start`,`location_end`,`location_departure`, `location_arrival`,`user_id_user`,`plane_id_plane`)
         VALUES (:start, :end, :departure, :arrival, :userId, :planeId)";
 
         $query = $pdo->prepare($sql);
@@ -110,7 +112,7 @@ class Validate extends DataBase
         $query->bindValue(':arrival', $_location_arrival, PDO::PARAM_STR);
         $query->bindValue(':userId', $_user_id, PDO::PARAM_INT);
         $query->bindValue(':planeId', $_plane_id, PDO::PARAM_INT);
-        
+
         $query->execute();
     }
 
@@ -146,13 +148,13 @@ class Validate extends DataBase
         return $result[0];
     }
 
-    public function modifLocValidate(string $locationStart, string $locationEnd,string $locationDeparture, string $locationArrival, int $locationId): void
+    public function modifLocValidate(string $locationStart, string $locationEnd, string $locationDeparture, string $locationArrival, int $locationId): void
     {
         $pdo = parent::connectDb();
 
         $sql = "UPDATE `location` SET `location_start`=:location_start ,`location_end`=:location_end ,`location_departure`=:location_departure,`location_arrival`=:location_arrival  WHERE `location_id` =:location_id";
 
-        $query = $pdo->prepare($sql);
+        $query = $pdo->prepare($sql);$
 
         $query->bindValue(':location_start', $locationStart, PDO::PARAM_STR);
         $query->bindValue(':location_end', $locationEnd, PDO::PARAM_STR);
@@ -163,4 +165,16 @@ class Validate extends DataBase
         $query->execute();
     }
 
+    public function deleteLocation(string $locationId): void
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "DELETE	FROM `location` WHERE `location_id` =:location_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':location_id', $locationId, PDO::PARAM_STR);
+
+        $query->execute();
+    }
 }

@@ -1,14 +1,15 @@
-<?php 
+<?php
 if (!isset($_SESSION['user']) || $_SESSION['user']['role_id_role'] != 1) {
-  header("Location: login.php");
-  exit;
-}
+    header("Location: login.php");
+    exit;
+  }
 
-var_dump($_POST);
 require_once '../config.php';
 require_once '../models/database.php';
 require_once '../models/plane.php';
+require_once '../helpers/form.php';
+
+
 
 $attribut = new Plane();
-
-$plane = $attribut->returnOnePlane($_GET['planeId']);
+$planes = $attribut->returnPlane();

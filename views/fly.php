@@ -1,5 +1,6 @@
 <?php
 require_once '../data/table.php';
+require_once '../controllers/controllers-fly.php';
 ?>
 
 <?php include '../elements/meta.php' ?>
@@ -37,29 +38,27 @@ require_once '../data/table.php';
     <?php
     $start = 1;
 
-    foreach ($tableFly as $key => $value) {
+    foreach ($planes as $value) {
         if (($start % 2) == 0) { ?>
             <div class="row mx-0 p-0 justify-content-center espaceFly">
                 <div class="col-lg-11 col-11 Textcolor p-3 ">
                     <div class="row m-0 p-0 ">
                         <div class="col-lg-3 col-12 p-0 m-0 ">
-                            <img class="imageFlotte" src="../public/img/<?= $value['planeImgVal'] ?>" class="card-img-top" alt="...">
+                            <img class="imageFlotte" src="../public/img/<?= $value['plane_picture'] ?>" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body col-lg-9  col-9  ">
-                            <p class="card-text fs-2 mx-3 fontTitle"><?= $value['title'] ?></p>
+                            <p class="card-text fs-2 mx-3 fontTitle"><?= $value['plane_name'] ?></p>
                             <div class="fs-4 mx-3 fontText">
-                                <p><?= $value['text_loc'] ?></p>
+                                <p><?= $value['plane_description'] ?></p>
                             </div>
                             <div class="row justify-content-evenly fontText  m-0 p-0">
                                 <ul class="col-lg-3 col-11   mx-3 ">
-                                    <li class="fs-5">Taille :<?= $value['size'] ?></li>
-                                    <li class="fs-5">Places :<?= $value['place'] ?></li>
-                                    <li class="fs-5">portée :<?= $value['scope'] ?></li>
+                                    <li class="fs-5">Taille :<?= $value['plane_size'] ?></li>
+                                    <li class="fs-5">portée :<?= $value['plane_scope'] ?></li>
                                 </ul>
                                 <ul class="col-lg-4 col-11  mx-3 ">
-                                    <li class="fs-5">Autonomie :<?= $value['autonomy'] ?></li>
-                                    <li class="fs-5">Altitude max :<?= $value['altitude'] ?></li>
-                                    <li class="fs-5">Vitesse Max :<?= $value['speed'] ?></li>
+                                    <li class="fs-5">Altitude max :<?= $value['plane_altitude'] ?></li>
+                                    <li class="fs-5">Vitesse Max :<?= $value['plane_speed'] ?></li>
                                 </ul>
                             </div>
 
@@ -75,29 +74,27 @@ require_once '../data/table.php';
                 <div class="col-lg-11 col-11 Textcolor p-3">
                     <div class="row m-0 p-0 ">
                         <div class="col-lg-3 col-12 p-0 m-0  d-lg-none d-block">
-                            <img class="imageFlotte" src="../public/img/<?= $value['planeImgVal'] ?>" class="card-img-top" alt="...">
+                            <img class="imageFlotte" src="../public/img/<?= $value['plane_picture'] ?>" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body col-lg-9 col-9  ">
-                            <p class="card-text fs-2 mx-1 fontTitle"><?= $value['title'] ?></p>
+                            <p class="card-text fs-2 mx-1 fontTitle"><?= $value['plane_name'] ?></p>
                             <div class="fs-4 mx-1 fontText">
-                                <p><?= $value['text_loc'] ?></p>
+                                <p><?= $value['plane_description'] ?></p>
                             </div>
                             <div class="row justify-content-evenly fontText m-0 p-0">
                                 <ul class="col-lg-4 col-11  ">
-                                    <li class="fs-5">Taille :<?= $value['size'] ?></li>
-                                    <li class="fs-5">Places :<?= $value['place'] ?></li>
-                                    <li class="fs-5">portée :<?= $value['scope'] ?></li>
+                                    <li class="fs-5">Taille :<?= $value['plane_size'] ?></li>
+                                    <li class="fs-5">portée :<?= $value['plane_scope'] ?></li>
                                 </ul>
                                 <ul class="col-lg-4 col-11  mx-3 ">
-                                    <li class="fs-5">Autonomie :<?= $value['autonomy'] ?></li>
-                                    <li class="fs-5">Altitude max :<?= $value['altitude'] ?></li>
-                                    <li class="fs-5">Vitesse Max :<?= $value['speed'] ?></li>
+                                    <li class="fs-5">Altitude max :<?= $value['plane_altitude'] ?></li>
+                                    <li class="fs-5">Vitesse Max :<?= $value['plane_speed'] ?></li>
                                 </ul>
                             </div>
 
                         </div>
                         <div class="col-lg-3 col-12 p-0 m-0  d-lg-block d-none">
-                            <img class="imageFlotte" src="../public/img/<?= $value['planeImgVal'] ?>" class="card-img-top" alt="...">
+                            <img class="imageFlotte" src="../public/img/<?= $value['plane_picture'] ?>" class="card-img-top" alt="...">
                         </div>
                     </div>
                 </div>
@@ -106,6 +103,9 @@ require_once '../data/table.php';
         $start++;
         ?>
     <?php } ?>
+
+
+    
 
     <p class="text-center fs-3 presentationColor fontTitle">1 Simulateur ALSIM AL250</p>
 

@@ -168,20 +168,27 @@ class Plane extends Database
         $query->execute();
     }
 
+    // retourne les informations d'un seul patient par rapport a l'ID renseigné
     public function returnOnePlane($plane_id)
     {
+        // crée une instance PDO
         $pdo = parent::connectDb();
 
+        // je crée une requete pour afficher les informations d'un avion
         $sql = "SELECT * FROM `plane` WHERE `plane_id` =:plane_id";
 
+        // Je prépare la requete a l'aide de la methode prepare
         $query = $pdo->prepare($sql);
 
+        // je lie les valeurs des parametres aux marqueurs nominatifs
         $query->bindValue(':plane_id', $plane_id, PDO::PARAM_STR);
 
+        // une j'execute la requete a l'aide de la methode execute
         $query->execute();
 
         $result = $query->fetchAll();
 
+        // je return le resultat
         return $result[0];
     }
 

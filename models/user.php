@@ -221,17 +221,17 @@ class Users extends DataBase
         return $result[0];
     }
 
-    public function modifUser(string $lasnameUser, string $firstnameUser,string $userpassword, string $phoneNumberUser, string $roleUser, string $usersId): void
+    public function modifUser(string $lasnameUser, string $firstnameUser, string $phoneNumberUser, string $roleUser, string $usersId): void
     {
         $pdo = parent::connectDb();
 
-        $sql = "UPDATE `user` SET `user_lastname`=:user_lastname ,`user_firstname`=:user_firstname ,`user_password`=:user_password,`user_phone`=:user_phone,`role_id_role` =:role_id_role  WHERE `user_id` =:user_id";
+        $sql = "UPDATE `user` SET `user_lastname`=:user_lastname ,`user_firstname`=:user_firstname ,`user_phone`=:user_phone,`role_id_role` =:role_id_role  WHERE `user_id` =:user_id";
 
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':user_lastname', $lasnameUser, PDO::PARAM_STR);
         $query->bindValue(':user_firstname', $firstnameUser, PDO::PARAM_STR);
-        $query->bindValue(':user_password', $userpassword, PDO::PARAM_STR);
+        
         $query->bindValue(':user_phone', $phoneNumberUser, PDO::PARAM_STR);
         $query->bindValue(':role_id_role', $roleUser, PDO::PARAM_STR);
         $query->bindValue(':user_id', $usersId, PDO::PARAM_STR);

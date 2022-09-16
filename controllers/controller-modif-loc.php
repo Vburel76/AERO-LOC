@@ -1,18 +1,18 @@
 <?php
-if (!isset($_SESSION['user'])) {
-    header("Location: connection.php");
+if (!isset($_SESSION['user']) || $_SESSION['user']['role_id_role'] != 1) {
+    header("Location: login.php");
     exit;
-}
+  }
 
 require_once '../config.php';
 require_once '../models/database.php';
-require_once '../models/validate-location.php';
-require_once '../models/users.php';
+require_once '../models/location.php';
+require_once '../models/user.php';
 
 
 
 $showForm = true;
-$error = [];
+$errors = [];
 $regexName = "/^[a-zA-Zéèêë]+$/";
 
 var_dump($_GET);
@@ -64,11 +64,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $locationId = intval($_GET['locationId']);
         
 
-        $locationModif = new Validate();
+        $locationModif = new Location();
 
         $locationModif->modifLocValidate( $locationStart,  $locationEnd, $locationDeparture,  $locationArrival, $locationId);
     }
 }
-$locObj = new Validate();
+$locObj = new Location();
 
 $infoLocation = $locObj->returnOnelocation($_GET['locationId']);

@@ -20,7 +20,7 @@ require_once('../controllers/controllers-plane-list.php');
                         <th class="pictureSize" scope="col">#</th>
                         <th class="pictureSize" scope="col">image</th>
                         <th class="pictureSize" scope="col">Nom</th>
-                        <th class="pictureSize" scope="col">Taille</th>
+                        <th class="pictureSize" scope="col">Description</th>
                         <th class="pictureSize" scope="col"></th>
                         <th class="pictureSize" scope="col"></th>
                         <th class="pictureSize" scope="col"></th>
@@ -46,6 +46,33 @@ require_once('../controllers/controllers-plane-list.php');
 
                 </tbody>
             </table>
+
+
+            <?php
+            foreach ($planes as $value) { ?>
+
+                <!-- Modal -->
+                <div class="modal fade" id="plane-<?= $value['plane_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez l'avion <?= $value['plane_name'] ?> </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid" src="../public/img/<?= $value['plane_picture'] ?>" srcset="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>
+                                <form action="" method="POST">
+                                    <button type="button" class="btn btn-primary" name="delete" onclick="document.location='plane-list.php?delete=<?= $value['plane_id'] ?>'">oui</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
 
         </div>
     </div>

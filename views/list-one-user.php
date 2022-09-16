@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 require_once('../controllers/controller-list-one-user.php');
 require_once('../config.php');
 require_once('../models/database.php');
-require_once('../models/users.php');
+require_once('../models/user.php');
 ?>
 
 <?php include '../elements/meta.php' ?>

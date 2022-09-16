@@ -1,5 +1,9 @@
 <?php include '../elements/meta.php';
 var_dump($_SESSION);
+
+if (!isset($_SESSION['user'])) {
+    session_start();
+}
 ?>
 
 <body>
