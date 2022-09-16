@@ -1,8 +1,5 @@
 <?php
-if (!isset($_SESSION['user']) || $_SESSION['user']['role_id_role'] != 1) {
-    header("Location: login.php");
-    exit;
-}
+
 
 require_once '../config.php';
 require_once '../models/database.php';
@@ -75,12 +72,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_user_firstname = htmlspecialchars($_POST['firstname']);
         $_user_mail = htmlspecialchars($_POST['mail']);
         $_user_phone = htmlspecialchars($_POST['mobile']);
-        $_user_password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+        $_user_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
 
         $userObj = new Users();
 
-        $userObj->addUser($_user_lastname, $_user_firstname,$_user_mail,$_user_phone, $_user_password);
+        if ($userObj->checkIfMailExists($_POST['mail'])) {
 
-        header('Location: login.php');
+            $errors['mail'] = 'existe deja';
+        } else {
+
+             $userObj->addUser($_user_lastname, $_user_firstname, $_user_mail, $_user_phone, $_user_password);
+            header('Location: login.php');
+        }
+
     }
 }

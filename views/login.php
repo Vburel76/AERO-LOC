@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+?>
+
 <?php include '../elements/meta.php' ?>
 
 <?php 
@@ -5,7 +10,7 @@
 
 if (!isset($_SESSION['user'])) {
 }
-var_dump($_SESSION);
+
 
 require_once '../controllers/controller-login.php';
 
