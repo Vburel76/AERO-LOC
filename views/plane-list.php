@@ -7,7 +7,11 @@ require_once('../controllers/controllers-plane-list.php');
 
 
 <body class="d-flex flex-column min-vh-100">
-    <a href="admin.php">Retour</a>
+<div class="row m-0 p-0">
+        <div class="col-lg-2 m-2">
+            <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+        </div>
+    </div>
 
     <p class="fs-2 text-center m-5">LISTE DES AVIONS</p>
 
@@ -32,13 +36,13 @@ require_once('../controllers/controllers-plane-list.php');
                     foreach ($planes as $value) { ?>
                         <tr>
                             <td class="align-middle"><?= $value['plane_id'] ?></td>
-                            <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="image d'avion"></td>
-                            <td class="align-middle "><?= $value['plane_name'] ?></td>
+                            <td class="align-middle"><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="image d'avion"></td>
+                            <td class="align-middle"><?= $value['plane_name'] ?></td>
                             <td class="align-middle"><?= $value['plane_loc_description'] ?></td>
-                            <td class="align-middle"><a href="modif-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn btn-warning">Modifier</a></td>
-                            <td class="align-middle"><a href="return-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn btn-primary">Info</a></td>
-                            <td>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#plane-<?= $value['plane_id'] ?>">Supprimer</button>
+                            <td class="align-middle"><a href="modif-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn buttontheme">Modifier</a></td>
+                            <td class="align-middle"><a href="return-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn buttontheme">Info</a></td>
+                            <td class="align-middle">
+                                <button type="button" class="btn buttontheme" data-bs-toggle="modal" data-bs-target="#plane-<?= $value['plane_id'] ?>">Supprimer</button>
                             </td>
                         </tr>
 
@@ -54,7 +58,7 @@ require_once('../controllers/controllers-plane-list.php');
                 <!-- Modal -->
                 <div class="modal fade" id="plane-<?= $value['plane_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content modalTheme">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez l'avion <?= $value['plane_name'] ?> </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -63,9 +67,9 @@ require_once('../controllers/controllers-plane-list.php');
                                 <img class="img-fluid" src="../public/img/<?= $value['plane_picture'] ?>" srcset="">
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>
+                                <button type="button" class="btn buttontheme" data-bs-dismiss="modal">non</button>
                                 <form action="" method="POST">
-                                    <button type="button" class="btn btn-primary" name="delete" onclick="document.location='plane-list.php?delete=<?= $value['plane_id'] ?>'">oui</button>
+                                    <button type="button" class="btn buttontheme" name="delete" onclick="document.location='plane-list.php?delete=<?= $value['plane_id'] ?>'">oui</button>
                                 </form>
 
                             </div>

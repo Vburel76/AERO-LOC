@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 require_once '../data/table.php';
 require_once '../controllers/controllers-fly.php';
 ?>
@@ -13,27 +17,16 @@ require_once '../controllers/controllers-fly.php';
 
 
 
-    <section class="row justify-content-center backgroundFly m-0 p-0">
-        <article class="col-lg-8 text-light p-3">
+    <section class="row justify-content-center m-0 p-0">
+        <article class="col-lg-10 col-12  p-3">
             <p class="text-center fs-2  fontTitle ">Louer un de nos avion</p>
             <p class="fs-4 textFly fontText ">Aero-Loc propose un large choix de modèle d'avion qui sera mis à votre disposition en fonction de votre experience , sinon un réentrainement sur le modèle souhaité vous sera proposez.Dans tous les cas une heures de vol avec instructeur sera obligatoire pour tous les nouveaux clients.Votre sécuritée est notre principale préocupation.Une licence de pilotage en cours de validitée est évidament indispensable pour pouvoir louer nos avions,nous vous proposons également d'obtenir cette licence.</p>
             <p class="fs-4 fontText ">Nos avions sont régulierements entretenus selon la reglementation en vigueur en France.<br>Si vous avez la moindre question vous pouvez nous contacter.</p>
-            <p class="fs-4 fontText "> La flotte se compose de :</p>
-            <div class="row">
-                <div class="col-12">
-                    <li>1 Robin DR400</li>
-                    <li>1 Socata TBM-700</li>
-                    <li>2 G120A</li>
-                    <li>2 Cirrus SR-22</li>
-                    <li>1 Cessna 172</li>
-                    <li>1 Cessna 182</li>
-                </div>
-            </div>
         </article>
 
     </section>
 
-    <h1 class="text-center mt-4 fontTitle presentationColor m-5">Présentation de la flotte</h1>
+    <h1 class="text-center mt-4 fontTitle m-4">Présentation de la flotte</h1>
 
     <?php
     $start = 1;
@@ -105,12 +98,12 @@ require_once '../controllers/controllers-fly.php';
     <?php } ?>
 
 
-    
 
-    <p class="text-center fs-3 presentationColor fontTitle">1 Simulateur ALSIM AL250</p>
 
-    <div class="row justify-content-center m-2">
-        <div class="col-lg-5 col-12 fontText mt-4">
+    <p class="text-center fs-3  fontTitle">1 Simulateur ALSIM AL250</p>
+
+    <section class="row justify-content-center m-3">
+        <article class="col-lg-5 col-12 textSimulateur fontText mt-3  m-0">
             <p>Nous vous proposons également un simulateur Certifié FNPT II pour pouvoir vous entrainez le mieux possible et ainsi pouvoir etre opérationel rapidement.Modélisant nos 6 avions, pratiquez aussi bien des tours de pistes que des approches RNP, de jour, de nuit, avec toutes les conditions météos possibles.</p>
 
             <li>Simulateur cabine : Angle de vue HD 250° Horizontal, 49° vertical. Manche de pilotage type “volant” 3 axes avec moteurs couples sur tous les axes. Deux siéges en cabine.</li>
@@ -120,18 +113,11 @@ require_once '../controllers/controllers-fly.php';
             <li>Avionique: Instrumentation classique ou glass-cockpit, selon la configuration choisie avant le vol.</li>
             <br>
             <li>Certification : Le simulateur est “certifiable” auprès de la DSAC. Pour l’instant les démarches n’ont pas été engagées donc les heures de vols ne peuvent pas être enregistrées dans le carnet de vol du pilote.</li>
-        </div>
+        </article>
         <div class="col-lg-5 col-12 mt-3">
-            <img class="imageFlotte" src="../public/img/simulateur.jpg" alt="">
+            <img class="imageFlotte" src="../public/img/simulateur.jpg" alt="simulateur.jpg">
         </div>
-    </div>
-
-
-
-
-
-
-
+    </section>
 
     <?php include '../elements/footer.php' ?>
     <!-- JavaScript Bundle with Popper -->

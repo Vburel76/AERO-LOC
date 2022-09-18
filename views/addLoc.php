@@ -8,8 +8,13 @@ if (!isset($_SESSION['user'])) {
 ?>
 
 <body class="d-flex flex-column min-vh-100">
+    <div class="row">
+        <div class="col-lg-2 m-2">
+            <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+        </div>
+    </div>
 
-<h1 class="text-center mt-5">AJOUTER UNE LOCATION</h1>
+    <h1 class="text-center mt-5">AJOUTER UNE LOCATION</h1>
 
     <form class="mt-5" action="#" method="POST" novalidate>
         <div class="row justify-content-center m-0 p-0 ">

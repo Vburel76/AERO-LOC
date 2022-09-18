@@ -1,11 +1,11 @@
-<?php 
+<?php
 session_start();
 
 ?>
 
 <?php include '../elements/meta.php' ?>
 
-<?php 
+<?php
 
 
 if (!isset($_SESSION['user'])) {
@@ -27,7 +27,13 @@ require_once '../controllers/controller-login.php';
         Aero-Loc
     </header>
 
-    <a href="formulaire-user.php">Crée un compte</a>
+    <div class="row m-0 p-0">
+        <div class="col-lg-2 m-2">
+            <a href="formulaire-user.php" type="submit" class="btn fontColor btnSize m-1 p-1">Créer un compte</a>
+            <a href="landing.php" type="submit" class="btn fontColor btnSize m-1 p-1">Retour à l'accueil</a>
+        </div>
+
+    </div>
 
     <form action="#" method="POST">
         <div class="row justify-content-center m-4 p-0 ">

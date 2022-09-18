@@ -39,19 +39,13 @@ require_once('../controllers/controller-list-user.php');
                             <td class="pt-3"><?= $value['user_lastname'] ?></td>
                             <td class="pt-3"><?= $value['user_firstname'] ?></td>
                             <td class="pt-3"><?= $value['user_phone'] ?></td>
-                            <td><a href="modif-user.php?users=<?= $value['user_id'] ?>" class="btn btn-primary">modification</a></td>
-                            <td><a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn btn-secondary">+ d'info</a></td>
+                            <td><a href="modif-user.php?users=<?= $value['user_id'] ?>" class="btn buttontheme">modification</a></td>
+                            <td><a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttontheme">+ d'info</a></td>
                             <td>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
+                                <button type="button" class="btn buttontheme" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
                             </td>
                         </tr>
-
-
-
                     <?php } ?>
-
-
-
                 </tbody>
             </table>
             <?php
@@ -59,16 +53,19 @@ require_once('../controllers/controller-list-user.php');
 
                 <!-- Modal -->
                 <div class="modal fade" id="user-<?= $value['user_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
+                    <div class="modal-dialog ">
+                        <div class="modal-content modalTheme">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez ? </h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez <?= $value['user_lastname'].' '.$value['user_firstname'] ?> ? </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
+                            <div class="modal-body">
+                                Confirmez vous la suppression ?
+                            </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>
+                                <button type="button" class="btn buttontheme " data-bs-dismiss="modal">non</button>
                                 <form action="" method="POST">
-                                    <button type="button" class="btn btn-primary" name="delete" value="<?= $value['user_id'] ?>" onclick="document.location='user-list.php?user_id=<?= $value['user_id'] ?>'">oui</button>
+                                    <button type="button" class="btn buttontheme" name="delete" value="<?= $value['user_id'] ?>" onclick="document.location='user-list.php?user_id=<?= $value['user_id'] ?>'">oui</button>
                                 </form>
 
                             </div>

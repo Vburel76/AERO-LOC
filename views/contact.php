@@ -1,10 +1,10 @@
 <?php include '../elements/meta.php' ?>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php include '../elements/navBar.php' ?>
 
     <div class="row m-3 p-0 justify-content-center">
-        <div class="col-lg-8 col-10">
+        <div class="col-lg-8 col-10 mt-5">
             <p class="mb-3 fs-4 fontTitle textColor2 text-center">Formulaire de contact</p>
             <form>
                 <div class="row">

@@ -207,26 +207,12 @@ header {
     font-family: 'Archivo Black', sans-serif;
 }
 
-.backgroundFly{
-    background:linear-gradient( rgb(49, 127, 196),rgb(49, 127, 196)) , url('../img/imageFond.jpg');
-    background-position: center;
-    background-repeat: no-repeat ;
-    background-size: cover;
-    background-blend-mode: darken;
-}
 
 
 .textFly{
     margin-top: 1rem;  
 }
 
-.formationBackground{
-    background-image : url('../img/DSC01106.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 38rem;
-    
-}
 
 .borderColor{
     border: 3px solid  rgb(31, 80, 123);
@@ -304,6 +290,10 @@ header {
     font-weight: bold;
 }
 
+.modalTheme{
+    border: 3px solid rgb(31, 80, 123) ;
+}
+
 .buttontheme:hover{
     background-color: rgb(31, 80, 123);
     color: white;
@@ -312,6 +302,18 @@ header {
 .pictureModifLocation{
     width: 18rem;
 }
+
+.textSimulateur{
+    font-size: 19px;
+}
+
+.FormationImg{
+    background-image: url("../img/imgFlotte2.jpg");
+    height: 25rem;
+    background-repeat: no-repeat ;
+}
+
+
 
 
 

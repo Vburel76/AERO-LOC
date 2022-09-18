@@ -1,4 +1,9 @@
 <?php
+
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 require_once '../data/table.php';
 require_once '../controllers/controller-pagePlane.php';
 
@@ -16,8 +21,7 @@ require_once '../controllers/controller-pagePlane.php';
     <section class="row m-0 p-5 justify-content-center">
         <article class="col-lg-8">
             <p class="fs-3 text-center textColor2 fontTitle">Louer un avion privé depuis l'aéroport d'octeville</p>
-            <p class="fontText">Vous pouvez louer nos avions pour un ou plusieurs jours. Le préalable indispensable est une heure de vol avec un instructeur d'Aero-Loc afin de valider vos capacités au pilotage de l'appareil.</p>
-            <p class="fontText">Pour annuler une réservation il est posible de le faire jusqu'à 24 heures avant le vol .</p>
+            <p class="fontText">Vous pouvez louer nos avions pour un ou plusieurs jours. Le préalable indispensable est une heure de vol avec un instructeur d'Aero-Loc afin de valider vos capacités au pilotage de l'appareil. Pour annuler une réservation il est posible de le faire jusqu'à 24 heures avant le vol .</p>
         </article>
     </section>
 
@@ -27,14 +31,14 @@ require_once '../controllers/controller-pagePlane.php';
         </div>
     </div>
 
-    <p class="fs-3 fontTitle textColor2 text-center mt-4 ">Les locations</p>
+    <p class="fs-3 fontTitle  text-center mt-4 ">Les locations</p>
 
     <div class="d-flex justify-content-center">
         <div class="row col-lg-10 col-12 m-0 p-0 justify-content-center ">
 
 
             <?php foreach ($planes as $value) { ?>
-                <div class="card mt-4 m-5 cardColor row col-lg-3">
+                <div class="card mt-4 m-5 cardColor row col-lg-3 col-10">
                     <div class="col-12 col-lg-12 d-flex flex-column ">
                         <img class="pictureCard card-img-top mt-2" src="../public/img/<?= $value['plane_picture'] ?>" alt="image d avion">
                     </div>

@@ -5,9 +5,9 @@ if (!isset($_SESSION['user'])) {
 require_once('../controllers/controller-compte.php');
 require_once('../config.php');
 require_once('../models/database.php');
-require_once('../models/users.php');
+require_once('../models/user.php');
 ?>
-<?php 
+<?php
 include '../elements/meta.php';
 var_dump($user);
 ?>
@@ -21,7 +21,7 @@ var_dump($user);
 
     <?php include '../elements/navBar.php' ?>
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center m-0 p-0">
         <div class="col-lg-5 fs-4 mt-3 text-center ">
 
             <p class="m-3">Nom : <?= strtoupper($user['user_lastname']); ?></p>
@@ -29,7 +29,11 @@ var_dump($user);
 
         </div>
 
-        <a class="text-center" href="profil.php">Modifier le profil</a>
+        <div class="row justify-content-center m-0 p-0">
+            <div class="col-lg-3 text-center col-10 m-3">
+                <a class="p-2 buttontheme" href="profil.php">Modifier le profil</a>
+            </div>
+        </div>
     </div>
 
 

@@ -17,12 +17,12 @@ if (!isset($_SESSION['user'])) {
     <main>
 
 
-        <section class="row  section1 mt-5 m-0 p-0">
+        <section class="row justify-content-center  section1 mt-5 m-0 p-0">
 
-            <article class="col-12 col-lg-6  text-center ">
-                <img class="imageArticle1" src="../public/img/aeroclub.jpg" alt="">
+            <article class="col-12 col-lg-5  text-center ">
+                <img class="imageArticle1" src="../public/img/aeroclub.jpg" alt="aeroclub">
             </article>
-            <article class="col m-3 p-0 ">
+            <article class="col-lg-5 m-3 p-0 ">
                 <p class="fs-5 mt-3 fontText ">AeroLoc n'est pas une compagnie aérienne, mais une société de location d'aéronefs (coque nue) sans pilote pour réaliser vos vols privés et vols d'affaires à prix abordables.<br>
                     La société est fondée en 2015 et implantée près de la ville du Havre.
                     Nous offrons également la possibilité de passer le LAPL et le PPL licences de pilotage obligatoire pour pouvoir piloter un de nos avions .<br>
@@ -36,63 +36,54 @@ if (!isset($_SESSION['user'])) {
         </section>
 
         <div class="row  mt-4 m-0 p-0 justify-content-center  text-center ">
-            <h2 class="presentationColor fs-1 fontTitle">Informations</h2>
+            <h2 class=" fs-1 fontTitle">Informations</h2>
         </div>
-
-
 
         <div class="row  m-0 p-0 section1 justify-content-center">
 
-
-            <div class="row mt-3 justify-content-evenly m-3">
-                <div class="col-lg-5 col-12 info text-center p-0 ">
+            <section class="row mt-3 justify-content-center m-3">
+                <article class="col-lg-5 col-12 info text-center p-0 m-1">
                     <p class="fs-4 Textcolor fontTitle">Location</p>
                     <p class="mt-4 fontText">Aero-Loc propose une large gamme de service et notament la location d’avion.
                         En effet apres avoir remplir certaines conditions qui vous serons communiquées , il sera possible de louer un avion pour les itinéraires de votre choix.
                     </p>
-                </div>
-                <div class="col-lg-5 col-12 info text-center p-0 ">
-                    <div class="col">
-                        <p class="fs-4 Textcolor fontTitle">Certification</p>
-                        <p class="fontText">Aero-Loc propose également le passsage des certifications necessaires pour pouvoir piloter.
-                        </p>
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8 col-10 ">
-                                <img class="image3" src="../public/img/PPL.jpg" alt="">
-                            </div>
+                </article>
+                <article class="col-lg-5 col-12 info text-center p-0 m-1 ">
+                    <p class="fs-4 Textcolor fontTitle">Certification</p>
+                    <p class="fontText">Aero-Loc propose également le passsage des certifications necessaires pour pouvoir piloter.
+                    </p>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-10 ">
+                            <img class="image3" src="../public/img/PPL.jpg" alt="">
                         </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </section>
 
-
-            <div>
-
-            </div>
 
             <div class="text-center mt-5">
-                <img width="60%" src="../public/img/headerimgInformation.jpg" alt="">
+                <img width="60%" src="../public/img/headerimgInformation.jpg" alt="imgInformation">
             </div>
             <div class="row  justify-content-center mt-2">
 
                 <div class="row justify-content-center ">
-                    <div class="col-lg-8">
-                        <p class="fs-4 text-center mt-2 presentationColor fontTitle">A propos des tarifs </p>
+                    <div class="col-lg-10">
+                        <p class="fs-4 text-center mt-2 fontTitle">A propos des tarifs </p>
                     </div>
 
                 </div>
 
 
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 m-2 fontText">
+                <section class="row justify-content-center">
+                    <article class="col-lg-10 m-2 fontText">
                         <p>Vous trouverez un aperçus de nos tarif ci dessous.Pour plus de renseignement sur les démarches administratifs ou la demande de devis nos chargés d'affaires sont à disposition toute la semaine 7/7. </p>
                         <p>Pour toute autre demande vous pouvez nous contacter via notre numero ou le formulaire de contact.</p>
-                    </div>
-                </div>
+                    </article>
+                </section>
             </div>
 
-            <div class="row justify-content-center  imgRate">
-                <div class="col-lg-10 Textcolor p-3">
+            <section class="row justify-content-center  imgRate">
+                <article class="col-lg-10 Textcolor p-3">
                     <p class="text-center mb-5 fs-5 text-light fontTitle ">De quoi est constitué le prix de la location d'un avion ?</p>
                     <li class="text-light fontText">Premièrement la location de l'avion coque nue (c'est a dire sans pilote)</li>
                     <br>
@@ -100,24 +91,24 @@ if (!isset($_SESSION['user'])) {
                     <li class="text-light fontText">Le modèle de l'avion. En effet le tarif ne sera pas le même entre deux avion de taille et puissance différente. </li>
                     <li class="text-light fontText">La distance entre le lieu de depart et celui d'arrivée. Plus la distance est élevée plus la consommation en carburant et l'entretien de l'avion sera nécessaire. </li>
                     <li class="text-light fontText">Les taxes d'aéroport (Différent d'un aeroport à l'autre).</li>
-                </div>
-            </div>
+                </article>
+            </section>
 
-            <div class="row justify-content-center fontText">
-                <div class="col-lg-5  mt-3">
-                    <p class="text-center presentationColor fs-5">Le prix pour la location d'un avion d'un petit avion commence à 300 €/HT (coque nue) au quel s'ajoute des couts ci dessus.</p>
-                </div>
-                <div class="col-lg-5  mt-3">
-                    <p class="text-center presentationColor fs-5">Le prix de location pour un avion de grande taille commence à 550€/HT (coque nue) au quel s'ajoute des couts ci dessus. </p>
-                </div>
-            </div>
+            <section class="row justify-content-center fontText">
+                <article class="col-lg-5 mt-3">
+                    <p class="text-center  fs-5">Le prix pour la location d'un avion d'un petit avion commence à 300 €/HT (coque nue) au quel s'ajoute des couts ci dessus.</p>
+                </article>
+                <article class="col-lg-5 mt-3">
+                    <p class="text-center fs-5">Le prix de location pour un avion de grande taille commence à 550€/HT (coque nue) au quel s'ajoute des couts ci dessus. </p>
+                </article>
+            </section>
 
-            <div class="row  mt-4 m-0 p-0 justify-content-center presentationColor ">
-                <h3 class=" col-lg-6 col-10  p-2 text-center fontTitle">Galerie Photo</h3>
-            </div>
+            
+                <h3 class="m-3 p-2 text-center fontTitle">Galerie Photo</h3>
+            
 
-            <div class="row m-0 p-0 justify-content-center mb-3 mt-3">
-                <div class="col-lg-9 col-9 ">
+            <section class="row m-0 p-0 justify-content-center mb-3 mt-3">
+                <article class="col-lg-10 col-9 ">
                     <div class="row justify-content-center">
 
                         <div class="col-10 col-lg-4 p-0">
@@ -157,9 +148,9 @@ if (!isset($_SESSION['user'])) {
                         </div>
 
                     </div>
-                </div>
-            </div>
-
+                </article>
+            </section>
+        </div>
     </main>
 
 
