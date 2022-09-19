@@ -131,6 +131,23 @@ class Location extends DataBase
         return $result;
     }
 
+    public function returnUserValidate($user_id)
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "SELECT * FROM `location` INNER JOIN `user` ON `user_id_user` = `user_id` INNER JOIN `plane` ON `plane_id_plane` = `plane_id` WHERE `user_id` =:user_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+
+        $query->execute();
+
+        $result = $query->fetchAll();
+
+        return $result;
+    }
+
     public function returnOnelocation($location_id)
     {
         $pdo = parent::connectDb();

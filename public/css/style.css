@@ -13,9 +13,6 @@ header {
     color: rgb(31, 80, 123) ;
 }
 
-
-
-
 /* ---NavBar--- */
 
 .textNavbar {
@@ -31,6 +28,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 2;
+    height: 3rem;
    
 }
 
@@ -44,13 +42,13 @@ header {
 
 /* ---icon--- */
 .iconProfile {
-    width: 5rem;
-    height: 5rem;
+    width: 2rem;
+    height: 2rem;
 
 }
 
 .taille {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: white;
 
 }
@@ -304,13 +302,31 @@ header {
 }
 
 .textSimulateur{
-    font-size: 19px;
+    font-size: 1rem;
 }
 
 .FormationImg{
     background-image: url("../img/imgFlotte2.jpg");
     height: 25rem;
     background-repeat: no-repeat ;
+}
+
+.textJust{
+    text-align: justify;
+}
+
+.flyWidth{
+    width: 100%;
+    height: 14rem;
+}
+.flyPlane{
+    width: 100%;
+    height: 100%;
+}
+
+.flyBackground{
+    background-image: url("../img/DSC01106.jpg");
+    height: 28rem;
 }
 
 

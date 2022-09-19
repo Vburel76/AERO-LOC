@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (!isset($_SESSION['user'])) {
+    session_start();
+}
 require_once('../controllers/controller-list-one-location.php');
 ?>
 
@@ -9,7 +11,7 @@ require_once('../controllers/controller-list-one-location.php');
 <body class="d-flex flex-column min-vh-100">
     <div class="row">
         <div class="col-lg-2 m-2">
-            <a href="list-location.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+            <a href="reservation.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
         </div>
     </div>
 

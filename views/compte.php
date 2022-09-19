@@ -25,7 +25,7 @@ var_dump($user);
         <div class="col-lg-5 fs-4 mt-3 text-center ">
 
             <p class="m-3">Nom : <?= strtoupper($user['user_lastname']); ?></p>
-            <p class="m-3">Prénom : Valentin</p>
+            <p class="m-3">Prénom : <?= strtoupper($user['user_firstname']); ?></p>
 
         </div>
 
