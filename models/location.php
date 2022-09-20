@@ -96,18 +96,18 @@ class Location extends DataBase
     }
 
 
-    //  methode pour ajouter un rendez vous (en cours de création)
-    public function addvalidate(string $_location_start, string $_location_end, string $_location_departure, string $_location_arrival, string $_user_id, string $_plane_id): void
+    //  methode pour ajouter un rendez vous 
+    public function addvalidate(string $_location_start, string $_location_periode, string $_location_departure, string $_location_arrival, string $_user_id, string $_plane_id): void
     {
         $pdo = parent::connectDb();
 
-        $sql = "INSERT INTO `location` (`location_start`,`location_end`,`location_departure`, `location_arrival`,`user_id_user`,`plane_id_plane`)
-        VALUES (:start, :end, :departure, :arrival, :userId, :planeId)";
+        $sql = "INSERT INTO `location` (`location_start`,`location_periode`,`location_departure`, `location_arrival`,`user_id_user`,`plane_id_plane`)
+        VALUES (:start, :periode, :departure, :arrival, :userId, :planeId)";
 
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':start', $_location_start, PDO::PARAM_STR);
-        $query->bindValue(':end', $_location_end, PDO::PARAM_STR);
+        $query->bindValue(':periode', $_location_periode, PDO::PARAM_STR);
         $query->bindValue(':departure', $_location_departure, PDO::PARAM_STR);
         $query->bindValue(':arrival', $_location_arrival, PDO::PARAM_STR);
         $query->bindValue(':userId', $_user_id, PDO::PARAM_INT);
@@ -140,6 +140,44 @@ class Location extends DataBase
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+
+        $query->execute();
+
+        $result = $query->fetchAll();
+
+        return $result;
+    }
+
+    public function checkIfDateExists(string $start): bool
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "SELECT `location_start` FROM `location` WHERE `location_start` = :start";
+        
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':start', $start, PDO::PARAM_STR);
+
+        $query->execute();
+
+        $result = $query->fetchAll();
+
+        if (count($result) != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function returnPlaneValidate($plane_id)
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "SELECT `location_start`,`location_periode`,`location_departure`,`location_arrival` FROM `location` INNER JOIN `plane` ON `plane_id_plane` = `plane_id` WHERE `plane_id` =:plane_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':plane_id', $plane_id, PDO::PARAM_STR);
 
         $query->execute();
 

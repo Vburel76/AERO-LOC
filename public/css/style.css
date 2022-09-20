@@ -28,9 +28,9 @@ header {
     top: 0;
     width: 100%;
     z-index: 2;
-    height: 3rem;
-   
 }
+
+
 
 
 @media screen and (max-width: 480px) {
@@ -42,8 +42,8 @@ header {
 
 /* ---icon--- */
 .iconProfile {
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 5rem;
 
 }
 
@@ -164,6 +164,16 @@ header {
 .Textcolor {
     background-color: rgb(31, 80, 123);
     color: white;
+}
+
+.TextcolorPagePlane {
+    background-color: rgb(31, 80, 123);
+    color: white;
+}
+
+.TextcolorPagePlane:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease-out;
 }
 
 .textColor2 {
@@ -306,7 +316,7 @@ header {
 }
 
 .FormationImg{
-    background-image: url("../img/imgFlotte2.jpg");
+    background-image: url("../img/imgF.jpg");
     height: 25rem;
     background-repeat: no-repeat ;
 }
