@@ -15,10 +15,27 @@ header {
 
 /* ---NavBar--- */
 
-.textNavbar {
-    margin-left: 5rem;
+.backgroundNavbar {
+    margin-left: 2rem;
     margin-right: 2rem;
+}
+.textNavBar{
     color: white;
+}
+.textNavBar:hover{
+    color: black;
+}
+
+.textUserNavBar{
+    color: white;
+}
+.backgroundNavbar:hover{
+    
+    background-color: white;
+}
+
+.sizeLiNavBar{
+    width: 10rem;
 }
 
 
@@ -44,9 +61,11 @@ header {
 .iconProfile {
     width: 5rem;
     height: 5rem;
-
 }
 
+.iconBorder:hover{
+    border: 1px solid white;
+}
 .taille {
     font-size: 1.5rem;
     color: white;

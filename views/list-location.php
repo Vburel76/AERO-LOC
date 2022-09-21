@@ -40,10 +40,10 @@ require_once('../controllers/controller-list-location.php');
                             <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
                             <td class="align-middle "><?= $value['plane_id'] ?></td>
                             <td class="align-middle "><?= $value['location_start'] ?></td>
-                            <td class="align-middle"><?= $value['location_end'] ?></td>
+                            <td class="align-middle"><?= $value['location_periode'] ?></td>
                             <td class="align-middle"><?= $value['user_lastname'] ?></td>
                             <td class="align-middle"><?= $value['user_firstname'] ?></td>
-                            <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn btn-primary">Info</a></td>
+                            <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn buttontheme">Info</a></td>
                         </tr>
 
                     <?php } ?>

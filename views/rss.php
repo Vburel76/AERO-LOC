@@ -22,7 +22,7 @@ require_once "../controllers/rss-controllers.php";
                 <img src="<?= $flux1[$i]->enclosure['url'] ?>" alt="<?= $flux1[$i]->enclosure['url'] ?>" class="imgSize my-2">
                 <p class="text-start px-1"><b><?= $flux1[$i]->title ?></b></p>
                 <p class="text-start px-1"><?= utf8_encode(strftime($date_format, strtotime($flux1[$i]->pubDate))) ?></p>
-                <a href="<?= $flux1[$i]->link ?>" target="_blank" class="btn Textcolor text-center mb-3">Ouvrir l'article</a>
+                <a href="<?= $flux1[$i]->link ?>" target="_blank" class="btn TextcolorPagePlane text-center mb-3">Ouvrir l'article</a>
             </div>
         <?php } ?>
 

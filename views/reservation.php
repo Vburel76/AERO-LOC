@@ -26,7 +26,7 @@ require_once('../controllers/controller-reservation.php');
                         <th class="pictureSize" scope="col">Image</th>
                         <th class="pictureSize" scope="col">Avion</th>
                         <th class="pictureSize" scope="col">date de départ</th>
-                        <th class="pictureSize" scope="col">date d'arrivée</th>
+                        <th class="pictureSize" scope="col">Période de la journée</th>
                         <th class="pictureSize" scope="col">Nom</th>
                         <th class="pictureSize" scope="col">Prénom</th>
                         <th class="pictureSize" scope="col"></th>
@@ -41,10 +41,10 @@ require_once('../controllers/controller-reservation.php');
                             <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
                             <td class="align-middle "><?= $value['plane_id'] ?></td>
                             <td class="align-middle "><?= $value['location_start'] ?></td>
-                            <td class="align-middle"><?= $value['location_end'] ?></td>
+                            <td class="align-middle"><?= $value['location_periode'] ?></td>
                             <td class="align-middle"><?= $value['user_lastname'] ?></td>
                             <td class="align-middle"><?= $value['user_firstname'] ?></td>
-                            <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn btn-primary">Info</a></td>
+                            <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn buttontheme">Info</a></td>
                         </tr>
 
                     <?php } ?>

@@ -34,8 +34,13 @@ require_once '../controllers/controller-list-one-location.php';
                             </span>
                             <input id="modifDateLoc" name="modifDateLoc" class="tailleInput " type="date" value="<?= $infoLocation['location_start'] ?>">
 
-                            <label for="endModifLoc" class="mt-2">Date d'arrivée</label><span class="ms-2 text-danger"><?= isset($errors['endModifLoc']) ? $errors['endModifLoc'] : '' ?></span>
-                            <input id="endModifLoc" name="endModifLoc" class="tailleInput" type="date" value="<?= $infoLocation['location_end'] ?>">
+                            <label for="periode" class="mt-2">Période de la journée</label><span class="ms-2 text-danger"><?= isset($errors['periode']) ? $errors['periode'] : '' ?></span>
+                            <select  name="periode" id="periode" value="<?= $infoLocation['location_periode'] ?>">
+                                <option value="">--Période de la journée--</option>
+                                <option value="Matin" <?= $infoLocation['location_periode'] == "Matin" ?  'selected': '' ?>>Matin</option>
+                                <option value="Après-Midi" <?= $infoLocation['location_periode'] == "Après-Midi" ?  'selected': '' ?>>Après-Midi</option>
+                                <option value="Journée" <?= $infoLocation['location_periode'] == "Journée" ?  'selected': '' ?>>Journée</option>
+                            </select>
 
 
                             <label for="departureModifLoc" class="mt-2">lieu de départ</label><span class="ms-2 text-danger"><?= isset($errors['departureModifLoc']) ? $errors['departureModifLoc'] : '' ?></span>

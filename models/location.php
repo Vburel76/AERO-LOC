@@ -153,7 +153,7 @@ class Location extends DataBase
         $pdo = parent::connectDb();
 
         $sql = "SELECT `location_start` FROM `location` WHERE `location_start` = :start";
-        
+
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':start', $start, PDO::PARAM_STR);
@@ -203,16 +203,16 @@ class Location extends DataBase
         return $result[0];
     }
 
-    public function modifLocValidate(string $locationStart, string $locationEnd, string $locationDeparture, string $locationArrival, int $locationId): void
+    public function modifLocValidate(string $locationStart, string $locationPeriode, string $locationDeparture, string $locationArrival, int $locationId): void
     {
         $pdo = parent::connectDb();
 
-        $sql = "UPDATE `location` SET `location_start`=:location_start ,`location_end`=:location_end ,`location_departure`=:location_departure,`location_arrival`=:location_arrival  WHERE `location_id` =:location_id";
+        $sql = "UPDATE `location` SET `location_start`=:location_start ,`location_periode`=:location_periode ,`location_departure`=:location_departure,`location_arrival`=:location_arrival  WHERE `location_id` =:location_id";
 
-        $query = $pdo->prepare($sql);$
+        $query = $pdo->prepare($sql);
 
         $query->bindValue(':location_start', $locationStart, PDO::PARAM_STR);
-        $query->bindValue(':location_end', $locationEnd, PDO::PARAM_STR);
+        $query->bindValue(':location_pediode', $locationPeriode, PDO::PARAM_STR);
         $query->bindValue(':location_departure', $locationDeparture, PDO::PARAM_STR);
         $query->bindValue(':location_arrival', $locationArrival, PDO::PARAM_STR);
         $query->bindValue(':location_id', $locationId, PDO::PARAM_INT);
@@ -220,7 +220,27 @@ class Location extends DataBase
         $query->execute();
     }
 
-    public function deleteLocation(string $locationId): void
+    /**
+     * Permet de changer le statut de la réservation
+     * 
+     * @param string $locationValidation La valeur à rentrer dans la bdd
+     * @param int $locationId L'id de la location
+     */
+    public function ChangeValidation(string $locationValidation, int $locationId)
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "UPDATE `location` SET `location_validate` = :location_validate WHERE `location_id` =:location_id";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':location_validate', $locationValidation, PDO::PARAM_BOOL);
+        $query->bindValue(':location_id', $locationId, PDO::PARAM_INT);
+
+        $query->execute();
+    }
+
+    public function deleteLocation(string $locationId)
     {
         $pdo = parent::connectDb();
 

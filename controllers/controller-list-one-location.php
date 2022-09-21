@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (!isset($_SESSION['user'])) {
   header("Location: login.php");
   exit;
@@ -23,6 +23,11 @@ if (isset($_GET['delete'])) {
   header("Location: list-location.php");
 }
 
+
 $attribut = new Location();
 
 $location = $attribut->returnOnelocation($_GET['locationId']);
+
+if (isset($_POST['change'])) {
+  $validation = $attribut->ChangeValidation(1, $_GET['locationId']);
+}

@@ -17,6 +17,7 @@ $regexName = "/^[a-zA-Zéèêë]+$/";
 
 var_dump($_GET);
 
+
 // je declenche mes vérifications lorsque j'appui sur le bouton validé car ça declenche un POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -58,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Je stock les valeurs des inputs dans des variables en effectuant un htmlspecialchars afin de m'assurer que les données soient safe
         $locationStart = htmlspecialchars($_POST['modifDateLoc']);
-        $locationEnd = htmlspecialchars($_POST['endModifLoc']);
+        $locationPeriode = htmlspecialchars($_POST['periode']);
         $locationDeparture = htmlspecialchars($_POST['departureModifLoc']);
         $locationArrival = htmlspecialchars($_POST['arrivalModifLoc']);
         $locationId = intval($_GET['locationId']);
@@ -66,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $locationModif = new Location();
 
-        $locationModif->modifLocValidate( $locationStart,  $locationEnd, $locationDeparture,  $locationArrival, $locationId);
+        $locationModif->modifLocValidate( $locationStart,  $locationPeriode, $locationDeparture,  $locationArrival, $locationId);
     }
 }
 $locObj = new Location();
