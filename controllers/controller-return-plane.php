@@ -4,7 +4,6 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role_id_role'] != 1) {
   exit;
 }
 
-var_dump($_POST);
 require_once '../config.php';
 require_once '../models/database.php';
 require_once '../models/plane.php';

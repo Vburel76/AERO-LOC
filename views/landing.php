@@ -1,12 +1,13 @@
-<?php include '../elements/meta.php';
 
-
+<?php
 if (!isset($_SESSION['user'])) {
     session_start();
 }
-?>
 
-<body>
+?>
+<?php include '../elements/meta.php';?>
+
+
 
     <header class="text-center m-0 d-lg-block d-none">
         <!-- <h1>Aero-Loc</h1> -->
@@ -23,12 +24,12 @@ if (!isset($_SESSION['user'])) {
                 <img class="imageArticle1" src="../public/img/aeroclub.jpg" alt="aeroclub">
             </article>
             <article class="col-lg-5 m-3 p-0 ">
-                <p class="fs-5 textJust mt-3 fontText ">AeroLoc n'est pas une compagnie aérienne, mais une société de location d'aéronefs (coque nue) sans pilote pour réaliser vos vols privés et vols d'affaires à prix abordables.<br>
+                <p class=" textJust mt-3 fontText ">AeroLoc n'est pas une compagnie aérienne, mais une société de location d'aéronefs (coque nue) sans pilote pour réaliser vos vols privés et vols d'affaires à prix abordables.<br>
                     La société est fondée en 2015 et implantée près de la ville du Havre.
                     Nous offrons également la possibilité de passer le LAPL et le PPL licences de pilotage obligatoire pour pouvoir piloter un de nos avions .<br>
                     Retrouver sur notre site toutes les informations sur la location et le passage des licences de pilotage.
                 </p>
-                <p class="fs-5 fontText">un vol urgent ou un vol vers une destination peu desservie, notre équipe affrète vous accompagne tout au long de la préparation de votre vol.
+                <p class=" fontText">un vol urgent ou un vol vers une destination peu desservie, notre équipe affrète vous accompagne tout au long de la préparation de votre vol.
                 </p>
 
                 </p>
@@ -156,12 +157,5 @@ if (!isset($_SESSION['user'])) {
         </div>
     </main>
 
-
     <?php include '../elements/footer.php' ?>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../dist/js/lightbox-plus-jquery.js"></script>
-    <script src="../dist/js/lightbox.js"></script>
-</body>
-
-</html>
+    

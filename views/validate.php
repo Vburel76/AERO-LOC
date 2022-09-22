@@ -8,7 +8,6 @@ require_once '../controllers/controller-validate.php';
 
 <?php include '../elements/meta.php' ?>
 
-<body>
     <header class="text-center">
         Aero-Loc
     </header>
@@ -77,9 +76,8 @@ require_once '../controllers/controller-validate.php';
         </div>
 
         <div class="row justify-content-center">
-
             <div class="col-lg-11">
-                <p class="text-danger">Crénaux non disponible :</p>
+                <p class="text-danger">Date non disponible :</p>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -105,8 +103,3 @@ require_once '../controllers/controller-validate.php';
     </div>
 
     <?php include '../elements/footer.php' ?>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body>
-
-</html>

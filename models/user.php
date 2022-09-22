@@ -114,7 +114,11 @@ class Users extends DataBase
     }
 
 
-    // Methode pour ajouter un utilisateur a l'aide d'un formulaire 
+    /**
+     * Permet d'ajouter un utilisateur dans la bdd'
+     * 
+     * 
+     */
 
     public function addUser(string $_user_lastname, string $_user_firstname, string $_user_mail, string $_user_phone, string $_user_password): void
     {
@@ -130,18 +134,23 @@ class Users extends DataBase
         $query->bindValue(':mail', $_user_mail, PDO::PARAM_STR);
         $query->bindValue(':phonenumber', $_user_phone, PDO::PARAM_STR);
         $query->bindValue(':password', $_user_password, PDO::PARAM_STR);
-        
+
 
         $query->execute();
     }
 
 
+    /**
+     * Permet de vérifier si le mail existe dans la BDD 
+     * 
+     * 
+     */
     public function checkIfMailExists(string $mail): bool
     {
         $pdo = parent::connectDb();
 
         $sql = "SELECT `user_mail` FROM `user` WHERE `user_mail` = :mail";
-        
+
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':mail', $mail, PDO::PARAM_STR);
@@ -157,14 +166,19 @@ class Users extends DataBase
         }
     }
 
-    public function checkPassword(string $mail) : array
+    /**
+     * Permet de vérifier si le mot de passe correspond au mail de l'utilisateur dans la BDD 
+     * 
+     * 
+     */
+    public function checkPassword(string $mail): array
     {
 
-        $pdo = parent::connectDb() ;
+        $pdo = parent::connectDb();
 
-        $sql = "SELECT * FROM `user` WHERE `user_mail` = :mail";  
+        $sql = "SELECT * FROM `user` WHERE `user_mail` = :mail";
 
-        $query= $pdo->prepare($sql);
+        $query = $pdo->prepare($sql);
 
         $query->bindValue(':mail', $mail, PDO::PARAM_STR);
 
@@ -172,10 +186,13 @@ class Users extends DataBase
 
         $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
-
     }
 
-
+    /**
+     * Permet de d'afficher la liste des utilisateurs
+     * 
+     * 
+     */
     public function returnUsers()
     {
         $pdo = parent::connectDb();
@@ -191,6 +208,11 @@ class Users extends DataBase
         return $result;
     }
 
+    /**
+     * Permet de supprimer un utilisateur grace à son ID 
+     * 
+     * 
+     */
     public function deleteUser(string $userid): void
     {
         $pdo = parent::connectDb();
@@ -204,6 +226,11 @@ class Users extends DataBase
         $query->execute();
     }
 
+    /**
+     * Permet d'afficher un utilisateur grace à son ID  
+     * 
+     * 
+     */
     public function returnOneUser($user_id)
     {
         $pdo = parent::connectDb();
@@ -221,6 +248,12 @@ class Users extends DataBase
         return $result[0];
     }
 
+
+    /**
+     * Permet de modifier un utilisateur en fonction de son ID  
+     * 
+     * 
+     */
     public function modifUser(string $lasnameUser, string $firstnameUser, string $phoneNumberUser, string $roleUser, string $usersId): void
     {
         $pdo = parent::connectDb();
@@ -231,7 +264,6 @@ class Users extends DataBase
 
         $query->bindValue(':user_lastname', $lasnameUser, PDO::PARAM_STR);
         $query->bindValue(':user_firstname', $firstnameUser, PDO::PARAM_STR);
-        
         $query->bindValue(':user_phone', $phoneNumberUser, PDO::PARAM_STR);
         $query->bindValue(':role_id_role', $roleUser, PDO::PARAM_STR);
         $query->bindValue(':user_id', $usersId, PDO::PARAM_STR);

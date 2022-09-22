@@ -10,7 +10,7 @@ require_once '../models/database.php';
 require_once '../models/location.php';
 require_once '../models/plane.php';
 
-var_dump($_SESSION);
+
 $showForm = true;
 $errors = [];
 $regexName = "/^[ a-zA-Zéèêë]+$/";

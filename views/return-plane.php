@@ -13,7 +13,11 @@ require_once('../models/plane.php');
 
 
 <body class="d-flex flex-column min-vh-100">
-    <a href="plane-list.php">Retour</a>
+    <div class="row m-0 p-0">
+        <div class="col-lg-2 m-2">
+            <a href="plane-list.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+        </div>
+    </div>
 
     <p class="fs-2 text-center m-5">DETAIL AVION</p>
 

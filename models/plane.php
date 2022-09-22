@@ -103,7 +103,13 @@ class Plane extends Database
         $this->_plane_picture_val = $_plane_picture_val;
     }
 
-    public function addPlane(string $_plane_name, int $_plane_size, int $_plane_scode, int $_plane_autonomy, int $_plane_altitude,int $_speed,string $_plane_picture,string $_plane_description, string $_plane_loc_description): void
+
+    /**
+     * Permet d'ajouter un avion grace a un formulaire
+     * 
+     * 
+     */
+    public function addPlane(string $_plane_name, int $_plane_size, int $_plane_scode, int $_plane_autonomy, int $_plane_altitude, int $_speed, string $_plane_picture, string $_plane_description, string $_plane_loc_description): void
     {
         $pdo = parent::connectDb();
 
@@ -119,13 +125,18 @@ class Plane extends Database
         $query->bindValue(':altitude', $_plane_altitude, PDO::PARAM_INT);
         $query->bindValue(':speed', $_speed, PDO::PARAM_INT);
         $query->bindValue(':picture', $_plane_picture, PDO::PARAM_STR);
-        $query->bindValue(':text_description',$_plane_description, PDO::PARAM_STR);
-        $query->bindValue(':text_description_loc',$_plane_loc_description, PDO::PARAM_STR);
-        
+        $query->bindValue(':text_description', $_plane_description, PDO::PARAM_STR);
+        $query->bindValue(':text_description_loc', $_plane_loc_description, PDO::PARAM_STR);
+
 
         $query->execute();
     }
 
+    /**
+     * Permet d'afficher la liste des avions de la BDD  
+     * 
+     * 
+     */
     public function returnPlane()
     {
         // création d'une instance pdo via la fonction du parent
@@ -146,7 +157,12 @@ class Plane extends Database
         return $result;
     }
 
-    public function modifPlane(string $_plane_name, int $_plane_size, int $_plane_scode, int $_plane_autonomy, int $_plane_altitude,int $_speed,string $_plane_picture,string $_plane_description, string $_plane_loc_description, string $_planeId): void
+    /**
+     * Permet de modifier les informations d'un avion par rapport à son id   
+     * 
+     * 
+     */
+    public function modifPlane(string $_plane_name, int $_plane_size, int $_plane_scode, int $_plane_autonomy, int $_plane_altitude, int $_speed, string $_plane_picture, string $_plane_description, string $_plane_loc_description, string $_planeId): void
     {
         $pdo = parent::connectDb();
 
@@ -168,7 +184,11 @@ class Plane extends Database
         $query->execute();
     }
 
-    // retourne les informations d'un seul patient par rapport a l'ID renseigné
+    /**
+     * Permet d'afficher les informations de l'avion par raport à son ID  
+     * 
+     * 
+     */
     public function returnOnePlane($plane_id)
     {
         // crée une instance PDO
@@ -192,6 +212,12 @@ class Plane extends Database
         return $result[0];
     }
 
+
+    /**
+     * Permet de supprimer un avion  
+     * 
+     * 
+     */
     public function deletePlane(string $planeid): void
     {
         $pdo = parent::connectDb();
@@ -205,6 +231,3 @@ class Plane extends Database
         $query->execute();
     }
 }
-
-
-

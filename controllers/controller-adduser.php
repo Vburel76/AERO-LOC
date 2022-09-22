@@ -12,8 +12,6 @@ $errors = [];
 $regexName = "/^[a-zA-Zéèêë]+$/";
 $regexPhone = "/^[0-9]{10}+$/";
 
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
@@ -82,18 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $errors['mail'] = 'existe deja';
         } else {
 
-
-
             $userObj->addUser($_user_lastname, $_user_firstname, $_user_mail, $_user_phone, $_user_password);
-           
-            $_SESSION['swal'] = [
-                'icon' => 'success',
-                'title' => 'Création',
-                'text' => 'Votre compte est bien crée'
-            ];
-
-            header('Location: login.php');
-            exit;
+            header('Location: admin.php');
         }
     }
 }

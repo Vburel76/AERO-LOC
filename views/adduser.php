@@ -5,44 +5,43 @@ if (!isset($_SESSION['user'])) {
     session_start();
 }
 
-require_once '../controllers/controller-user.php';
+require_once '../controllers/controller-adduser.php';
 ?>
 
-<body class="d-flex flex-column min-vh-100">
-    <div class="row">
+    <div class="row m-0 p-0">
         <div class="col-lg-2 m-2">
             <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
         </div>
     </div>
 
-    <h1 class="text-center mt-5">AJOUTER UN UTILISATEUR</h1>
+    <p class="text-center mt-5 fontTitle">AJOUTER UN UTILISATEUR</p>
 
     <form class="mt-5" action="#" method="POST" novalidate>
         <div class="row justify-content-center m-0 p-0 ">
             <div class="col-lg-6">
                 <div class="row justify-content-center m-0 p-0 pt-2 rounded roundColor">
                     <div class="col-lg-5 p-1 rounded">
-                        <label for="nameUser">Nom</label><span class="ms-2 text-danger"><?= isset($errors['nameUser']) ? $errors['nameUser'] : '' ?></span>
-                        <input id="nameUser" name="nameUser" class="tailleInput " type="text" value="">
+                        <label for="lastname" class="fontText">Nom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>
+                        <input id="lastname" name="lastname" class="tailleInput " type="text" value="">
 
-                        <label for="firstnameUser" class="mt-2">prénom</label><span class="ms-2 text-danger"><?= isset($errors['firstnameUser']) ? $errors['firstnameUser'] : '' ?></span>
-                        <input id="firstnameUser" name="firstnameUser" class="tailleInput" type="text" value="">
-
-
-                        <label for="phoneUser" class="mt-2">mobile</label><span class="ms-2 text-danger"><?= isset($errors['phoneUser']) ? $errors['phoneUser'] : '' ?></span>
-                        <input name="phoneUser" id="phoneUser" class="tailleInput" type="text" value="">
+                        <label for="firstname" class="mt-2 fontText">prénom</label><span class="ms-2 text-danger"><?= isset($errors['firstname']) ? $errors['firstname'] : '' ?></span>
+                        <input id="firstname" name="firstname" class="tailleInput" type="text" value="">
 
 
-                        <label for="mailUser">mail</label><span class="ms-2 text-danger"><?= isset($errors['mailUser']) ? $errors['mailUser'] : '' ?></span>
-                        <input id="mailUser" name="mailUser" class="tailleInput" type="tel" value="">
+                        <label for="mobile" class="mt-2 fontText">mobile</label><span class="ms-2 text-danger"><?= isset($errors['mobile']) ? $errors['mobile'] : '' ?></span>
+                        <input name="mobile" id="mobile" class="tailleInput" type="text" value="">
+
+
+                        <label for="mail" class="fontText">mail</label><span class="ms-2 text-danger"><?= isset($errors['mail']) ? $errors['mail'] : '' ?></span>
+                        <input id="mail" name="mail" class="tailleInput" type="tel" value="">
 
 
 
-                        <label for="passwordUser" class="">Mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['passwordUser']) ? $errors['passwordUser'] : '' ?></span>
-                        <input id="passwordUser" name="passwordUser" class="tailleInput" type="text" value="">
+                        <label for="password" class="fontText">Mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
+                        <input id="password" name="password" class="tailleInput" type="password" value="">
 
-                        <label for="comfirmePasswordUser" class="">Confirmation mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['comfirmePasswordUser']) ? $errors['comfirmePasswordUser'] : '' ?></span>
-                        <input id="comfirmePasswordUser" name="comfirmePasswordUser" class="tailleInput" type="text">
+                        <label for="confirmPassword" class="fontText">Confirmation mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['confirmPassword']) ? $errors['confirmPassword'] : '' ?></span>
+                        <input id="confirmPassword" name="confirmPassword" class="tailleInput" type="password">
 
 
 
@@ -59,17 +58,7 @@ require_once '../controllers/controller-user.php';
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </form>
 
     <?php include '../elements/footer.php' ?>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../dist/js/lightbox-plus-jquery.js"></script>
-    <script src="../dist/js/lightbox.js"></script>
-</body>
-
-</html>

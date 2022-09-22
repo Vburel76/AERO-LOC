@@ -6,8 +6,7 @@ require_once('../controllers/controller-list-location.php');
 <?php include '../elements/meta.php' ?>
 
 
-<body class="d-flex flex-column min-vh-100">
-    <div class="row">
+    <div class="row m-0 p-0">
         <div class="col-lg-2 m-2">
             <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
         </div>
@@ -28,6 +27,7 @@ require_once('../controllers/controller-list-location.php');
                         <th class="pictureSize" scope="col">date d'arrivée</th>
                         <th class="pictureSize" scope="col">Nom</th>
                         <th class="pictureSize" scope="col">Prénom</th>
+                        <th class="pictureSize" scope="col">Statut</th>
                         <th class="pictureSize" scope="col"></th>
 
                     </tr>
@@ -38,11 +38,12 @@ require_once('../controllers/controller-list-location.php');
                         <tr>
                             <td class="align-middle"><?= $value['location_id'] ?></td>
                             <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
-                            <td class="align-middle "><?= $value['plane_id'] ?></td>
+                            <td class="align-middle "><?= $value['plane_name'] ?></td>
                             <td class="align-middle "><?= $value['location_start'] ?></td>
                             <td class="align-middle"><?= $value['location_periode'] ?></td>
                             <td class="align-middle"><?= $value['user_lastname'] ?></td>
                             <td class="align-middle"><?= $value['user_firstname'] ?></td>
+                            <td class="align-middle"><?= $value['location_validate'] == 1 ? '<p class="text-success">validé</p>' : '<p class="text-danger">En attente</p>'  ?></td>
                             <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn buttontheme">Info</a></td>
                         </tr>
 
@@ -54,12 +55,4 @@ require_once('../controllers/controller-list-location.php');
         </div>
     </div>
 
-
     <?php include '../elements/footer.php' ?>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../dist/js/lightbox-plus-jquery.js"></script>
-    <script src="../dist/js/lightbox.js"></script>
-</body>
-
-</html>

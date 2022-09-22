@@ -5,18 +5,18 @@
 
     <div class="row m-3 p-0 justify-content-center">
         <div class="col-lg-8 col-10 mt-5">
-            <p class="mb-3 fs-4 fontTitle textColor2 text-center">Formulaire de contact</p>
+            <p class="mb-3 fs-4 fontTitle text-center">Formulaire de contact</p>
             <form>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label class="textColor2 fontText" for="firstName">Prénom</label>
+                        <label class=" fontText" for="firstName">Prénom</label>
                         <input type="text" class="form-control cardColor" id="firstname" placeholder="" value="" required>
                         <div class="invalid-feedback">
                             Valid first name is required.
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="textColor2 fontText" for="lastName">Nom</label>
+                        <label class=" fontText" for="lastName">Nom</label>
                         <input type="text" class="form-control cardColor" id="lastname" placeholder="" value="" required>
                     </div>
                     <div class="invalid-feedback">
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="textColor2 fontText" for="email">Email</label>
+                    <label class=" fontText" for="email">Email</label>
                     <input type="email" class="form-control cardColor" id="email" placeholder="you@example.com">
                     <div class="invalid-feedback">
                         Please enter a valid email address for shipping updates.
@@ -33,17 +33,17 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="textColor2 fontText" for="object">Objet</label>
+                    <label class=" fontText" for="object">Objet</label>
                     <input type="text" class="form-control cardColor" id="object" placeholder="" value="" required>
                 </div>
 
                 <div class="form-group">
-                    <label class="textColor2 fontText" for="exampleFormControlTextarea1">Message</label>
+                    <label class=" fontText" for="exampleFormControlTextarea1">Message</label>
                     <textarea class="form-control cardColor" id="exampleFormControlTextarea1" rows="12"></textarea>
                 </div>
 
                 <div class="row justify-content-center m-3">
-                        <button class="btn btn-primary col-lg-3 Textcolor">Envoyer</button>
+                        <button class="btn col-lg-3 TextcolorPagePlane">Envoyer</button>
                 </div>
 
             </form>

@@ -28,11 +28,6 @@ $paramUpload = [
     'extend' => 'webp'
 ];
 
-var_dump($_FILES);
-var_dump($_POST);
-
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Si le client ne clique pas sur upload, il sera en error 4, et donc pas de test
@@ -156,4 +151,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $userObj = new Plane();
 $infoPlane = $userObj->returnOnePlane($_GET['planeId']);
 
-var_dump($errors);

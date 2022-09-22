@@ -96,7 +96,16 @@ class Location extends DataBase
     }
 
 
-    //  methode pour ajouter un rendez vous 
+    /**
+     * Permet d'ajouter une réservation  
+     * 
+     * @param string $_location_start ID de la date de souhaitée.
+     * * @param string $_location_periode ID de la période souhaitée.
+     * * @param string $_location_departure ID du lieu de départ.
+     * * @param string $_location_arrival ID du lieu d'arrivée.
+     * * @param int $_user_id ID du user.
+     * * @param int $_plane_id ID de l'avion.
+     */
     public function addvalidate(string $_location_start, string $_location_periode, string $_location_departure, string $_location_arrival, string $_user_id, string $_plane_id): void
     {
         $pdo = parent::connectDb();
@@ -116,6 +125,11 @@ class Location extends DataBase
         $query->execute();
     }
 
+    /**
+     * Permet d'afficher la liste de toutes les reservations  
+     * 
+     * 
+     */
     public function returnValidate()
     {
         $pdo = parent::connectDb();
@@ -131,6 +145,12 @@ class Location extends DataBase
         return $result;
     }
 
+
+    /**
+     * Permet d'afficher les reservations de l'utilisateur connecté'  
+     * 
+     * @param int $user_id ID du user.
+     */
     public function returnUserValidate($user_id)
     {
         $pdo = parent::connectDb();
@@ -148,6 +168,12 @@ class Location extends DataBase
         return $result;
     }
 
+
+    /**
+     * Permet de verifier si la date de départ existe dans la BDD  
+     * 
+     * @param string $start variable de la date de depart.
+     */
     public function checkIfDateExists(string $start): bool
     {
         $pdo = parent::connectDb();
@@ -169,6 +195,12 @@ class Location extends DataBase
         }
     }
 
+
+    /**
+     * Permet d'afficher les informations de la reservation en fonction de son ID 
+     * 
+     * @param int $plane_id L'id de l'avion'.
+     */
     public function returnPlaneValidate($plane_id)
     {
         $pdo = parent::connectDb();
@@ -186,6 +218,11 @@ class Location extends DataBase
         return $result;
     }
 
+    /**
+     * Permet d'afficher les informations de la reservation en fonction de son ID 
+     * 
+     * @param int $location_id L'id de la location.
+     */
     public function returnOnelocation($location_id)
     {
         $pdo = parent::connectDb();
@@ -203,6 +240,11 @@ class Location extends DataBase
         return $result[0];
     }
 
+    /**
+     * Permet de modifier la reservation 
+     * 
+     * 
+     */
     public function modifLocValidate(string $locationStart, string $locationPeriode, string $locationDeparture, string $locationArrival, int $locationId): void
     {
         $pdo = parent::connectDb();
@@ -240,6 +282,12 @@ class Location extends DataBase
         $query->execute();
     }
 
+
+    /**
+     * Permet de supprimer la réservation
+     * 
+     * @param int $locationId L'id de la location
+     */
     public function deleteLocation(string $locationId)
     {
         $pdo = parent::connectDb();

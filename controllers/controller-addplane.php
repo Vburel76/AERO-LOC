@@ -26,8 +26,7 @@ $paramUpload = [
     'extend' => 'webp'
 ];
 
-var_dump($_FILES);
-var_dump($_POST);
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -131,9 +130,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             header('Location: admin.php');
 
-
-
-            
         } else {
             $errors['fileToUpload'] = $resultUploadImage['messageError'];
         }

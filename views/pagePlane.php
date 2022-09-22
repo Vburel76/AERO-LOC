@@ -1,17 +1,14 @@
 <?php
+require_once '../data/table.php';
+require_once '../controllers/controller-pagePlane.php';
 
 if (!isset($_SESSION)) {
     session_start();
 }
-
-require_once '../data/table.php';
-require_once '../controllers/controller-pagePlane.php';
-
 ?>
 
 <?php include '../elements/meta.php' ?>
 
-<body>
     <header class="text-center d-none">
         Aero-Loc
     </header>
@@ -60,8 +57,3 @@ require_once '../controllers/controller-pagePlane.php';
         </div>
     </div>
     <?php include '../elements/footer.php' ?>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body>
-
-</html>

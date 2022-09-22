@@ -199,9 +199,6 @@ header {
     color: rgb(31, 80, 123);
 }
 
-.footerSize {
-    height: 7rem;
-}
 
 /* test */
 
@@ -357,6 +354,7 @@ header {
     background-image: url("../img/DSC01106.jpg");
     height: 28rem;
 }
+
 
 
 
