@@ -33,7 +33,7 @@ require_once '../controllers/controller-validate.php';
                             <div class="col-lg-5">
                                 <label for="dateStart" class="fontText textColor2" for="start">Date de départ :</label><br>
                                 <span class="text-danger"><?= isset($errors['dateStart']) ? $errors['dateStart'] : '' ?></span>
-                                <input id="dateStart" name="dateStart" class="mt-3 fs-5" type="date" id="start" name="trip-start" min=<?php echo date('Y-m-d') ?>>
+                                <input id="dateStart" name="dateStart" class="mt-3 fs-5" type="date" id="start" name="trip-start" min=<?= date('Y-m-d')?>>
                             </div>
                             <div class="col-lg-5">
                                 <label for="dateEnd" class="fontText textColor2" for="start">Période de la journée :</label><br>
@@ -77,7 +77,7 @@ require_once '../controllers/controller-validate.php';
 
         <div class="row justify-content-center">
             <div class="col-lg-11">
-                <p class="text-danger">Date non disponible :</p>
+                <p class="text-danger">Date indisponible :</p>
                 <table class="table table-striped">
                     <thead>
                         <tr>

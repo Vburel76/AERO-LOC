@@ -9,7 +9,6 @@ require_once('../models/user.php');
 ?>
 <?php
 include '../elements/meta.php';
-var_dump($user);
 ?>
 
 

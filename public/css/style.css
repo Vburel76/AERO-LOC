@@ -7,10 +7,11 @@ header {
     height: 28rem;
     background-image: url("../img/louer_avion_taxi_aérien.jpg");
 }
+
 /* fin Header */
 
 .presentationColor {
-    color: rgb(31, 80, 123) ;
+    color: rgb(31, 80, 123);
 }
 
 /* ---NavBar--- */
@@ -19,22 +20,25 @@ header {
     margin-left: 2rem;
     margin-right: 2rem;
 }
-.textNavBar{
+
+.textNavBar {
     color: white;
 }
-.textNavBar:hover{
+
+.textNavBar:hover {
     color: black;
 }
 
-.textUserNavBar{
+.textUserNavBar {
     color: white;
 }
-.backgroundNavbar:hover{
-    
+
+.backgroundNavbar:hover {
+
     background-color: white;
 }
 
-.sizeLiNavBar{
+.sizeLiNavBar {
     width: 10rem;
 }
 
@@ -63,9 +67,10 @@ header {
     height: 5rem;
 }
 
-.iconBorder:hover{
+.iconBorder:hover {
     border: 1px solid white;
 }
+
 .taille {
     font-size: 1.5rem;
     color: white;
@@ -138,12 +143,12 @@ header {
     height: auto;
 }
 
-.imgFormation{
+.imgFormation {
     width: 60%;
     height: auto;
 }
 
-.imgLocation{
+.imgLocation {
     width: 100%;
 }
 
@@ -160,7 +165,7 @@ header {
 
 .tableauSize {
     width: 5rem;
-    color:  rgb(31, 80, 123);
+    color: rgb(31, 80, 123);
 }
 
 .FormularSize {
@@ -190,7 +195,7 @@ header {
     color: white;
 }
 
-.TextcolorPagePlane:hover{
+.TextcolorPagePlane:hover {
     transform: scale(1.2);
     transition: all 0.5s ease-out;
 }
@@ -212,153 +217,198 @@ header {
     cursor: pointer;
 }
 
- .galery {
+.galery {
     opacity: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.galeryImg{
+.galeryImg {
     width: 100%;
     height: auto;
 }
 
 
-.fontText{
+.fontText {
     font-family: 'Ubuntu', sans-serif;
 }
 
-.fontTitle{
+.fontTitle {
     font-family: 'Archivo Black', sans-serif;
 }
 
 
 
-.textFly{
-    margin-top: 1rem;  
+.textFly {
+    margin-top: 1rem;
 }
 
 
-.borderColor{
-    border: 3px solid  rgb(31, 80, 123);
+.borderColor {
+    border: 3px solid rgb(31, 80, 123);
 }
 
-.cardColor{
-    border: 2px solid  rgb(31, 80, 123) ;
+.cardColor {
+    border: 2px solid rgb(31, 80, 123);
     z-index: 1;
 
-} 
+}
 
 
 .imgSize {
     width: 90%;
     height: auto;
-    }
-
-
-    /* login */
-    .tailleInput{
-        width: 100%;
-    }
-
-    .fontStyle{
-        font-style: italic; 
-    }
-
-    .btnSize{
-        width: 100%;
-        color: white;
-    }
-
-    .fontColor{
-        background-color: rgb(31, 80, 123);
-        font-weight: bold;
-    }
-
-    /* admin button */
-    .fontTheme{
-      color: rgb(31, 80, 123);
-      border: 3px solid rgb(31, 80, 123) ;
-      font-weight: bold;
-      width: 15rem;
-      
-    }
-    .fontTheme:hover{
-        background-color: rgb(31, 80, 123);
-        color: white;
-    }
-
-    .roundColor{
-        border: 2px solid  rgb(31, 80, 123);
-    }
-
-/* fin login */
-
-.pictureLocation{
-    width: 100px;
 }
 
-.pictureOneLocation{
-    width: 25rem;
-}
-.pictureCard{
+
+/* login */
+.tailleInput {
     width: 100%;
 }
 
-.pictureModif{
-    width: 150px;
+.fontStyle {
+    font-style: italic;
 }
 
-.buttontheme{
-    color: rgb(31, 80, 123);
-    border: 3px solid rgb(31, 80, 123) ;
+.btnSize {
+    width: 100%;
+    color: white;
+}
+
+.fontColor {
+    background-color: rgb(31, 80, 123);
     font-weight: bold;
 }
 
-.modalTheme{
-    border: 3px solid rgb(31, 80, 123) ;
+/* admin button */
+.fontTheme {
+    color: rgb(31, 80, 123);
+    border: 3px solid rgb(31, 80, 123);
+    font-weight: bold;
+    width: 15rem;
+
 }
 
-.buttontheme:hover{
+.fontTheme:hover {
     background-color: rgb(31, 80, 123);
     color: white;
 }
 
-.pictureModifLocation{
+.roundColor {
+    border: 2px solid rgb(31, 80, 123);
+}
+
+/* fin login */
+
+.pictureLocation {
+    width: 100px;
+}
+
+.pictureOneLocation {
+    width: 25rem;
+}
+
+.pictureCard {
+    width: 100%;
+}
+
+.pictureModif {
+    width: 150px;
+}
+
+.buttontheme {
+    color: rgb(31, 80, 123);
+    border: 3px solid rgb(31, 80, 123);
+    font-weight: bold;
+}
+
+.modalTheme {
+    border: 3px solid rgb(31, 80, 123);
+}
+
+.buttontheme:hover {
+    background-color: rgb(31, 80, 123);
+    color: white;
+}
+
+.pictureModifLocation {
     width: 18rem;
 }
 
-.textSimulateur{
+.textSimulateur {
     font-size: 1rem;
 }
 
-.FormationImg{
+.FormationImg {
     background-image: url("../img/imgF.jpg");
-    height: 25rem;
-    background-repeat: no-repeat ;
+    height: 28rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
-.textJust{
+.textJust {
     text-align: justify;
 }
 
-.flyWidth{
+.flyWidth {
     width: 100%;
     height: 14rem;
 }
-.flyPlane{
+
+.flyPlane {
     width: 100%;
     height: 100%;
 }
 
-.flyBackground{
+.flyBackground {
     background-image: url("../img/DSC01106.jpg");
     height: 28rem;
+    background-attachment: fixed;
 }
 
+.PagePlaneBackgroung {
+    background-image: url("../img/location.jpg");
+    height: 22rem;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 
+.BGlanding {
+    background-image: url("../img/imageLanding.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
+/* list-location js */
 
-
-
-
-
+#myInput {
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid rgb(31, 80, 123); 
+    margin-bottom: 12px; 
+  }
+  
+  #myTable {
+    border-collapse: collapse; 
+    width: 100%; 
+    border: 1px solid #ddd; 
+    font-size: 18px; 
+  }
+  
+  #myTable th, #myTable td {
+    text-align: left; 
+    padding: 12px; 
+  }
+  
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+  }
+  /* fin list-location js */

@@ -45,9 +45,6 @@
                 <li class="nav-item me-3 sizeLiNavBar backgroundNavbar rounded">
                     <a class="nav-link textNavBar" href="pagePlane.php">Location</a>
                 </li>
-                <li class="nav-item me-3 sizeLiNavBar backgroundNavbar rounded">
-                    <a class="nav-link textNavBar" href="rss.php">Actu</a>
-                </li>
             </ul>
 
             <div class="d-lg-block d-none dropstart">

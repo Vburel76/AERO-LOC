@@ -27,7 +27,7 @@ if (!isset($_SESSION)) {
 
 <div class="row m-0 p-0 justify-content-center">
     <div class="col-lg-11 ">
-        <div class="row justify-content-evenly m-5">
+        <div class="row justify-content-evenly m-5 p-1 modalTheme">
             <?php foreach ($planes as $value) { ?>
 
                 <div class="col-lg-3 m-2 ">
