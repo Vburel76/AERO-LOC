@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $errors['departure'] = "champ obligatoire";
     } else if (!preg_match($regexName, $_POST['departure'])) {
       $errors['departure'] = "Mauvais format";
+    } else if ($_POST['departure'] === $_POST['arrival']) {
+      $errors['departure'] = "lieu de d'arrivée";
     }
   }
 
@@ -50,6 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $errors['arrival'] = "champ obligatoire";
     } else if (!preg_match($regexName, $_POST['arrival'])) {
       $errors['arrival'] = "Mauvais format";
+    } else if ($_POST['arrival'] === $_POST['departure']) {
+      $errors['arrival'] = "lieu de départ identique";
     }
   }
 
@@ -71,7 +75,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $validateObj = new Location();
 
       $validateObj->addvalidate($_location_start, $_location_periode, $_location_departure, $_location_arrival, $_user_id, $_plane_id);
+
+      $_SESSION['swal'] = [
+        'icon' => 'success',
+        'title' => 'Création',
+        'text' => 'Location validée'
+      ];
       header('Location: pagePlane.php');
+      exit;
     }
   }
 }

@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
 
 
 <header class="text-center m-0 d-lg-block d-none">
-    <!-- <h1>Aero-Loc</h1> -->
+    <h1 class="AeroLoc">Aero-Loc</h1>
 </header>
 
 <?php include '../elements/navBar.php' ?>
@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
 <main class="BGlanding">
 
     <div class="row m-0 p-0 justify-content-center">
-        <div class="col-lg-10  bg-light">
+        <div class="col-lg-11  bg-light">
 
 
             <section class="row justify-content-center  section1 mt-5 m-0 p-0">

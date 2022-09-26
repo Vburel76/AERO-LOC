@@ -14,14 +14,14 @@ include '../elements/meta.php';
 
 
 <body>
-    <header class="text-center">
-        Aero-Loc
+    <header class="text-center d-none d-lg-block">
+        <h1 class="AeroLoc">Aero-Loc</h1>
     </header>
 
     <?php include '../elements/navBar.php' ?>
 
-    <div class="row justify-content-center m-0 p-0">
-        <div class="col-lg-5 fs-4 mt-3 text-center ">
+    <div class="row justify-content-center m-5 p-0">
+        <div class="col-lg-5 fs-4 mt-3  ">
 
             <p class="m-3">Nom : <?= strtoupper($user['user_lastname']); ?></p>
             <p class="m-3">Prénom : <?= strtoupper($user['user_firstname']); ?></p>
@@ -29,7 +29,7 @@ include '../elements/meta.php';
         </div>
 
         <div class="row justify-content-center m-0 p-0">
-            <div class="col-lg-3 text-center col-10 m-3">
+            <div class="col-lg-3 col-10 m-3">
                 <a class="p-2 buttontheme" href="profil.php">Modifier le profil</a>
             </div>
         </div>

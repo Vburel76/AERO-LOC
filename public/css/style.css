@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 /* Header */
 
 header {
     height: 28rem;
-    background-image: url("../img/louer_avion_taxi_aérien.jpg");
+    background: rgba(0, 0, 0, 0.2) url("../img/louer_avion_taxi_aérien.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 28rem;
+    background-blend-mode: darken;
 }
 
 /* fin Header */
@@ -236,6 +240,14 @@ header {
     font-family: 'Archivo Black', sans-serif;
 }
 
+.AeroLoc{
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    font-size: 12rem;
+    margin-top: 7rem;
+
+}
+
 
 
 .textFly {
@@ -412,3 +424,8 @@ header {
     background-color: #f1f1f1;
   }
   /* fin list-location js */
+
+  .sizeLanding{
+    height: 28rem;
+  }
+

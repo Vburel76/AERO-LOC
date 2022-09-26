@@ -10,12 +10,7 @@ require_once '../controllers/controller-login.php';
     Aero-Loc
 </header>
 
-<div class="row m-0 p-0">
-    <div class="col-lg-2 m-2">
 
-
-    </div>
-</div>
 <p class="text-center fs-5 fontTitle">Connexion</p>
 <form action="#" method="POST">
     <div class="row justify-content-center m-4 p-0 ">
