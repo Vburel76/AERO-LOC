@@ -390,6 +390,8 @@ header {
     background-image: url("../img/imageLanding.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: grey;
+    background-blend-mode: screen;
 }
 
 /* list-location js */

@@ -179,7 +179,7 @@ if (!isset($_SESSION)) {
                     </div>
 
                     <div class=" row d-flex justify-content-center mt-3 mb-3 m-0 p-0">
-                        <button type="submit" class="btn col-lg-3 col-10 Textcolor buttonSize">Envoyer</button>
+                        <button type="submit" class="btn col-lg-3 col-10 TextcolorPagePlane buttonSize">Envoyer</button>
                     </div>
                 </div>
             </form>
