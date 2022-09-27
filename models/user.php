@@ -264,6 +264,9 @@ class Users extends DataBase
 
         $query = $pdo->prepare($sql);
 
+var_dump( $lasnameUser,  $firstnameUser, $userPictureProfil,  $phoneNumberUser, $passwordUser,  $roleUser,  $usersId);
+
+
         $query->bindValue(':user_lastname', $lasnameUser, PDO::PARAM_STR);
         $query->bindValue(':user_firstname', $firstnameUser, PDO::PARAM_STR);
         $query->bindValue(':user_picture_profil', $userPictureProfil, PDO::PARAM_STR);

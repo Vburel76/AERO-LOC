@@ -1,11 +1,15 @@
-<?php include '../elements/meta.php' ?>
-
 <?php
 if (!isset($_SESSION['user'])) {
     session_start();
 }
+?>
+
+<?php
 require_once '../controllers/controller-profil.php';
 ?>
+<?php include '../elements/meta.php' ?>
+
+
 
 <body>
 
@@ -23,7 +27,8 @@ require_once '../controllers/controller-profil.php';
                     <div class="row justify-content-center m-3 p-0 pt-2 rounded roundColor">
                         <div class="col-lg-5 col-10 p-1 rounded">
                             <label for="pictureProfil">Photo de Profil</label><span class="ms-2 text-danger"><?= isset($errors['pictureProfil']) ? $errors['pictureProfil'] : '' ?></span>
-                            <input id="pictureProfil" name="pictureProfil" class="tailleInput " type="file" value="">
+                            <img class=" img-fluid mt-3 mb-3" src="../public/img/<?= $infoUser['user_picture_profil'] ?>" alt="">
+                            <input id="pictureProfil" name="pictureProfil" class="tailleInput " type="file" value="<?= $infoUser['user_picture_profil']  ?>">
 
 
                             <label for="lastname">Nom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>

@@ -21,7 +21,7 @@ include '../elements/meta.php';
         <div class="col-lg-8 cardColor">
             <div class="row justify-content-center">
                 <div class="col-lg-4  mt-3">
-                    
+                    <img class="img-fluid" src="../public/img/<?= $user['user_picture_profil'] ?>" alt="" srcset="">
                 </div>
                 <div class="col-lg-4  mt-3">
                 <p class="m-3">Nom : <b><?= strtoupper($user['user_lastname']); ?></b></p>

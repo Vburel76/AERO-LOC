@@ -88,9 +88,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['password'])) {
 
-        if ($_POST['password'] == '') {
-            $errors['password'] = "champ obligatoire";
-        } else if ($_POST['confirmPassword'] == '' &&  $_POST['password'] != '') {
+
+        if ($_POST['confirmPassword'] == '' &&  $_POST['password'] != '') {
             $errors['confirmPassword'] = 'champ obligatoire';
         } else if ($_POST['confirmPassword'] != $_POST['password']) {
             $errors['password'] = "mot de passe différent";
@@ -102,38 +101,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (count($errors) == 0) {
 
         // Je stock les valeurs des inputs dans des variables en effectuant un htmlspecialchars afin de m'assurer que les données soient safe
-        $lasnameUser = htmlspecialchars($_POST['lastname']);
+        $lastnameUser = htmlspecialchars($_POST['lastname']);
         $firstnameUser = htmlspecialchars($_POST['firstname']);
         $passwordUser = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $phoneNumberUser = htmlspecialchars($_POST['mobile']);
         $usersId = htmlspecialchars($_SESSION['user']['user_id']);
 
         if ($_FILES['pictureProfil']['error'] == 4) {
-            $userObj = new Users();            
+            $userObj = new Users();
             $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
             var_dump($infoUser);
             $userPictureProfil = $infoUser['user_picture_profil'];
-            $userObj->modifUser($lasnameUser, $firstnameUser,$userPictureProfil ,$passwordUser, $phoneNumberUser, 2, $usersId);
+            $userObj->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, $passwordUser, 2, $usersId);
 
-            header('Location: compte.php');
+            // header('Location: compte.php');
         } else {
             $resultUploadImage = form::uploadImage('pictureProfil', $paramUpload);
-
+            var_dump($resultUploadImage);
             if ($resultUploadImage['success'] === false) {
                 $errors['pictureProfil'] = $resultUploadImage['errorMessage'];
             } else {
                 $usersModif = new Users();
                 $infoUser = $usersModif->returnOneUser($_SESSION['user']['user_id']);
                 $oldUserPicture = $infoUser['user_picture_profil'];
-                unlink('../public/img/' . $oldUserPicture);
+                var_dump($oldUserPicture);
+                // unlink('../public/img/' . $oldUserPicture);
 
                 $userPictureProfil = $resultUploadImage['imageName'];
-                $usersModif->modifUser( $lasnameUser, $firstnameUser,$userPictureProfil,$phoneNumberUser, $passwordUser,$passwordUser, 2, $usersId);
+                $usersModif->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, $passwordUser, 2, $usersId);
 
-                header('Location: compte.php');
+                // header('Location: compte.php');
             }
         }
     }
 }
 $userObj = new Users();
 $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
+var_dump($errors);

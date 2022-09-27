@@ -1,5 +1,5 @@
 
-<?php require_once "../elements/meta.php"; ?>
+<?php require_once "../elements/meta.php" ?>
 
   <div class="row justify-content-center p-0 mx-0 my-5">
     <div class="col-lg-6">
