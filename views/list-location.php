@@ -62,4 +62,7 @@ require_once('../controllers/controller-list-location.php');
         </div>
     </div>
 </div>
+
+
 <?php include '../elements/footer.php' ?>
+<script src="../public/script/list-location.js"></script>

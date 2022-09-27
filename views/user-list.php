@@ -18,10 +18,10 @@ require_once('../controllers/controller-list-user.php');
 
             <div class="row m-0 p-0 justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <input class="rounded" id="myInput" onkeyup="myFunction()" type="text" />
+                    <input type="text" class="rounded" id="myInput" onkeyup="myFunction()"  >
                     <table id="myTable" class="table table-striped">
                         <thead>
-                            <tr>
+                            <tr class="header">
                                 <th scope="col">#</th>
                                 <th scope="col">Nom</th>
                                 <th scope="col">Prénom</th>
@@ -82,3 +82,4 @@ require_once('../controllers/controller-list-user.php');
 </div>
 
 <?php include '../elements/footer.php' ?>
+<script src="../public/script/user-list.js"></script>

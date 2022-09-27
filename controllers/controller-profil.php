@@ -2,12 +2,24 @@
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
     exit;
-  }
+}
 
 require_once '../config.php';
+require_once '../helpers/form.php';
 require_once '../models/database.php';
 require_once '../models/user.php';
 require_once '../models/role.php';
+
+$paramUpload = [
+    // Taille max de l'image
+    'size' => 40000000,
+    // les extensions autorisé
+    'extension' => ['jpeg', 'jpg', 'webp', 'png'],
+    // le nom du répertoire qui va accueillir les images
+    'directory' => '../public/img/',
+    // choix de l'extension lors de l'enregistrement de l'image
+    'extend' => 'webp'
+];
 
 
 
@@ -20,11 +32,22 @@ $roleObj = new Role();
 $roleArray = $roleObj->getAllRole();
 
 var_dump($_SESSION);
+var_dump($_FILES);
 
 
 
 // je declenche mes vérifications lorsque j'appui sur le bouton validé car ça declenche un POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Si le client ne clique pas sur upload, il sera en error 4, et donc pas de test
+    if ($_FILES['pictureProfil']['error'] != 4) {
+        // je stock dans une variable intermédiaire le resultat de la méthode verifyImage()
+        $resultVerifyImg = Form::verifyImg('pictureProfil', $paramUpload);
+
+        if ($resultVerifyImg['permissionToUpload'] === false) {
+            $errors['pictureProfil'] = $resultVerifyImg['errorMessage'];
+        }
+    }
 
 
     if (isset($_POST['lastname'])) {
@@ -55,10 +78,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    if(isset($_POST['lastpassword']) && !empty($_POST['lastpassword']) ){
+    if (isset($_POST['lastpassword']) && !empty($_POST['lastpassword'])) {
         if (password_verify($_POST['lastpassword'], $_SESSION['user']['user_password'])) {
-           echo "bon mot de passe";
-        }else{
+            echo "bon mot de passe";
+        } else {
             $errors['lastpassword'] = "mauvais mot de passe";
         }
     }
@@ -81,15 +104,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Je stock les valeurs des inputs dans des variables en effectuant un htmlspecialchars afin de m'assurer que les données soient safe
         $lasnameUser = htmlspecialchars($_POST['lastname']);
         $firstnameUser = htmlspecialchars($_POST['firstname']);
-        $passwordUser = password_hash($_POST['password'],PASSWORD_DEFAULT);
+        $passwordUser = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $phoneNumberUser = htmlspecialchars($_POST['mobile']);
         $usersId = htmlspecialchars($_SESSION['user']['user_id']);
 
-        $usersModif = new Users();
+        if ($_FILES['pictureProfil']['error'] == 4) {
+            $userObj = new Users();            
+            $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
+            var_dump($infoUser);
+            $userPictureProfil = $infoUser['user_picture_profil'];
+            $userObj->modifUser($lasnameUser, $firstnameUser,$userPictureProfil ,$passwordUser, $phoneNumberUser, 2, $usersId);
 
-        $usersModif->modifUser($lasnameUser, $firstnameUser,$passwordUser, $phoneNumberUser,2, $usersId);
+            header('Location: compte.php');
+        } else {
+            $resultUploadImage = form::uploadImage('pictureProfil', $paramUpload);
+
+            if ($resultUploadImage['success'] === false) {
+                $errors['pictureProfil'] = $resultUploadImage['errorMessage'];
+            } else {
+                $usersModif = new Users();
+                $infoUser = $usersModif->returnOneUser($_SESSION['user']['user_id']);
+                $oldUserPicture = $infoUser['user_picture_profil'];
+                unlink('../public/img/' . $oldUserPicture);
+
+                $userPictureProfil = $resultUploadImage['imageName'];
+                $usersModif->modifUser( $lasnameUser, $firstnameUser,$userPictureProfil,$phoneNumberUser, $passwordUser,$passwordUser, 2, $usersId);
+
+                header('Location: compte.php');
+            }
+        }
     }
 }
 $userObj = new Users();
-
 $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);

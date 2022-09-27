@@ -17,11 +17,14 @@ require_once '../controllers/controller-formulaire.php';
 </div>
 
 <p class="text-center fs-5 m-2 fontTitle">FORMULAIRE :</p>
-<form action="#" method="POST" novalidate>
+<form action="#" method="POST" novalidate enctype="multipart/form-data">
     <div class="row justify-content-center m-4 p-0 ">
         <div class="col-lg-6">
             <div class="row justify-content-center m-0 p-0 pt-2 rounded roundColor">
                 <div class="col-lg-5 p-1 rounded">
+                    <label for="pictureProfil">Photo de Profil</label><span class="ms-2 text-danger"><?= isset($errors['pictureProfil']) ? $errors['pictureProfil'] : '' ?></span>
+                    <input id="pictureProfil" name="pictureProfil" class="tailleInput " type="file" value="">
+                    
                     <label for="lastname" class="fontText">Nom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>
                     <input id="lastname" name="lastname" class="tailleInput " type="text" value="<?= isset($_POST['lastname']) ? $_POST['lastname'] : '' ?>">
 
