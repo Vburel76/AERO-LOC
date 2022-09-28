@@ -26,14 +26,18 @@ if (!isset($_SESSION)) {
 
             </section>
 
-            <h1 class="text-center mt-4 fontTitle m-4 ">Présentation de la flotte</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-11">
+                    <p class="text-center m-3 p-2 fs-3 fontTitle ligneflotte"> Présentation de la flotte </p>
+                </div>
+            </div>
 
 
             <div class="row m-0 p-0 justify-content-center bg-light">
                 <div class="col-lg-12 col-12 ">
                     <div class="row justify-content-evenly m-5 p-1 ">
                         <?php foreach ($planes as $value) { ?>
-                            <div class="col-lg-3 col-11 modalTheme p-3">
+                            <div class="col-lg-3 col-11 modalTheme p-3 mb-2">
                                 <div class="row">
                                     <p class="fs-4 fw-bold fontTitle presentationColor"><?= $value['plane_name'] ?></p>
                                     <div class="col-lg-12 m-0 p-0 flyWidth">
@@ -63,7 +67,7 @@ if (!isset($_SESSION)) {
 
 
 
-            <h2 class="text-center fontTitle">1 Simulateur ALSIM AL250</h2>
+            <p class="text-center m-3 p-2 fs-3 fontTitle ligne"> 1 Simulateur ALSIM AL250 </p>
 
             <section class="row justify-content-center m-3">
                 <article class="col-lg-5 col-12 textSimulateur textJust fontText mt-3  m-0">

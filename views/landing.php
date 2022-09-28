@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
 <main class="BGlanding">
 
     <div class="row m-0 p-0 justify-content-center">
-        <div class="col-lg-11  bg-light">
+        <div class="col-lg-11 bg-light">
 
 
             <section class="row justify-content-center  section1 mt-5 m-0 p-0">
@@ -38,9 +38,13 @@ if (!isset($_SESSION['user'])) {
                 </article>
             </section>
 
-            <div class="row  mt-4 m-0 p-0 justify-content-center  text-center ">
-                <p class="fs-2 fontTitle">Informations</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-11">
+                    <p class="text-center m-3 p-2 fs-3  fontTitle ligneinformation"> Informations </p>
+
+                </div>
             </div>
+
 
             <div class="row  m-0 p-0 section1 justify-content-center">
 
@@ -69,14 +73,11 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="row  justify-content-center mt-2">
 
-                    <div class="row justify-content-center ">
-                        <div class="col-lg-10">
-                            <p class="fs-2 text-center mt-2 fontTitle">A propos des tarifs </p>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <p class="text-center m-3 p-2 fs-3 fs-3 fontTitle  ligne"> Les tarifs </p>
                         </div>
-
                     </div>
-
-
                     <section class="row justify-content-center">
                         <article class="col-lg-10 m-2 fontText">
                             <p>Vous trouverez un aperçus de nos tarif ci dessous.Pour plus de renseignement sur les démarches administratifs ou la demande de devis nos chargés d'affaires sont à disposition toute la semaine 7/7. </p>
@@ -109,14 +110,15 @@ if (!isset($_SESSION['user'])) {
                     </article>
                 </section>
 
-
-                <p class="m-3 p-2 fs-2 text-center fontTitle">Galerie Photo</p>
-
+                <div class="row justify-content-center">
+                    <div class="col-lg-11 col-11">
+                        <p class="m-3 p-2 fs-3 text-center fontTitle ligneGalerie"> Galerie </p>
+                    </div>
+                </div>
 
                 <section class="row m-0 p-0 justify-content-center mb-3 mt-3">
                     <article class="col-lg-10 col-9 ">
                         <div class="row justify-content-center">
-
                             <div class="col-10 col-lg-4 p-0">
                                 <a data-lightbox="example-set" href="../public/img/galery1.jpg">
                                     <img class="galeryImg galery" src="../public/img/galery1.jpg" alt="">

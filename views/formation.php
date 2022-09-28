@@ -14,10 +14,14 @@ if (!isset($_SESSION)) {
             <div row class="d-none d-lg-block  m-0 p-0 FormationImg">
             </div>
 
-
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-11">
+                    <p class="text-center m-3 p-2 fs-3 lignePPl fontTitle"> Quesque le PPL ? </p>
+                </div>
+            </div>
             <section class="row justify-content-center formationBackground m-0 p-0">
                 <article class="col-lg-9 col-12  p-3">
-                    <p class="text-center fs-4 fontTitle">Quesque le PPL ?</p>
+
                     <br>
                     <p class=" fontText ">La licence PPL (Private Pilot Licence) est une formation récente accessible dès 45 heures de vol.
                         Cette licence européenne confère à son détenteur les mêmes privilèges que la LAPL sans la limitation du nombre de passagers et sans la limitation de la masse de l’appareil (>2 tonnes).
@@ -25,7 +29,8 @@ if (!isset($_SESSION)) {
                         La PPL(A) est une licence européenne qui vous permet d’évoluer vers d’autres qualifications.
                         La formation de pilote privé est dispensée par un instructeur qualifié.</p>
 
-                    <p class="fs-4 fontTitle text-center">Durée de la formation</p>
+                            <p class="fs-4 fontTitle text-center">Durée de la formation</p>
+
 
                     <p class=" fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
                 </article>
@@ -55,12 +60,15 @@ if (!isset($_SESSION)) {
                     <img class="imgFormation" src="../public/img/formationImg.jpg" alt="formationImg">
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-11">
+                    <p class="text-center m-3 p-2 fs-3 fontTitle ligneformation"> Déroulé de la formation </p>
+                </div>
+            </div>
+
             <section class="row justify-content-center m-0 p-0">
                 <article class="col-lg-9 mt-5 ">
-                    <p class="text-center fs-4 fontTitle">Déroulé de la formation</p>
-
                     <p class="fontText">La formation commence par une partie théorique de plusieurs heures et qui s'effectue dans une salle de cours avec un formateur assermenté, cette partie theorique fera l'objet d'une évaluation.Par la suite la partie pratique se déroulare tous d'abord en simulateur et ensuite en avion, la aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
-
                 </article>
             </section>
 

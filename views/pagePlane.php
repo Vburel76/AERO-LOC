@@ -23,8 +23,11 @@ if (!isset($_SESSION)) {
             </section>
 
 
-
-            <p class="fs-3 fontTitle text-center mt-4 ">Les locations</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-11">
+                    <p class="fs-3  m-3 p-2  fontTitle text-center mt-4 ligneLocation "> Les locations </p>
+                </div>
+            </div>
 
             <div class="d-flex justify-content-center">
                 <div class="row col-lg-10 col-11 m-2 p-0 justify-content-center ">
