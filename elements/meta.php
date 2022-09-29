@@ -16,4 +16,3 @@
     <title>Aero-Loc</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">

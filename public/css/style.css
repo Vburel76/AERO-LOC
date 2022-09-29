@@ -319,6 +319,11 @@ header {
     width: 25rem;
 }
 
+.pictureOneUser {
+    width: 12rem;
+
+}
+
 .pictureCard {
     width: 100%;
 }
@@ -395,6 +400,18 @@ header {
     background-blend-mode: screen;
 }
 
+.modifUser {
+    height: 84vh;
+}
+
+.infoOneUser {
+    height: 90vh;
+}
+
+.utilisateurSize {
+    margin-top: 5rem;
+}
+
 /* list-location js */
 
 #myInput {
@@ -410,7 +427,7 @@ header {
     /* Increase font-size */
     padding: 12px 20px 12px 40px;
     /* Add some padding */
-    border: 1px solid #ddd;
+    border: 1px solid rgb(31, 80, 123);
     /* Add a grey border */
     margin-bottom: 12px;
     /* Add some space below the input */
@@ -459,6 +476,15 @@ header {
     vertical-align: middle;
 }
 
+.ligneModify:before,
+.ligneModify:after {
+    content: '';
+    width: 25%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .ligneinformation:before,
 .ligneinformation:after {
     content: '';
@@ -477,10 +503,19 @@ header {
     vertical-align: middle;
 }
 
+.ligneUser:before,
+.ligneUser:after {
+    content: '';
+    width: 25%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .lignePPl:before,
 .lignePPl:after {
     content: '';
-    width: 38%;
+    width: 35%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -489,7 +524,7 @@ header {
 .ligneformation:before,
 .ligneformation:after {
     content: '';
-    width: 34%;
+    width: 30%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -522,8 +557,36 @@ header {
     vertical-align: middle;
 }
 
+.lignemodifyPlane:before,
+.lignemodifyPlane:after {
+    content: '';
+    width: 35%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 
 @media screen and (max-width: 780px) {
+
+
+    .lignemodifyPlane:before,
+    .lignemodifyPlane:after {
+        content: '';
+        width: 25%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .ligneModify:before,
+    .ligneModify:after {
+        content: '';
+        width: 27%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     .ligneGalerie:before,
     .ligneGalerie:after {
@@ -543,6 +606,15 @@ header {
         vertical-align: middle;
     }
 
+    .ligneUser:before,
+    .ligneUser:after {
+        content: '';
+        width: 18%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
     .ligneflotte:before,
     .ligneflotte:after {
         content: '';
@@ -555,7 +627,7 @@ header {
     .lignePPl:before,
     .lignePPl:after {
         content: '';
-        width: 18%;
+        width: 12%;
         border-top: 3px double black;
         display: inline-block;
         vertical-align: middle;
@@ -564,7 +636,7 @@ header {
     .ligneformation:before,
     .ligneformation:after {
         content: '';
-        width: 8%;
+        width: 5%;
         border-top: 3px double black;
         display: inline-block;
         vertical-align: middle;

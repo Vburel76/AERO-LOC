@@ -11,9 +11,9 @@ if (!isset($_SESSION)) {
 <?php include '../elements/navBar.php' ?>
 
 
-<div class="BGlanding">
+<body class=" d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
-        <div class="col-lg-11 bg-light  p-0">
+        <div class="col-lg-11 col-12 bg-light  p-0">
             <div class="flyBackground d-lg-block d-none">
             </div>
 
@@ -26,7 +26,7 @@ if (!isset($_SESSION)) {
 
             </section>
 
-            <div class="row justify-content-center">
+            <div class="row m-0 p-0 justify-content-center">
                 <div class="col-lg-11 col-11">
                     <p class="text-center m-3 p-2 fs-3 fontTitle ligneflotte"> Présentation de la flotte </p>
                 </div>
@@ -87,6 +87,6 @@ if (!isset($_SESSION)) {
             </section>
         </div>
     </div>
-</div>
+</body>
 
 <?php include '../elements/footer.php' ?>

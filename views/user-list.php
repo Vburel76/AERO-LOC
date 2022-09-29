@@ -5,50 +5,59 @@ require_once('../controllers/controller-list-user.php');
 
 <?php include '../elements/meta.php' ?>
 <?php include '../elements/navBar.php' ?>
-<div class="BGlanding">
+
+<body class="d-flex flex-column min-vh-100 BGlanding">
+
     <div class="row m-0 p-0 justify-content-center ">
-        <div class="col-lg-11 bg-light  p-0">
-            <div class="row m-0 p-0">
-                <div class="col-lg-2 m-2">
+        <div class="col-lg-8 bg-light p-0">
+            <div class="row m-0 p-0 justify-content-center">
+                <div class="col-lg-2 col-12 m-2">
                     <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
                 </div>
             </div>
 
-            <p class="fs-2 text-center m-5">LISTE DES UTILISATEURS</p>
+            <div class="row m-3 p-0 justify-content-center ">
+                <div class="col-lg-11 col-12 text-center">
+                    <p class="fontTitle text-center m-3 p-2 fs-3 ligneUser "> UTILISATEURS </p>
+                </div>
+            </div>
 
-            <div class="row m-0 p-0 justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <input type="text" class="rounded" id="myInput" onkeyup="myFunction()"  >
-                    <table id="myTable" class="table table-striped">
-                        <thead>
-                            <tr class="header">
-                                <th scope="col">#</th>
-                                <th scope="col">Nom</th>
-                                <th scope="col">Prénom</th>
-                                <th scope="col">Mobile</th>
-                                <th scope="col">info</th>
-                                <th scope="col">info</th>
-                                <th scope="col">supprimer</th>
+            <div class="row m-0 p-0 justify-content-center mb-5">
+                <div class="col-lg-12 text-center">
+                    <input type="text" class="rounded" id="myInput" onkeyup="myFunction()">
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-striped">
+                            <thead>
+                                <tr class="header">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Prénom</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">Modification</th>
+                                    <th scope="col">information</th>
+                                    <th scope="col">supprimer</th>
 
-                            </tr>
-                        </thead>
-                        <tbody class="p-5">
-                            <?php
-                            foreach ($users as $value) { ?>
-                                <tr>
-                                    <th class="pt-3"><?= $value['user_id'] ?></th>
-                                    <td class="pt-3"><?= $value['user_lastname'] ?></td>
-                                    <td class="pt-3"><?= $value['user_firstname'] ?></td>
-                                    <td class="pt-3"><?= $value['user_phone'] ?></td>
-                                    <td><a href="modif-user.php?users=<?= $value['user_id'] ?>" class="btn buttontheme">modification</a></td>
-                                    <td><a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttontheme">+ d'info</a></td>
-                                    <td>
-                                        <button type="button" class="btn buttontheme" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
-                                    </td>
                                 </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody class="p-5">
+                                <?php
+                                foreach ($users as $value) {
+                                     ?>
+                                    <tr>
+                                        <th class="pt-3"><?= $value['user_id'] ?></th>
+                                        <td class="pt-3"><?= $value['user_lastname'] ?></td>
+                                        <td class="pt-3"><?= $value['user_firstname'] ?></td>
+                                        <td class="pt-3"><?= $value['user_phone'] ?></td>
+                                        <td><a href="modif-user.php?users=<?= $value['user_id'] ?>" class="btn buttontheme">modification</a></td>
+                                        <td><a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttontheme">+ d'info</a></td>
+                                        <td>
+                                            <button type="button" class="btn buttontheme" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
                     <?php
                     foreach ($users as $value) { ?>
 
@@ -79,7 +88,7 @@ require_once('../controllers/controller-list-user.php');
             </div>
         </div>
     </div>
-</div>
+</body>
 
 <?php include '../elements/footer.php' ?>
 <script src="../public/script/user-list.js"></script>

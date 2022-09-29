@@ -1,20 +1,19 @@
+<?php include '../elements/meta.php'; ?>
 <?php
 if (!isset($_SESSION['user'])) {
     session_start();
 }
-
 ?>
-<?php include '../elements/meta.php'; ?>
 
 
 
-<header class="text-center m-0 d-lg-block d-none">
-    <h1 class="AeroLoc">Aero-Loc</h1>
-</header>
 
-<?php include '../elements/navBar.php' ?>
+<body class=" d-flex flex-column min-vh-100 BGlanding">
+    <header class="text-center m-0 d-lg-block d-none">
+        <h1 class="AeroLoc">Aero-Loc</h1>
+    </header>
 
-<main class="BGlanding">
+    <?php include '../elements/navBar.php'?>
 
     <div class="row m-0 p-0 justify-content-center">
         <div class="col-lg-11 bg-light">
@@ -161,6 +160,7 @@ if (!isset($_SESSION['user'])) {
             </div>
         </div>
     </div>
-</main>
+    <?php include '../elements/footer.php' ?>
+</body>
 
-<?php include '../elements/footer.php' ?>
+</html>

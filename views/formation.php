@@ -8,13 +8,13 @@ if (!isset($_SESSION)) {
 
 <?php include '../elements/navBar.php' ?>
 
-<div class="BGlanding">
+<body class=" d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
-        <div class="col-lg-11 bg-light  p-0">
+        <div class="col-lg-11 col-12 bg-light  p-0">
             <div row class="d-none d-lg-block  m-0 p-0 FormationImg">
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row m-0 p-0 justify-content-center">
                 <div class="col-lg-11 col-11">
                     <p class="text-center m-3 p-2 fs-3 lignePPl fontTitle"> Quesque le PPL ? </p>
                 </div>
@@ -60,7 +60,7 @@ if (!isset($_SESSION)) {
                     <img class="imgFormation" src="../public/img/formationImg.jpg" alt="formationImg">
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row m-0 p-0 justify-content-center">
                 <div class="col-lg-11 col-11">
                     <p class="text-center m-3 p-2 fs-3 fontTitle ligneformation"> Déroulé de la formation </p>
                 </div>
@@ -193,6 +193,6 @@ if (!isset($_SESSION)) {
             </form>
         </div>
     </div>
-</div>
+</body>
 
 <?php include '../elements/footer.php' ?>
