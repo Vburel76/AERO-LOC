@@ -29,7 +29,7 @@ if (!isset($_SESSION)) {
                         La PPL(A) est une licence européenne qui vous permet d’évoluer vers d’autres qualifications.
                         La formation de pilote privé est dispensée par un instructeur qualifié.</p>
 
-                            <p class="fs-4 fontTitle text-center">Durée de la formation</p>
+                    <p class="fs-4 fontTitle text-center">Durée de la formation</p>
 
 
                     <p class=" fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
@@ -43,21 +43,19 @@ if (!isset($_SESSION)) {
             <p class="text-center mt-4 fontText">Un certain nombres de conditions doivent etre remplir pour pouvoir commencer la formation.</p>
 
             <section class="row justify-content-center mt-5 m-0 p-0">
-                <article class="col-lg-3 col-8 mt-1 m-2 text-center Textcolor">
-                    <p class=" m-2 fontText "><i class="bi bi-globe fs-4 m-2"></i>être francais</p>
+                <article class="col-lg-4 col-8 mt-1 m-2 text-center">
+                    <img class="imgFormation " src="../public/img/formationImg.jpg" alt="formationImg">
                 </article>
-                <article class="col-lg-3 col-8 mt-1 m-2 text-center Textcolor">
-                    <p class=" m-2 fontText"><i class="bi bi-check2-circle fs-4 m-2"></i>avoir l'age minimum requis</p>
-                </article>
-                <article class="col-lg-3 col-8 mt-1 m-2 text-center Textcolor">
-                    <p class=" m-2 fontText"><i class="bi bi-heart-pulse fs-4 m-2"></i>être apte médicalement</p>
+                <article class="col-lg-4 col-8 mt-4 m-2 ">
+                    <p class="m-2 fontText text-center Textcolor mt-1 p-2"><i class="bi bi-globe fs-4 m-2"></i>être de nationalité francais</p>
+                    <p class="m-2 fontText text-center Textcolor mt-5 p-2"><i class="bi bi-check2-circle fs-4 m-2"></i>avoir l'age minimum requis</p>
+                    <p class="m-2 fontText text-center Textcolor mt-5 p-2"><i class="bi bi-heart-pulse fs-4 m-2"></i>être apte médicalement</p>
                 </article>
             </section>
 
 
             <div class="row text-center justify-content-center mt-5 m-0 p-0">
                 <div class="col-lg-10">
-                    <img class="imgFormation" src="../public/img/formationImg.jpg" alt="formationImg">
                 </div>
             </div>
             <div class="row m-0 p-0 justify-content-center">

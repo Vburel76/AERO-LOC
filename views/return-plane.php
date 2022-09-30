@@ -29,13 +29,13 @@ require_once('../models/plane.php');
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-lg-10 col-12">
                     <div class="row roundColor justify-content-evenly rounded m-3 mb-5 ">
                         <div class="col-lg-5 col-12 text-center p-2">
                             <img class=" img-fluid mt-3 " src="../public/img/<?= $plane['plane_picture'] ?>" alt="" srcset="">
                         </div>
                         <div class="col-lg-5 col-12">
-                            <p class="fs-5 mt-3">Nom : <b><?= $plane['plane_name'] ?></b></p>
+                            <p class="fs-5 mt-4">Nom : <b><?= $plane['plane_name'] ?></b></p>
                             <p class="fs-5">taille : <b><?= $plane['plane_size'] ?> M</b></p>
                             <p class="fs-5">Portée : <b><?= $plane['plane_scope'] ?> KM</b></p>
                             <p class="fs-5">Altitude max : <b><?= $plane['plane_altitude'] ?></b></p>

@@ -5,20 +5,25 @@ require_once('../controllers/controller-list-location.php');
 
 <?php include '../elements/meta.php' ?>
 <?php include '../elements/navBar.php' ?>
-<div class="BGlanding">
+
+<body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
-        <div class="col-lg-11 bg-light  p-0">
+        <div class="col-lg-8 bg-light p-0">
             <div class="row m-0 p-0">
                 <div class="col-lg-2 m-2">
                     <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
                 </div>
             </div>
 
-            <p class="fs-2 text-center m-5">LISTE DES LOCATIONS</p>
+            <div class="row m-3 p-0 justify-content-center ">
+                <div class="col-lg-11 col-12 text-center">
+                    <p class="fontTitle text-center m-3 p-2 fs-3 ligneLocation "> LOCATIONS </p>
+                </div>
+            </div>
 
             <div class="row m-0 p-0 justify-content-center">
 
-                <div class="col-lg-8 col-12 text-center">
+                <div class="col-lg-12 col-12 text-center">
                     <div class="table-responsive">
                         <input class="rounded" id="myInput" onkeyup="myFunction()" type="text" />
                         <table id="myTable" class="table table-striped">
@@ -61,7 +66,7 @@ require_once('../controllers/controller-list-location.php');
             </div>
         </div>
     </div>
-</div>
+</body>
 
 
 <?php include '../elements/footer.php' ?>

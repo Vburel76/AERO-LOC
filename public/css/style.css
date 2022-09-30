@@ -148,7 +148,7 @@ header {
 }
 
 .imgFormation {
-    width: 60%;
+    width: 100%;
     height: auto;
 }
 
@@ -524,7 +524,7 @@ header {
 .lignePPl:before,
 .lignePPl:after {
     content: '';
-    width: 35%;
+    width: 36%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -533,7 +533,7 @@ header {
 .ligneformation:before,
 .ligneformation:after {
     content: '';
-    width: 30%;
+    width: 31%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -542,7 +542,7 @@ header {
 .ligneLocation:before,
 .ligneLocation:after {
     content: '';
-    width: 40%;
+    width: 35%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -645,7 +645,7 @@ header {
     .lignePPl:before,
     .lignePPl:after {
         content: '';
-        width: 12%;
+        width: 16%;
         border-top: 3px double black;
         display: inline-block;
         vertical-align: middle;

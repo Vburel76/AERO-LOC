@@ -31,7 +31,7 @@ require_once '../controllers/controller-modif-plane.php';
                                 <label for="file" class="fontText">Image</label><span class="ms-2 text-danger"><?= isset($errors['fileToUpload']) ? $errors['fileToUpload'] : '' ?></span>
                                 <br>
                                 <img class="pictureModif mt-3 mb-3" src="../public/img/<?= $infoPlane['plane_picture'] ?>" alt="">
-                                <input type="file" name="fileToUpload" id="fileToUpload" value="<?= $infoPlane['plane_picture'] ?>">
+                                <input type="file" name="fileToUpload" id="fileToUpload" value="<?= $infoPlane['plane_picture'] ?>"><br>
 
                                 <label for="namelocPlane" class="mt-2 fontText">Nom de l'avion</label><span class="ms-2 text-danger"><?= isset($errors['namelocPlane']) ? $errors['namelocPlane'] : '' ?>
                                 </span>

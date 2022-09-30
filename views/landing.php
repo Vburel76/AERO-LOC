@@ -25,10 +25,10 @@ if (!isset($_SESSION['user'])) {
                     <img class="imageArticle1" src="../public/img/aeroclub.jpg" alt="aeroclub">
                 </article>
                 <article class="col-lg-5 m-3 p-0 ">
-                    <p class=" textJust mt-3 fontText ">AeroLoc n'est pas une compagnie aérienne, mais une société de location d'aéronefs (coque nue) sans pilote pour réaliser vos vols privés et vols d'affaires à prix abordables.<br>
+                    <p class=" textJust mt-3 fontText ">AeroLoc n'est pas une compagnie aérienne, mais une société de <a class="text-decoration-none" href="pagePlane.php"> location </a> d'aéronefs (coque nue) sans pilote pour réaliser vos vols privés et vols d'affaires à prix abordables.<br>
                         La société est fondée en 2015 et implantée près de la ville du Havre.
-                        Nous offrons également la possibilité de passer le LAPL et le PPL licences de pilotage obligatoire pour pouvoir piloter un de nos avions .<br>
-                        Retrouver sur notre site toutes les informations sur la location et le passage des licences de pilotage.
+                        Nous offrons également la possibilité de passer le PPL licences de pilotage obligatoire pour pouvoir piloter un de nos avions .<br>
+                        Retrouver sur notre site toutes les informations sur la <a class="text-decoration-none" href="pagePlane.php"> location </a> et le passage des licences de pilotage.
                     </p>
                     <p class=" fontText">un vol urgent ou un vol vers une destination peu desservie, notre équipe affrète vous accompagne tout au long de la préparation de votre vol.
                     </p>
@@ -78,7 +78,7 @@ if (!isset($_SESSION['user'])) {
                     <section class="row justify-content-center">
                         <article class="col-lg-10 m-2 fontText textJust">
                             <p>Vous trouverez un aperçus de nos tarif ci dessous.Pour plus de renseignement sur les démarches administratifs ou la demande de devis nos chargés d'affaires sont à disposition toute la semaine 7/7. </p>
-                            <p>Pour toute autre demande vous pouvez nous contacter via notre numero ou le formulaire de contact.</p>
+                            <p>Pour toute autre demande vous pouvez nous <a class="text-decoration-none" href="contact.php">contacter</a> via notre numero ou le formulaire de contact.</p>
                         </article>
                     </section>
                 </div>

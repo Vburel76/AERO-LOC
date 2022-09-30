@@ -6,19 +6,20 @@ if (!isset($_SESSION['user'])) {
 }
 ?>
 
+<body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0">
         <div class="col-lg-2 m-2">
             <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
         </div>
     </div>
 
-    <p class="text-center fs-5 fontTitle mt-5">AJOUTER UNE LOCATION</p>
+    <p class="text-center fs-5 fontTitle mt-5">AJOUTER UNE RESERVATION (non fonctionnel)</p>
 
     <form class="mt-5" action="#" method="POST" novalidate>
         <div class="row justify-content-center m-2 p-0 ">
             <div class="col-lg-6">
-                <div class="row justify-content-center m-0 p-0 pt-2 rounded roundColor">
-                    <div class="col-lg-5 p-1 rounded">
+                <div class="row justify-content-center m-0 p-0 pt-2 rounded roundColor bg-light">
+                    <div class="col-lg-5 p-1 rounded ">
                         <label for="namePlane" class="fontText">Nom de l'avion</label><span class="ms-2 text-danger"><?= isset($errors['namePlane']) ? $errors['namePlane'] : '' ?>
                         </span>
                         <input id="namePlane" name="namePlane" class="tailleInput " type="text" value="">
@@ -61,5 +62,5 @@ if (!isset($_SESSION['user'])) {
             </div>
         </div>
     </form>
-
-    <?php include '../elements/footer.php' ?>
+</body>
+<?php include '../elements/footer.php' ?>
