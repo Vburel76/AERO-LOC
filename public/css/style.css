@@ -470,7 +470,7 @@ header {
 .ligneGalerie:before,
 .ligneGalerie:after {
     content: '';
-    width: 44%;
+    width: 43%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -488,7 +488,16 @@ header {
 .ligneinformation:before,
 .ligneinformation:after {
     content: '';
-    width: 40%;
+    width: 42%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lignetarif:before,
+.lignetarif:after {
+    content: '';
+    width: 44%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -560,7 +569,7 @@ header {
 .lignemodifyPlane:before,
 .lignemodifyPlane:after {
     content: '';
-    width: 35%;
+    width: 30%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -599,6 +608,15 @@ header {
 
     .ligneinformation:before,
     .ligneinformation:after {
+        content: '';
+        width: 25%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .lignetarif:before,
+    .lignetarif:after {
         content: '';
         width: 25%;
         border-top: 3px double black;

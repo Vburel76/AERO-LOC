@@ -7,6 +7,10 @@ require_once('../controllers/controllers-plane-list.php');
 
 <?php include '../elements/meta.php' ?>
 
+<?php include '../elements/navBar.php' ?>
+
+
+
 <body class="d-flex flex-column min-vh-100 BGlanding">
 
     <div class="row m-0 p-0 justify-content-center ">

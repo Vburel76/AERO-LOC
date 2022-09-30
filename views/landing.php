@@ -13,7 +13,7 @@ if (!isset($_SESSION['user'])) {
         <h1 class="AeroLoc">Aero-Loc</h1>
     </header>
 
-    <?php include '../elements/navBar.php'?>
+    <?php include '../elements/navBar.php' ?>
 
     <div class="row m-0 p-0 justify-content-center">
         <div class="col-lg-11 bg-light">
@@ -37,9 +37,10 @@ if (!isset($_SESSION['user'])) {
                 </article>
             </section>
 
+
             <div class="row justify-content-center">
                 <div class="col-lg-11 col-11">
-                    <p class="text-center m-3 p-2 fs-3  fontTitle ligneinformation"> Informations </p>
+                    <p class="text-center m-1  p-2 fs-3  fontTitle ligneinformation"> Infos </p>
 
                 </div>
             </div>
@@ -49,13 +50,13 @@ if (!isset($_SESSION['user'])) {
 
                 <section class="row mt-3 justify-content-center m-3">
                     <article class="col-lg-5 col-12 info  p-0 m-1">
-                        <p class="fs-4 Textcolor text-center fontTitle">Location</p>
+                        <p class="fs-5 Textcolor text-center fontTitle">Location</p>
                         <p class="mt-4 fontText px-3">Aero-Loc propose une large gamme de service et notament la location d’avion.
                             En effet apres avoir remplir certaines conditions qui vous serons communiquées , il sera possible de louer un avion pour les itinéraires de votre choix.
                         </p>
                     </article>
                     <article class="col-lg-5 col-12 info  p-0 m-1 ">
-                        <p class="fs-4 Textcolor text-center fontTitle">Certification</p>
+                        <p class="fs-5 Textcolor text-center fontTitle">Certification</p>
                         <p class="fontText px-3">Aero-Loc propose également le passsage des certifications necessaires pour pouvoir piloter.
                         </p>
                         <div class="row justify-content-center">
@@ -67,18 +68,15 @@ if (!isset($_SESSION['user'])) {
                 </section>
 
 
-                <div class="text-center mt-5">
-                    <img width="60%" src="../public/img/headerimgInformation.jpg" alt="imgInformation">
-                </div>
                 <div class="row  justify-content-center mt-2">
 
                     <div class="row justify-content-center">
-                        <div class="col-lg-11">
-                            <p class="text-center m-3 p-2 fs-3 fs-3 fontTitle  ligne"> Les tarifs </p>
+                        <div class="col-lg-11 col-11">
+                            <p class="text-center m-1 p-2 fs-3 fs-3 fontTitle  lignetarif"> Tarifs </p>
                         </div>
                     </div>
                     <section class="row justify-content-center">
-                        <article class="col-lg-10 m-2 fontText">
+                        <article class="col-lg-10 m-2 fontText textJust">
                             <p>Vous trouverez un aperçus de nos tarif ci dessous.Pour plus de renseignement sur les démarches administratifs ou la demande de devis nos chargés d'affaires sont à disposition toute la semaine 7/7. </p>
                             <p>Pour toute autre demande vous pouvez nous contacter via notre numero ou le formulaire de contact.</p>
                         </article>
@@ -86,7 +84,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
 
                 <section class="row justify-content-center  imgRate">
-                    <article class="col-lg-10 Textcolor p-3">
+                    <article class="col-lg-10 Textcolor mt-2 mb-4 p-3">
                         <p class="text-center mb-3 fs-5 text-light fontTitle ">De quoi est constitué le prix de la location d'un avion ?</p>
                         <ul>
                             <li class="text-light fontText">Premièrement la location de l'avion coque nue (c'est a dire sans pilote)</li>
@@ -100,14 +98,18 @@ if (!isset($_SESSION['user'])) {
                     </article>
                 </section>
 
-                <section class="row justify-content-center fontText">
-                    <article class="col-lg-5 mt-3">
-                        <p class="text-center ">Le prix pour la location d'un avion d'un petit avion commence à 300 €/HT (coque nue) au quel s'ajoute des couts ci dessus.</p>
+                <section class="row justify-content-evenly fontText">
+                    <article class="col-lg-3 mt-3">
+                    <p class="h3">Cesna</p>
+                        <p class="textJust fw-bold">Le prix pour la location d'un avion d'un petit avion commence à 300 €/HT (coque nue) au quel s'ajoute des couts ci dessus.</p>
                     </article>
-                    <article class="col-lg-5 mt-3">
-                        <p class="text-center">Le prix de location pour un avion de grande taille commence à 550€/HT (coque nue) au quel s'ajoute des couts ci dessus. </p>
+                    <article class="col-lg-3 mt-3">
+                    <p class="h3">Socata</p>
+                        <p class="textJust fw-bold">Le prix de location pour un avion de grande taille commence à 550€/HT (coque nue) au quel s'ajoute des couts ci dessus. </p>
                     </article>
                 </section>
+
+                
 
                 <div class="row justify-content-center">
                     <div class="col-lg-11 col-11">
@@ -115,8 +117,8 @@ if (!isset($_SESSION['user'])) {
                     </div>
                 </div>
 
-                <section class="row m-0 p-0 justify-content-center mb-3 mt-3">
-                    <article class="col-lg-10 col-9 ">
+                <section class="row m-0 p-0 justify-content-center mb-5 mt-3">
+                    <article class="col-lg-10 col-9">
                         <div class="row justify-content-center">
                             <div class="col-10 col-lg-4 p-0">
                                 <a data-lightbox="example-set" href="../public/img/galery1.jpg">

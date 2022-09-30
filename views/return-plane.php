@@ -12,63 +12,42 @@ require_once('../models/plane.php');
 
 
 
-<body class="d-flex flex-column min-vh-100">
-    <div class="row m-0 p-0">
-        <div class="col-lg-2 m-2">
-            <a href="plane-list.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
-        </div>
-    </div>
-
-    <p class="fs-2 text-center m-5">DETAIL AVION</p>
+<body class="d-flex flex-column min-vh-100 BGlanding border border-primary">
 
     <div class="row m-0 p-0 justify-content-center">
-        <div class="col-lg-8 text-center">
+        <div class="col-lg-8 col-12 bg-light utilisateurSize ">
+            <div class="row m-0 p-0 justify-content-center">
+                <div class="col-lg-2 col-10 m-2">
+                    <a href="plane-list.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+                </div>
+            </div>
 
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Taille</th>
-                        <th scope="col">Portée</th>
-                        <th scope="col">Autonomie</th>
-                        <th scope="col">Altitude</th>
-                        <th scope="col">Vitesse</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Description de la location</th>
+            <div class="row m-3 p-0 justify-content-center">
+                <div class="col-lg-11 col-12 text-center">
+                    <p class="fontTitle text-center m-3 p-2 fs-5  ligneModify "> Avion </p>
+                </div>
+            </div>
 
-
-                    </tr>
-                </thead>
-                <tbody class="p-5">
-
-
-                    <tr>
-                        <th class="pt-3 align-middle"><?= $plane['plane_id'] ?></th>
-                        <td class="pt-3 align-middle"><img class="pictureLocation" src="../public/img/<?= $plane['plane_picture'] ?>" alt="" srcset=""></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_name'] ?></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_size'] ?></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_scope'] ?></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_autonomy'] ?></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_altitude'] ?></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_speed'] ?></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_description'] ?></td>
-                        <td class="pt-3 align-middle"><?= $plane['plane_loc_description'] ?></td>
-                    </tr>
-
-
-                </tbody>
-            </table>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row roundColor justify-content-evenly rounded m-3 mb-5 ">
+                        <div class="col-lg-5 col-12 text-center p-2">
+                            <img class=" img-fluid mt-3 " src="../public/img/<?= $plane['plane_picture'] ?>" alt="" srcset="">
+                        </div>
+                        <div class="col-lg-5 col-12">
+                            <p class="fs-5 mt-3">Nom : <b><?= $plane['plane_name'] ?></b></p>
+                            <p class="fs-5">taille : <b><?= $plane['plane_size'] ?> M</b></p>
+                            <p class="fs-5">Portée : <b><?= $plane['plane_scope'] ?> KM</b></p>
+                            <p class="fs-5">Altitude max : <b><?= $plane['plane_altitude'] ?></b></p>
+                            <p class="fs-5">Vitesse max : <b><?= $plane['plane_speed'] ?></b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-
     <?php include '../elements/footer.php' ?>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../dist/js/lightbox-plus-jquery.js"></script>
-    <script src="../dist/js/lightbox.js"></script>
 </body>
 
 </html>
