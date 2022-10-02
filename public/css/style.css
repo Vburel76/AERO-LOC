@@ -476,6 +476,15 @@ header {
     vertical-align: middle;
 }
 
+.ligneaddPlane:before,
+.ligneaddPlane:after {
+    content: '';
+    width: 35%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .ligneModify:before,
 .ligneModify:after {
     content: '';
@@ -506,7 +515,7 @@ header {
 .ligneflotte:before,
 .ligneflotte:after {
     content: '';
-    width: 34%;
+    width: 30%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -578,6 +587,14 @@ header {
 
 @media screen and (max-width: 780px) {
 
+    .ligneaddPlane:before,
+    .ligneaddPlane:after {
+        content: '';
+        width: 25%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     .lignemodifyPlane:before,
     .lignemodifyPlane:after {
@@ -636,7 +653,7 @@ header {
     .ligneflotte:before,
     .ligneflotte:after {
         content: '';
-        width: 5%;
+        width: 3%;
         border-top: 3px double black;
         display: inline-block;
         vertical-align: middle;
