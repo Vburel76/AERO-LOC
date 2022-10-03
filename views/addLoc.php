@@ -7,8 +7,8 @@ if (!isset($_SESSION['user'])) {
 ?>
 
 <body class="d-flex flex-column min-vh-100 BGlanding">
-    <div class="row m-0 p-0">
-        <div class="col-lg-2 m-2">
+    <div class="row m-0 p-0 justify-content-center">
+        <div class="col-lg-2 col-10 m-2">
             <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
         </div>
     </div>

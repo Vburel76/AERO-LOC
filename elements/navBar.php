@@ -13,12 +13,12 @@
                     <li><a class="dropdown-item" href="compte.php">Mon profil</a></li>
                 <?php } ?>
 
-                <li><a class="dropdown-item" href="contact.php">contact</a></li>
+                <li><a class="dropdown-item" href="contact.php">Contact</a></li>
                 <?php if (isset($_SESSION['user'])) { ?>
                     <li><a class="dropdown-item" href="reservation.php">Réservation</a></li>
                 <?php } ?>
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['role_id_role'] == 1) { ?>
-                    <li><a class="dropdown-item" href="admin.php">admin</a></li>
+                    <li><a class="dropdown-item" href="admin.php">Admin</a></li>
                 <?php } ?>
 
 
@@ -60,12 +60,12 @@
                         <?php if (isset($_SESSION['user'])) { ?>
                             <li><a class="dropdown-item" href="compte.php">Mon profil</a></li>
                         <?php } ?>
-                        <li><a class="dropdown-item" href="contact.php">contact</a></li>
+                        <li><a class="dropdown-item" href="contact.php">Contact</a></li>
                         <?php if (isset($_SESSION['user'])) { ?>
                             <li><a class="dropdown-item" href="reservation.php">Réservation</a></li>
                         <?php } ?>
                         <?php if (isset($_SESSION['user']) && $_SESSION['user']['role_id_role'] == 1) { ?>
-                            <li><a class="dropdown-item" href="admin.php">admin</a></li>
+                            <li><a class="dropdown-item" href="admin.php">Admin</a></li>
                         <?php } ?>
                         <?php if (isset($_SESSION['user'])) { ?>
                             <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>

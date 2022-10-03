@@ -37,13 +37,13 @@ if (!isset($_SESSION)) {
                                 <img class="pictureCard card-img-top mt-2" src="../public/img/<?= $value['plane_picture'] ?>" alt="image d avion">
                             </div>
                             <div class="col-12 col-lg-12 card-body mt-auto">
-                                <h5 class="card-title textColor2 fontTitle"><?= $value['plane_name'] ?></h5>
+                                <p class="card-title textColor2 fontTitle h5"><?= $value['plane_name'] ?></p>
                                 <p class="card-text text-start fontText"><?= $value['plane_loc_description'] ?></p>
-                                <p class="card-text fontText">taille : <?= $value['plane_size'] ?></p>
-                                <p class="card-text fontText">Portée de l'avion : <?= $value['plane_scope'] ?></p>
-                                <p class="card-text fontText">Altitude max :<?= $value['plane_altitude'] ?></p>
+                                <p class="card-text fontText m-0">Taille : <b><?= $value['plane_size'] ?>m</b></p>
+                                <p class="card-text fontText m-0">Portée de l'avion : <b><?= $value['plane_scope'] ?>Km</b></p>
+                                <p class="card-text fontText m-0">Altitude max : <b><?= $value['plane_altitude'] ?>m</b></p>
 
-                                <a href="validate.php?plane=<?= $value['plane_id'] ?>" class="btn TextcolorPagePlane fontText">
+                                <a href="validate.php?plane=<?= $value['plane_id'] ?>" class="btn TextcolorPagePlane fontText mt-3">
                                     Reserver
                                 </a>
                             </div>

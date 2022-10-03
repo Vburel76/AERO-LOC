@@ -18,7 +18,7 @@ require_once '../controllers/controller-admin.php';
     <h1 class="text-center">Gestion du contenu</h1>
 
     <div class="row justify-content-center m-0 p-0 ">
-        <div class="col-lg-7 col-8 m-5 text-center bg-light py-5">
+        <div class="col-lg-6 col-8 m-5 text-center bg-light py-5">
             <a type="button" href="addLoc.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter une location </a>
             <a type="button" href="list-location.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion les locations</a>
             <a type="button" href="adduser.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter utilisateur</a>

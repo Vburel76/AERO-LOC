@@ -35,7 +35,7 @@ require_once('../controllers/controller-list-one-location.php');
                             <img class="pictureOneLocation text-center" src="../public/img/<?= $location['plane_picture'] ?>" alt="" srcset="">
                         </div>
 
-                        <div class="col-lg-6 mt-5">
+                        <div class="col-lg-6 mt-2">
                             <p class="fs-5 fw-bold fontTitle">Detail sur l'avion:</p>
                             <div class="row mb-2">
                                 <div class="col-lg-12">
@@ -105,10 +105,10 @@ require_once('../controllers/controller-list-one-location.php');
                         </div>
 
                         <div class="col-lg-2 col-3 me-2 ">
-                            <a href="modif-loc.php?locationId=<?= $location['location_id'] ?>" type="button" class="btn TextcolorPagePlane fontText m-1 ">modifier</a>
+                            <a href="modif-loc.php?locationId=<?= $location['location_id'] ?>" type="button" class="btn TextcolorPagePlaneGrey fontText m-1 ">modifier</a>
                         </div>
                         <div class="col-lg-2 col-3 me-2 ">
-                            <button type="button" class="btn  TextcolorPagePlane fontText m-1" data-bs-toggle="modal" data-bs-target="#location-<?= $location['location_id'] ?>">Supprimer</button>
+                            <button type="button" class="btn  TextcolorPagePlaneRed fontText m-1" data-bs-toggle="modal" data-bs-target="#location-<?= $location['location_id'] ?>">Supprimer</button>
                         </div>
                     </div>
 
@@ -119,8 +119,12 @@ require_once('../controllers/controller-list-one-location.php');
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez ? </h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez la location ? </h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><b>Nom :</b> <?= $location['user_lastname'] ?></p>
+                                    <p><b>Prenom :</b> <?= $location['user_firstname'] ?></p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>

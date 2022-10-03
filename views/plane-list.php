@@ -53,9 +53,9 @@ require_once('../controllers/controllers-plane-list.php');
                                         <td class="align-middle"><?= $value['plane_name'] ?></td>
                                         <td class="align-middle"><?= $value['plane_loc_description'] ?></td>
                                         <td class="align-middle"><a href="modif-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn buttontheme">Modifier</a></td>
-                                        <td class="align-middle"><a href="return-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn buttontheme">Info</a></td>
+                                        <td class="align-middle"><a href="return-plane.php?planeId=<?= $value['plane_id'] ?>" class="btn buttonthemeGrey">Info</a></td>
                                         <td class="align-middle">
-                                            <button type="button" class="btn buttontheme" data-bs-toggle="modal" data-bs-target="#plane-<?= $value['plane_id'] ?>">Supprimer</button>
+                                            <button type="button" class="btn buttonthemeRed" data-bs-toggle="modal" data-bs-target="#plane-<?= $value['plane_id'] ?>">Supprimer</button>
                                         </td>
                                     </tr>
 

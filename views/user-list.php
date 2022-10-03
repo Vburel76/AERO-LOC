@@ -18,15 +18,16 @@ require_once('../controllers/controller-list-user.php');
 
             <div class="row m-3 p-0 justify-content-center ">
                 <div class="col-lg-11 col-12 text-center">
-                    <p class="fontTitle text-center m-3 p-2 fs-3 ligneUser "> UTILISATEURS </p>
+                    <p class="fontTitle text-center m-3 p-2 fs-5 ligneUser "> Utilisateurs </p>
                 </div>
             </div>
 
             <div class="row m-0 p-0 justify-content-center mb-5">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 ">
+                <label class="m-2 fw-bold">entrer le nom de l'utilisateur:</label>
                     <input type="text" class="rounded" id="myInput" onkeyup="myFunction()">
                     <div class="table-responsive">
-                        <table id="myTable" class="table table-striped">
+                        <table id="myTable" class="table table-striped text-center">
                             <thead>
                                 <tr class="header">
                                     <th scope="col">#</th>
@@ -49,9 +50,9 @@ require_once('../controllers/controller-list-user.php');
                                         <td class="pt-3"><?= $value['user_firstname'] ?></td>
                                         <td class="pt-3"><?= $value['user_phone'] ?></td>
                                         <td><a href="modif-user.php?users=<?= $value['user_id'] ?>" class="btn buttontheme">modification</a></td>
-                                        <td><a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttontheme">+ d'info</a></td>
+                                        <td><a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttonthemeGrey">+ d'info</a></td>
                                         <td>
-                                            <button type="button" class="btn buttontheme" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
+                                            <button type="button" class="btn buttonthemeRed" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
                                         </td>
                                     </tr>
                                 <?php } ?>

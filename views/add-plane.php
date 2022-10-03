@@ -9,9 +9,9 @@ require_once '../controllers/controller-addplane.php';
 
 <body class=" d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
-        <div class="col-lg-8 col-12 bg-light  p-0">
-            <div class="row m-0 p-0 ">
-                <div class="col-lg-2 m-2">
+        <div class="col-lg-6 col-12 bg-light  p-0">
+            <div class="row m-0 p-0 justify-content-center ">
+                <div class="col-lg-2 col-10 m-2">
                     <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
                 </div>
             </div>
@@ -24,9 +24,9 @@ require_once '../controllers/controller-addplane.php';
 
             <form class="mt-3 mb-5" action="#" method="POST" novalidate enctype="multipart/form-data">
                 <div class="row justify-content-center m-0 p-0  ">
-                    <div class="col-lg-11 col-12">
+                    <div class="col-lg-12 col-12">
                         <div class="row justify-content-center mx-5 p-0 pt-2  rounded roundColor">
-                            <div class="col-lg-5 col-10 p-1  rounded">
+                            <div class="col-lg-6 col-10 p-1  rounded">
 
                                 <label for="file" class="fontText">Image</label><span class="ms-2 text-danger"><?= isset($errors['fileToUpload']) ? $errors['fileToUpload'] : '' ?></span>
                                 <input type="file" name="fileToUpload" id="fileToUpload">
