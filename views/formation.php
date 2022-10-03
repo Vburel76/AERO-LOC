@@ -16,7 +16,7 @@ if (!isset($_SESSION)) {
 
             <div class="row m-0 p-0 justify-content-center">
                 <div class="col-lg-11 col-11">
-                    <p class="text-center m-3 p-2 fs-3 lignePPl fontTitle"> Quesque le PPL ? </p>
+                    <p class="text-center m-3 p-2 fs-3 lignePPl fontTitle"> Qu'est-ce que le PPL ? </p>
                 </div>
             </div>
             <section class="row justify-content-center formationBackground m-0 p-0">
@@ -32,7 +32,7 @@ if (!isset($_SESSION)) {
                     <p class="fs-4 fontTitle text-center">Durée de la formation</p>
 
 
-                    <p class=" fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprenstissage du client.</p>
+                    <p class=" fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprentissage du client.</p>
                 </article>
             </section>
 
@@ -40,7 +40,7 @@ if (!isset($_SESSION)) {
 
             <p class="fs-5 text-center mt-4  fontTitle">Conditions d'admission pour la formation</p>
 
-            <p class="text-center mt-4 fontText">Un certain nombres de conditions doivent etre remplir pour pouvoir commencer la formation.</p>
+            <p class="text-center mt-4 fontText">Un certain nombre de conditions doivent être remplies pour pouvoir débuter la formation.</p>
 
             <section class="row justify-content-center mt-5 m-0 p-0">
                 <article class="col-lg-4 col-8 mt-1 m-2 text-center">
@@ -66,7 +66,7 @@ if (!isset($_SESSION)) {
 
             <section class="row justify-content-center m-0 p-0">
                 <article class="col-lg-9 mt-5 ">
-                    <p class="fontText">La formation commence par une partie théorique de plusieurs heures et qui s'effectue dans une salle de cours avec un formateur assermenté, cette partie theorique fera l'objet d'une évaluation.Par la suite la partie pratique se déroulare tous d'abord en simulateur et ensuite en avion, la aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
+                    <p class="fontText">La formation commence par une partie théorique de plusieurs heures  qui s'effectue dans une salle de cours avec un formateur assermenté. Cette partie theorique fera l'objet d'une évaluation.Par la suite la partie pratique se déroulera tout d'abord en simulateur et ensuite en avion, la aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
                 </article>
             </section>
 
@@ -141,7 +141,7 @@ if (!isset($_SESSION)) {
             </section>
 
             <div class="text-center mt-3 fontText">
-                <p>Début des leçons de pilotage pratique a l'issu de l'obention du PPL théorique. avec instructeur.Le planing s'adaptera à vos besoin.</p>
+                <p>Début des leçons de pilotage pratique à l'issu de l'obtention du PPL théorique. avec instructeur.Le planning s'adaptera à vos besoin.</p>
             </div>
 
             <section class="row m-0 p-0 justify-content-center ">

@@ -19,9 +19,9 @@ if (!isset($_SESSION)) {
 
             <section class="row justify-content-center m-0 p-0 ">
                 <article class="col-lg-10 col-12 p-3 ">
-                    <p class="text-center fs-4  fontTitle ">Louer un de nos avion</p>
-                    <p class=" textFly fontText textJust ">Aero-Loc propose un large choix de modèle d'avion qui sera mis à votre disposition en fonction de votre experience , sinon un réentrainement sur le modèle souhaité vous sera proposez.Dans tous les cas une heures de vol avec instructeur sera obligatoire pour tous les nouveaux clients.Votre sécuritée est notre principale préocupation.Une licence de pilotage en cours de validitée est évidament indispensable pour pouvoir louer nos avions,nous vous proposons également d'obtenir cette licence.</p>
-                    <p class=" fontText textJust ">Nos avions sont régulierements entretenus selon la reglementation en vigueur en France.<br>Si vous avez la moindre question vous pouvez nous contacter.</p>
+                    <p class="text-center fs-4  fontTitle ">Louer un de nos avions</p>
+                    <p class=" textFly fontText textJust ">Aero-Loc propose un large choix de modèle d'avion qui sera mis à votre disposition en fonction de votre experience , sinon un réentraînement sur le modèle souhaité vous sera proposez.Dans tous les cas une heure de vol avec instructeur sera obligatoire pour tous les nouveaux clients. Votre sécurité est notre principale préocupation.Une licence de pilotage en cours de validité est évidemment indispensable pour pouvoir louer nos avions , nous vous proposons également d'obtenir cette licence.</p>
+                    <p class=" fontText textJust ">Nos avions sont régulièrements entretenus selon la réglementation en vigueur en France.<br>Si vous avez la moindre question vous pouvez nous contacter.</p>
                 </article>
 
             </section>
@@ -71,9 +71,9 @@ if (!isset($_SESSION)) {
 
             <section class="row justify-content-center m-3">
                 <article class="col-lg-5 col-12 textSimulateur textJust fontText mt-3  m-0">
-                    <p>Nous vous proposons également un simulateur Certifié FNPT II pour pouvoir vous entrainez le mieux possible et ainsi pouvoir etre opérationel rapidement.Modélisant nos 6 avions, pratiquez aussi bien des tours de pistes que des approches RNP, de jour, de nuit, avec toutes les conditions météos possibles.</p>
+                    <p>Nous vous proposons également un simulateur Certifié FNPT II pour pouvoir vous entrainez le mieux possible et ainsi pouvoir être opérationnel rapidement.Modélisant nos 6 avions, pratiquez aussi bien des tours de pistes que des approches RNP, de jour, de nuit, avec toutes les conditions météos possibles.</p>
 
-                    <li>Simulateur cabine : Angle de vue HD 250° Horizontal, 49° vertical. Manche de pilotage type “volant” 3 axes avec moteurs couples sur tous les axes. Deux siéges en cabine.</li>
+                    <li>Simulateur cabine : Angle de vue HD 250° Horizontal, 49° vertical. Manche de pilotage type “volant” 3 axes avec moteurs couples sur tous les axes. Deux sièges en cabine.</li>
                     <br>
                     <li>3 Modèles de vol : SEP train tricycle/pas fixe, SEP train rentrant/pas variable, MEP (bimoteur) train rentrant/pas variable.</li>
                     <br>

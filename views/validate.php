@@ -27,7 +27,7 @@ require_once '../controllers/controller-validate.php';
                     <div class="row">
                         <p class="textColor2 fontTitle"><?= $plane['plane_name'] ?></p>
 
-                        <p class="fontText">En fonction de votre expérience, vous pourrez être lâché sur nos machines après un éventuel ré-entrainement et un test réalisé par un de nos instructeurs.</p>
+                        <p class="fontText">En fonction de votre expérience, vous pourrez être lâché sur nos machines après un éventuel ré-entraînement et un test réalisé par un de nos instructeurs.</p>
                     </div>
 
                     <form action="#" method="POST" novalidate>

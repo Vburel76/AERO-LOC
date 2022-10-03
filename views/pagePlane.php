@@ -17,8 +17,8 @@ if (!isset($_SESSION)) {
 
             <section class="row m-0 p-5 justify-content-center">
                 <article class="col-lg-8">
-                    <p class="fs-5 text-center  fontTitle">Louer un avion privé depuis l'aéroport d'octeville</p>
-                    <p class="fontText">Vous pouvez louer nos avions pour un ou plusieurs jours. Le préalable indispensable est une heure de vol avec un instructeur d'Aero-Loc afin de valider vos capacités au pilotage de l'appareil. Pour annuler une réservation il est posible de le faire jusqu'à 24 heures avant le vol .</p>
+                    <p class="fs-5 text-center  fontTitle">Louer un avion privé depuis l'aéroport d'Octeville</p>
+                    <p class="fontText">Vous pouvez louer nos avions pour un ou plusieurs jours. Le préalable indispensable est une heure de vol avec un instructeur d'Aero-Loc afin de valider vos capacités au pilotage de l'appareil. Pour annuler une réservation il est possible de le faire jusqu'à 24 heures avant le vol .</p>
                 </article>
             </section>
 
