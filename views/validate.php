@@ -98,7 +98,7 @@ require_once '../controllers/controller-validate.php';
                                 <?php
                                 foreach ($location as $value) { ?>
                                     <tr>
-                                        <td class="align-middle"><?= $value['location_start'] ?></td>
+                                        <td class="align-middle"><?= date_format(date_create($value['location_start']),"d/m/Y") ?></td>
                                         <td class="align-middle"><?= $value['location_periode'] ?></td>
                                     </tr>
                                 <?php } ?>

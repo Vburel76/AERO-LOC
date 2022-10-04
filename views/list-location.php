@@ -49,7 +49,7 @@ require_once('../controllers/controller-list-location.php');
                                             <td class="align-middle"><?= $value['location_id'] ?></td>
                                             <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
                                             <td class="align-middle "><?= $value['plane_name'] ?></td>
-                                            <td class="align-middle "><?= $value['location_start'] ?></td>
+                                            <td class="align-middle "><?= date_format(date_create($value['location_start']),"d/m/Y") ?></td>
                                             <td class="align-middle"><?= $value['location_periode'] ?></td>
                                             <td class="align-middle"><?= $value['user_lastname'] ?></td>
                                             <td class="align-middle"><?= $value['user_firstname'] ?></td>

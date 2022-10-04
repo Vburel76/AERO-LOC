@@ -87,7 +87,7 @@ require_once('../controllers/controller-list-one-location.php');
                         </div>
                         <div class="row m-2 p-0 justify-content-center">
                             <div class="col-lg-5">
-                                <p class="text-start fontText m-2">Date : <b><?= $location['location_start'] ?></b></p>
+                                <p class="text-start fontText m-2">Date : <b><?= date_format(date_create($location['location_start']),"d/m/Y") ?></b></p>
                                 <p class="text-start fontText m-2 ">Statut: <b><?= $location['location_validate'] == 1 ? '<span class="text-success">validé</span>' : '<span class="text-danger">En attente</span>'  ?></b></p>
                             </div>
                             <div class="col-lg-5">
