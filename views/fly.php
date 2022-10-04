@@ -14,6 +14,7 @@ if (!isset($_SESSION)) {
 <body class=" d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-11 col-12 bg-light  p-0">
+            
             <div class="flyBackground d-lg-block d-none">
             </div>
 

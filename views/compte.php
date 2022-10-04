@@ -17,7 +17,7 @@ include '../elements/meta.php';
 
 <?php include '../elements/navBar.php' ?>
 
-<div class="BGlanding">
+<body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-9 col-11 bg-light m-5 p-0">
 
@@ -49,7 +49,7 @@ include '../elements/meta.php';
 
                         <div class="row justify-content-center">
                             <div class="col-lg-11 col-11">
-                                <p class="fs-5 text-center m-3 p-2 lignephone mt-3"> Mes photos </p>
+                                <p class="fs-5 fontTitle text-center m-3 p-2 lignephone mt-3"> Mes photos </p>
                             </div>
                         </div>
 
@@ -90,7 +90,7 @@ include '../elements/meta.php';
 
 
 
-
-
-
     <?php include '../elements/footer.php' ?>
+</body>
+
+</html>

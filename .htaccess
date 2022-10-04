@@ -8,4 +8,4 @@ RewriteEngine on
 #--------------------------------------------------
 # Page erreur 404 perso 
 #--------------------------------------------------
-ErrorDocument 404 /test.php
+ErrorDocument 404 /error.php

@@ -39,7 +39,7 @@ header {
 
 .backgroundNavbar:hover {
 
-    background-color: white;
+background-color: white;
 }
 
 .sizeLiNavBar {
@@ -54,8 +54,6 @@ header {
     width: 100%;
     z-index: 2;
 }
-
-
 
 
 @media screen and (max-width: 480px) {
@@ -186,6 +184,7 @@ header {
 .profilPicture {
     width: 20rem;
     height: auto;
+
 }
 
 
@@ -357,14 +356,16 @@ header {
     border: 3px solid rgb(31, 80, 123);
     font-weight: bold;
 }
+
 .buttonthemeRed {
     color: red;
     border: 3px solid red;
     font-weight: bold;
 }
-.buttonthemeRed:hover{
-    background-color:red;
-    color: white;  
+
+.buttonthemeRed:hover {
+    background-color: red;
+    color: white;
 }
 
 
@@ -374,9 +375,10 @@ header {
     border: 3px solid rgb(66, 66, 66);
     font-weight: bold;
 }
-.buttonthemeGrey:hover{
-    background-color:rgb(66, 66, 66);
-    color: white;  
+
+.buttonthemeGrey:hover {
+    background-color: rgb(66, 66, 66);
+    color: white;
 }
 
 
@@ -425,6 +427,9 @@ header {
     background-attachment: fixed;
 }
 
+
+
+
 .PagePlaneBackgroung {
     background-image: url("../img/location.jpg");
     height: 22rem;
@@ -433,10 +438,15 @@ header {
     background-repeat: no-repeat;
 }
 
+.test {
+    min-height: 43rem;
+}
+
 
 .BGlanding {
     background-image: url("../img/imageLanding.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     background-color: grey;
     background-blend-mode: screen;
@@ -513,6 +523,15 @@ header {
 .ligneGalerie:after {
     content: '';
     width: 43%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lignecontenu:before,
+.lignecontenu:after {
+    content: '';
+    width: 24%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -620,7 +639,7 @@ header {
 .lignephone:before,
 .lignephone:after {
     content: '';
-    width: 40%;
+    width: 35%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -637,6 +656,15 @@ header {
 
 
 @media screen and (max-width: 780px) {
+
+    .lignecontenu:before,
+    .lignecontenu:after {
+        content: '';
+        width: 18%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     .ligneaddPlane:before,
     .ligneaddPlane:after {
@@ -758,7 +786,7 @@ header {
     .lignephone:before,
     .lignephone:after {
         content: '';
-        width: 30%;
+        width: 28%;
         border-top: 3px double black;
         display: inline-block;
         vertical-align: middle;

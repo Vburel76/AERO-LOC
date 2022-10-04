@@ -207,9 +207,12 @@ class Plane extends Database
         $query->execute();
 
         $result = $query->fetchAll();
-
-        // je return le resultat
-        return $result[0];
+        if ($result == false) {
+            return false;
+        } else {
+            // je return le resultat
+            return $result[0];
+        }
     }
 
 

@@ -247,7 +247,12 @@ class Users extends DataBase
 
         $result = $query->fetchAll();
 
-        return $result[0];
+        if ($result == false) {
+            return false;
+        } else {
+            // je return le resultat
+            return $result[0];
+        }
     }
 
 
@@ -256,7 +261,7 @@ class Users extends DataBase
      * 
      * 
      */
-    public function modifUser(string $lasnameUser, string $firstnameUser,string $userPictureProfil, string $phoneNumberUser,string $passwordUser, string $roleUser, string $usersId): void
+    public function modifUser(string $lasnameUser, string $firstnameUser, string $userPictureProfil, string $phoneNumberUser, string $passwordUser, string $roleUser, string $usersId): void
     {
         $pdo = parent::connectDb();
 
@@ -264,7 +269,7 @@ class Users extends DataBase
 
         $query = $pdo->prepare($sql);
 
-var_dump( $lasnameUser,  $firstnameUser, $userPictureProfil,  $phoneNumberUser, $passwordUser,  $roleUser,  $usersId);
+        var_dump($lasnameUser,  $firstnameUser, $userPictureProfil,  $phoneNumberUser, $passwordUser,  $roleUser,  $usersId);
 
 
         $query->bindValue(':user_lastname', $lasnameUser, PDO::PARAM_STR);

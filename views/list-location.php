@@ -15,7 +15,7 @@ require_once('../controllers/controller-list-location.php');
                 </div>
             </div>
 
-            <div class="row m-3 p-0 justify-content-center ">
+            <div class="row m-3 p-0 justify-content-center">
                 <div class="col-lg-11 col-12 text-center">
                     <p class="fontTitle text-center m-3 p-2 fs-3 ligneLocation "> LOCATIONS </p>
                 </div>
@@ -25,41 +25,43 @@ require_once('../controllers/controller-list-location.php');
                 <div class="col-lg-12 col-12 ">
                     <div class="table-responsive">
                         <label class="m-2 fw-bold">entrer le nom de l'utilisateur:</label>
-                        <input class="rounded" id="myInput" onkeyup="myFunction()" type="text"  />
-                        <table id="myTable" class="table table-striped text-center">
-                            <thead>
-                                <tr>
-                                    <th class="pictureSize" scope="col">#</th>
-                                    <th class="pictureSize" scope="col">Image</th>
-                                    <th class="pictureSize" scope="col">Avion</th>
-                                    <th class="pictureSize" scope="col">date de départ</th>
-                                    <th class="pictureSize" scope="col">Période</th>
-                                    <th class="pictureSize" scope="col">Nom</th>
-                                    <th class="pictureSize" scope="col">Prénom</th>
-                                    <th class="pictureSize" scope="col">Statut</th>
-                                    <th class="pictureSize" scope="col"></th>
+                        <input class="rounded" id="myInput" onkeyup="myFunction()" type="text" />
+                        <div class="table-responsive">
+                            <table id="myTable" class="table table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th class="pictureSize" scope="col">#</th>
+                                        <th class="pictureSize" scope="col">Image</th>
+                                        <th class="pictureSize" scope="col">Avion</th>
+                                        <th class="pictureSize" scope="col">date de départ</th>
+                                        <th class="pictureSize" scope="col">Période</th>
+                                        <th class="pictureSize" scope="col">Nom</th>
+                                        <th class="pictureSize" scope="col">Prénom</th>
+                                        <th class="pictureSize" scope="col">Statut</th>
+                                        <th class="pictureSize" scope="col"></th>
 
-                                </tr>
-                            </thead>
-                            <tbody class="p-5">
-                                <?php
-                                foreach ($location as $value) { ?>
-                                    <tr class="search-list">
-                                        <td class="align-middle"><?= $value['location_id'] ?></td>
-                                        <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
-                                        <td class="align-middle "><?= $value['plane_name'] ?></td>
-                                        <td class="align-middle "><?= $value['location_start'] ?></td>
-                                        <td class="align-middle"><?= $value['location_periode'] ?></td>
-                                        <td class="align-middle"><?= $value['user_lastname'] ?></td>
-                                        <td class="align-middle"><?= $value['user_firstname'] ?></td>
-                                        <td class="align-middle"><?= $value['location_validate'] == 1 ? '<p class="text-success">validé</p>' : '<p class="text-danger">En attente</p>'  ?></td>
-                                        <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn buttontheme">Info</a></td>
                                     </tr>
+                                </thead>
+                                <tbody class="p-5">
+                                    <?php
+                                    foreach ($location as $value) { ?>
+                                        <tr class="search-list">
+                                            <td class="align-middle"><?= $value['location_id'] ?></td>
+                                            <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
+                                            <td class="align-middle "><?= $value['plane_name'] ?></td>
+                                            <td class="align-middle "><?= $value['location_start'] ?></td>
+                                            <td class="align-middle"><?= $value['location_periode'] ?></td>
+                                            <td class="align-middle"><?= $value['user_lastname'] ?></td>
+                                            <td class="align-middle"><?= $value['user_firstname'] ?></td>
+                                            <td class="align-middle"><?= $value['location_validate'] == 1 ? '<p class="text-success">validé</p>' : '<span class="text-danger">En attente de validation</span>'  ?></td>
+                                            <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn buttontheme">Info</a></td>
+                                        </tr>
 
-                                <?php } ?>
+                                    <?php } ?>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                 </div>

@@ -12,7 +12,6 @@ require_once('../controllers/controllers-plane-list.php');
 
 
 <body class="d-flex flex-column min-vh-100 BGlanding">
-
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-8 bg-light  p-0">
             <div class="row m-0 p-0 justify-content-center">
@@ -38,8 +37,6 @@ require_once('../controllers/controllers-plane-list.php');
                                     <th class="pictureSize" scope="col">image</th>
                                     <th class="pictureSize" scope="col">Nom</th>
                                     <th class="pictureSize" scope="col">Description</th>
-                                    <th class="pictureSize" scope="col"></th>
-                                    <th class="pictureSize" scope="col"></th>
                                     <th class="pictureSize" scope="col"></th>
 
                                 </tr>

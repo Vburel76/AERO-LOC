@@ -134,7 +134,7 @@ class Location extends DataBase
     {
         $pdo = parent::connectDb();
 
-        $sql = "SELECT * FROM `location` INNER JOIN `user` ON `user_id_user` = `user_id` INNER JOIN `plane` ON `plane_id_plane` = `plane_id`";
+        $sql = "SELECT *  FROM `location` INNER JOIN `user` ON `user_id_user` = `user_id` INNER JOIN `plane` ON `plane_id_plane` = `plane_id`";
 
         $query = $pdo->query($sql);
 
@@ -237,7 +237,12 @@ class Location extends DataBase
 
         $result = $query->fetchAll();
 
-        return $result[0];
+        if ($result == false) {
+            return false;
+        } else {
+            // je return le resultat
+            return $result[0];
+        }
     }
 
     /**

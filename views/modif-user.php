@@ -9,6 +9,9 @@ require_once '../controllers/controller-modif-user.php';
 
 <body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
+
+
+    <?php if ($infoUser != false) { ?>
         <div class="col-lg-6 bg-light modifUser ">
             <div class="row m-0 p-0">
                 <div class="col-lg-2 m-2">
@@ -44,9 +47,7 @@ require_once '../controllers/controller-modif-user.php';
                                         <option value="<?= $value['role_id'] ?>" <?= $value['role_id'] == $infoUser['role_id'] ?  'selected' : '' ?>><?= $value['role_name'] ?></option>
                                     <?php } ?>
                                 </select>
-
                             </div>
-
                             <div class="row justify-content-center m-0 p-0">
                                 <div class="col-lg-5  m-4">
                                     <input type="submit" class="btn fontColor btnSize" value="valider">
@@ -57,6 +58,20 @@ require_once '../controllers/controller-modif-user.php';
                 </div>
             </form>
         </div>
+        <?php } else { ?>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <p class="text-center fs-5 mt-5 border border-dark bg-light fontTitle p-3">veuillez un utilisateur valide</p>
+                    <div class="row m-0 p-0 justify-content-center">
+                        <div class="col-lg-2 col-10 m-2">
+                            <a href="user-list.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <?php }?>
+
+
     </div>
 </body>
 <?php include '../elements/footer.php' ?>

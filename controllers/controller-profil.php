@@ -31,10 +31,6 @@ $regexPhone = "/^[0-9]{10}+$/";
 $roleObj = new Role();
 $roleArray = $roleObj->getAllRole();
 
-var_dump($_SESSION);
-var_dump($_FILES);
-
-
 
 // je declenche mes vérifications lorsque j'appui sur le bouton validé car ça declenche un POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -137,4 +133,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 $userObj = new Users();
 $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
-var_dump($errors);
+

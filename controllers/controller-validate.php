@@ -78,8 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       $_SESSION['swal'] = [
         'icon' => 'success',
-        'title' => 'Création',
-        'text' => 'Location validée'
+        'title' => 'réservation enregistré',
+        'text' => 'En attente de validation'
       ];
       header('Location: pagePlane.php');
       exit;
