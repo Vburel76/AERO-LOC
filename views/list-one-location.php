@@ -7,7 +7,6 @@ require_once('../controllers/controller-list-one-location.php');
 ?>
 
 
-
 <?php include '../elements/navBar.php' ?>
 
 <body class="d-flex flex-column min-vh-100 BGlanding">

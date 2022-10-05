@@ -9,7 +9,7 @@ require_once '../controllers/controller-addplane.php';
 
 <body class=" d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
-        <div class="col-lg-6 col-12 bg-light p-0">
+        <div class="col-lg-8 col-12 bg-light p-0">
 
             <div class="row m-3 p-0 justify-content-center">
                 <div class="col-lg-11 col-12 text-center">
@@ -18,36 +18,37 @@ require_once '../controllers/controller-addplane.php';
             </div>
 
             <form class="mt-3 mb-5" action="#" method="POST" novalidate enctype="multipart/form-data">
-                <div class="row justify-content-center m-0 p-0  ">
-                    <div class="col-lg-12 col-12">
-                        <div class="row justify-content-center mx-5 p-0 pt-2  rounded roundColor">
-                            <div class="col-lg-6 col-10 p-1 rounded">
-
-                                <label for="file" class="fontText">Image</label><span class="ms-2 text-danger"><?= isset($errors['fileToUpload']) ? $errors['fileToUpload'] : '' ?></span>
+                <div class="row justify-content-center m-0 p-0">
+                    <div class="col-lg-11 col-12">
+                        <div class="row justify-content-center mx-5 p-0 pt-3 rounded roundColor">
+                            <div class="col-lg-5 col-10 p-1 rounded">
+                                <span class="ms-2 text-danger d-block"><?= isset($errors['fileToUpload']) ? $errors['fileToUpload'] : '' ?></span>
+                                <label for="file" class="fontText">Ajout d'une Image</label>
+                                <img class="img-fluid my-2" id="imgPreview">
                                 <input type="file" name="fileToUpload" id="fileToUpload" class="mb-3">
 
                                 <label for="namelocPlane" class="mt-2 fontText">Nom de l'avion</label><span class="ms-2 text-danger"><?= isset($errors['namelocPlane']) ? $errors['namelocPlane'] : '' ?>
                                 </span>
-                                <input id="namelocPlane" name="namelocPlane" class="tailleInput mb-3" type="text" value="">
+                                <input id="namelocPlane" name="namelocPlane" class="tailleInput mb-2 me-3" type="text" value="">
 
                                 <label for="sizelocPlane" class="mt-2 fontText">Taille de l'avion (En m)</label><span class="ms-2 text-danger"><?= isset($errors['sizelocPlane']) ? $errors['sizelocPlane'] : '' ?></span>
-                                <input id="sizelocPlane" name="sizelocPlane" class="tailleInput mb-3" type="text" value="">
+                                <input id="sizelocPlane" name="sizelocPlane" class="tailleInput mb-2 me-3" type="text" value="">
 
 
                                 <label for="scopelocPlane" class="mt-2 fontText">Portée (En Km)</label><span class="ms-2 text-danger"><?= isset($errors['scopelocPlane']) ? $errors['scopelocPlane'] : '' ?></span>
-                                <input name="scopelocPlane" id="scopelocPlane" class="tailleInput mb-3" type="text" value="">
+                                <input name="scopelocPlane" id="scopelocPlane" class="tailleInput mb-2 me-3" type="text" value="">
 
 
                                 <label for="autonomylocPlane" class="fontText">Autonomie (En Heures)</label><span class="ms-2 text-danger"><?= isset($errors['autonomylocPlane']) ? $errors['autonomylocPlane'] : '' ?></span>
-                                <input id="autonomylocPlane" name="autonomylocPlane" class="tailleInput mb-3" type="tel" value="">
+                                <input id="autonomylocPlane" name="autonomylocPlane" class="tailleInput mb-2 me-3" type="tel" value="">
 
 
 
                                 <label for="altitudelocPlane" class="fontText">Altitude max (En m)</label><span class="ms-2 text-danger"><?= isset($errors['altitudelocPlane']) ? $errors['altitudelocPlane'] : '' ?></span>
-                                <input id="altitudelocPlane" name="altitudelocPlane" class="tailleInput mb-3" type="text" value="">
+                                <input id="altitudelocPlane" name="altitudelocPlane" class="tailleInput mb-2 me-3" type="text" value="">
 
                                 <label for="speedlocPlane" class="fontText">Vitesse max (En Km/h)</label><span class="ms-2 text-danger"><?= isset($errors['speedlocPlane']) ? $errors['speedlocPlane'] : '' ?></span>
-                                <input id="speedlocPlane" name="speedlocPlane" class="tailleInput mb-3" type="text">
+                                <input id="speedlocPlane" name="speedlocPlane" class="tailleInput mb-2 me-3" type="text">
 
 
 
@@ -77,5 +78,20 @@ require_once '../controllers/controller-addplane.php';
 
         </div>
     </div>
+    <script>
+        // JS permettant d'avoir un apercu de l'image lors du choix de l'input
+        let inputPicture = document.getElementById('fileToUpload')
+        inputPicture.addEventListener("change", function() {
+            let oFReader = new FileReader(); // on créé un nouvel objet FileReader
+            oFReader.readAsDataURL(this.files[0]);
+            oFReader.onload = function(oFREvent) {
+                let imgPreview = document.getElementById('imgPreview');
+                console.log(oFREvent.target.result)
+                imgPreview.setAttribute('src', oFREvent.target.result);
+            };
+        })
+    </script>
+    <?php include '../elements/footer.php' ?>
 </body>
-<?php include '../elements/footer.php' ?>
+
+</html>

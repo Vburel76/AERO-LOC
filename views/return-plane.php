@@ -13,17 +13,10 @@ require_once('../models/plane.php');
 
 
 <body class="d-flex flex-column min-vh-100 BGlanding border border-primary">
-
     <div class="row m-0 p-0 justify-content-center">
         <?php if ($plane != false) { ?>
 
-            <div class="col-lg-8 col-12 bg-light utilisateurSize ">
-                <div class="row m-0 p-0 justify-content-center">
-                    <div class="col-lg-2 col-10 m-2">
-                        <a href="plane-list.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
-                    </div>
-                </div>
-
+            <div class="col-lg-8 col-12 bg-light listOnePlane">
                 <div class="row m-3 p-0 justify-content-center">
                     <div class="col-lg-11 col-12 text-center">
                         <p class="fontTitle text-center m-3 p-2 fs-5  ligneModify "> Avion </p>
@@ -43,6 +36,11 @@ require_once('../models/plane.php');
                                 <p class="fs-5">Altitude max : <b><?= $plane['plane_altitude'] ?></b></p>
                                 <p class="fs-5">Vitesse max : <b><?= $plane['plane_speed'] ?></b></p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0 justify-content-center ">
+                        <div class="col-lg-2 col-10 mt-3  m-2">
+                            <a href="plane-list.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
                         </div>
                     </div>
                 </div>

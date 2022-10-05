@@ -106,7 +106,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($_FILES['pictureProfil']['error'] == 4) {
             $userObj = new Users();
             $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
-            var_dump($infoUser);
             $userPictureProfil = $infoUser['user_picture_profil'];
             $userObj->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, $passwordUser, 2, $usersId);
 

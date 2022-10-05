@@ -259,7 +259,7 @@ class Location extends DataBase
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':location_start', $locationStart, PDO::PARAM_STR);
-        $query->bindValue(':location_pediode', $locationPeriode, PDO::PARAM_STR);
+        $query->bindValue(':location_periode', $locationPeriode, PDO::PARAM_STR);
         $query->bindValue(':location_departure', $locationDeparture, PDO::PARAM_STR);
         $query->bindValue(':location_arrival', $locationArrival, PDO::PARAM_STR);
         $query->bindValue(':location_id', $locationId, PDO::PARAM_INT);

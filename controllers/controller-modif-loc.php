@@ -13,10 +13,7 @@ require_once '../models/user.php';
 
 $showForm = true;
 $errors = [];
-$regexName = "/^[a-zA-Zéèêë]+$/";
-
-var_dump($_GET);
-
+$regexName = "/^[a-zA-Zéèêë' ']+$/";
 
 // je declenche mes vérifications lorsque j'appui sur le bouton validé car ça declenche un POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

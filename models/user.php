@@ -269,14 +269,25 @@ class Users extends DataBase
 
         $query = $pdo->prepare($sql);
 
-        var_dump($lasnameUser,  $firstnameUser, $userPictureProfil,  $phoneNumberUser, $passwordUser,  $roleUser,  $usersId);
-
-
         $query->bindValue(':user_lastname', $lasnameUser, PDO::PARAM_STR);
         $query->bindValue(':user_firstname', $firstnameUser, PDO::PARAM_STR);
         $query->bindValue(':user_picture_profil', $userPictureProfil, PDO::PARAM_STR);
         $query->bindValue(':user_phone', $phoneNumberUser, PDO::PARAM_STR);
         $query->bindValue(':user_password', $passwordUser, PDO::PARAM_STR);
+        $query->bindValue(':role_id_role', $roleUser, PDO::PARAM_STR);
+        $query->bindValue(':user_id', $usersId, PDO::PARAM_STR);
+
+        $query->execute();
+    }
+
+    public function modifRoleUser(string $roleUser, string $usersId): void
+    {
+        $pdo = parent::connectDb();
+
+        $sql = "UPDATE `user` SET`role_id_role` =:role_id_role  WHERE `user_id` =:user_id";
+
+        $query = $pdo->prepare($sql);
+
         $query->bindValue(':role_id_role', $roleUser, PDO::PARAM_STR);
         $query->bindValue(':user_id', $usersId, PDO::PARAM_STR);
 

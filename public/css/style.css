@@ -483,9 +483,19 @@ header {
     height: 90vh;
 }
 
-.utilisateurSize {
-    margin-top: 5rem;
+.modifOneUser{
+    height: 86vh;
 }
+
+.listOneUser{
+    height: 73vh;
+}
+
+.listOnePlane{
+    height: 93vh;
+
+}
+
 
 /* list-location js */
 
@@ -572,7 +582,7 @@ header {
 .ligneModify:before,
 .ligneModify:after {
     content: '';
-    width: 25%;
+    width: 40%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -671,7 +681,7 @@ header {
 .lignemodifyPlane:before,
 .lignemodifyPlane:after {
     content: '';
-    width: 30%;
+    width: 42%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -701,7 +711,7 @@ header {
     .lignemodifyPlane:before,
     .lignemodifyPlane:after {
         content: '';
-        width: 25%;
+        width: 38%;
         border-top: 3px double black;
         display: inline-block;
         vertical-align: middle;
@@ -710,7 +720,7 @@ header {
     .ligneModify:before,
     .ligneModify:after {
         content: '';
-        width: 27%;
+        width: 32%;
         border-top: 3px double black;
         display: inline-block;
         vertical-align: middle;

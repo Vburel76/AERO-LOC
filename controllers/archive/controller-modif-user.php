@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $usersModif = new Users();
 
-        $usersModif->modifUser($lasnameUser, $firstnameUser, $phoneNumberUser,$roleUser,$usersId);
+        $usersModif->modifUser($lasnameUser, $firstnameUser,$userPictureProfil, $phoneNumberUser,$roleUser,$usersId);
     }
 }
 $userObj = new Users();

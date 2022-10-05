@@ -14,12 +14,6 @@ require_once('../controllers/controllers-plane-list.php');
 <body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-8 bg-light  p-0">
-            <div class="row m-0 p-0 justify-content-center">
-                <div class="col-lg-2 col-10 m-2">
-                    <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
-                </div>
-            </div>
-
             <div class="row m-3 p-0 justify-content-center">
                 <div class="col-lg-11 col-12 text-center">
                     <p class="text-center fs-5 mt-5 fontTitle lignemodifyPlane"> L'avion </p>
@@ -60,6 +54,11 @@ require_once('../controllers/controllers-plane-list.php');
 
                             </tbody>
                         </table>
+                        <div class="row m-0 p-0 justify-content-center ">
+                            <div class="col-lg-2 col-10 mt-3  m-2">
+                                <a href="plane-list.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                            </div>
+                        </div>
                     </div>
 
                     <?php

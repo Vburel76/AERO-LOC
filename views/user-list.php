@@ -7,15 +7,8 @@ require_once('../controllers/controller-list-user.php');
 <?php include '../elements/navBar.php' ?>
 
 <body class="d-flex flex-column min-vh-100 BGlanding">
-
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-8 bg-light p-0">
-            <div class="row m-0 p-0 justify-content-center">
-                <div class="col-lg-2 col-12 m-2">
-                    <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
-                </div>
-            </div>
-
             <div class="row m-3 p-0 justify-content-center ">
                 <div class="col-lg-11 col-12 text-center">
                     <p class="fontTitle text-center m-3 p-2 fs-5 ligneUser "> Utilisateurs </p>
@@ -24,8 +17,8 @@ require_once('../controllers/controller-list-user.php');
 
             <div class="row m-0 p-0 justify-content-center mb-5">
                 <div class="col-lg-12 ">
-                    <label class="m-2 fw-bold">entrer le nom de l'utilisateur:</label>
-                    <input type="text" class="rounded" id="myInput" onkeyup="myFunction()">
+                    <label class="m-2 fw-bold">Recherche par nom:</label>
+                    <input type="text" class="rounded" placeholder="ex: Burel" id="myInput" onkeyup="myFunction()">
                     <div class="table-responsive">
                         <table id="myTable" class="table table-striped text-center">
                             <thead>
@@ -41,15 +34,13 @@ require_once('../controllers/controller-list-user.php');
                                 <?php
                                 foreach ($users as $value) {
                                 ?>
-                                    <tr>
+                                    <tr class="text-center">
                                         <th class="pt-3"><?= $value['user_id'] ?></th>
                                         <td class="pt-3"><?= $value['user_lastname'] ?></td>
                                         <td class="pt-3"><?= $value['user_firstname'] ?></td>
                                         <td class="pt-3"><?= $value['user_phone'] ?></td>
-                                        <td>
-                                            <a href="modif-user.php?users=<?= $value['user_id'] ?>" class="btn buttontheme m-1">Modification</a>
-
-                                            <a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttonthemeGrey m-1">+ d'Info</a>
+                                        <td class="text-center">
+                                            <a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttonthemeGrey m-1 ">+ d'Info</a>
 
                                             <button type="button" class="btn buttonthemeRed m-1" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
                                         </td>
@@ -83,7 +74,11 @@ require_once('../controllers/controller-list-user.php');
                             </div>
                         </div>
                     <?php } ?>
-
+                    <div class="row m-0 p-0 justify-content-center ">
+                        <div class="col-lg-2 col-10 mt-3  m-2">
+                            <a href="admin.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
