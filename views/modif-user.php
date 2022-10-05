@@ -9,8 +9,6 @@ require_once '../controllers/controller-modif-user.php';
 
 <body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
-
-
     <?php if ($infoUser != false) { ?>
         <div class="col-lg-6 bg-light modifUser ">
             <div class="row m-0 p-0">

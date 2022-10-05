@@ -19,17 +19,17 @@ require_once '../controllers/controller-admin.php';
             </div>
 
             <div class="row justify-content-center  m-0 p-0">
-                <div class="col-lg-8 col-8 m-5 text-center py-5">
-                    <a type="button" href="addLoc.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter une location </a>
-                    <a type="button" href="list-location.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des locations</a>
+                <div class="col-lg-8 col-8  text-center py-1">
+
                     <a type="button" href="adduser.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter utilisateur</a>
                     <a type="button" href="user-list.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des utilisateurs</a>
                     <a type="button" href="add-plane.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Ajouter avion</a>
                     <a type="button" href="plane-list.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des avions</a>
-                    <div class="row m-0 p-0 justify-content-center ">
-                        <div class="col-lg-2 col-12 m-2 mt-4">
-                            <a href="landing.php" type="submit" class="btn fontColor btnSize  p-1">Retour</a>
-                        </div>
+                    <a type="button" href="list-location.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des locations</a>
+                </div>
+                <div class="row m-0 p-0 justify-content-center ">
+                    <div class="col-lg-2 col-10 mt-3  m-2">
+                        <a href="admin.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
                     </div>
                 </div>
             </div>
