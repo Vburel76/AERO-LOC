@@ -24,11 +24,12 @@ if (!isset($_SESSION['user'])) {
 
             <form action="#" method="POST" novalidate enctype="multipart/form-data">
                 <div class="row justify-content-center mx-4 p-0">
-                    <div class="col-lg-12">
+                    <div class="col-lg-11">
                         <div class="row justify-content-center m-0 pt-3 rounded roundColor">
                             <div class="col-lg-5 col-11 p-1 rounded">
                                 <span class="ms-2 text-danger d-block"><?= isset($errors['pictureProfil']) ? $errors['pictureProfil'] : '' ?></span>
                                 <label class="fontText" for="pictureProfil">Photo de Profil</label>
+                                <img class="img-fluid my-2" id="imgPreview">
                                 <input id="pictureProfil" name="pictureProfil" class="tailleInput mb-2 me-3" type="file" value="">
 
                                 <label for="lastname" class="fontText">Nom</label><span class="ms-2 text-danger"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>
@@ -69,5 +70,22 @@ if (!isset($_SESSION['user'])) {
             </form>
         </div>
     </div>
+
+    <script>
+        // JS permettant d'avoir un apercu de l'image lors du choix de l'input
+        let inputPicture = document.getElementById('pictureProfil')
+        inputPicture.addEventListener("change", function() {
+            let oFReader = new FileReader(); // on créé un nouvel objet FileReader
+            oFReader.readAsDataURL(this.files[0]);
+            oFReader.onload = function(oFREvent) {
+                let imgPreview = document.getElementById('imgPreview');
+                console.log(oFREvent.target.result)
+                imgPreview.setAttribute('src', oFREvent.target.result);
+            };
+        })
+    </script>
+    <?php include '../elements/footer.php' ?>
+
 </body>
-<?php include '../elements/footer.php' ?>
+
+</html>
