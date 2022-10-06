@@ -31,10 +31,10 @@ include '../elements/meta.php';
                             <img class="imgCompte " src="../public/img/<?= $user['user_picture_profil'] ?>" alt="" srcset="">
                         </div>
                         <div class="col-lg-5 col-10 m-4">
-                            <p class="m-3 mb-2">Nom : <b><?= strtoupper($user['user_lastname']); ?></b></p>
-                            <p class="m-3">Prénom : <b><?= strtoupper($user['user_firstname']); ?></b></p>
-                            <p class="m-3">mail : <b><?= strtoupper($user['user_mail']); ?></b></p>
-                            <p class="m-3">Mobile : <b><?= strtoupper($user['user_phone']); ?></b></p>
+                            <p class="m-3 mb-2 "><span class="fw-bold">Nom :</span> <?= strtoupper($user['user_lastname']); ?></p>
+                            <p class="m-3"><span class="fw-bold">Prénom :</span> <?= ucfirst($user['user_firstname']); ?></p>
+                            <p class="m-3"><span class="fw-bold">mail :</span> <?= $user['user_mail']; ?></p>
+                            <p class="m-3"><span class="fw-bold">Mobile :</span> <?= $user['user_phone']; ?></p>
                         </div>
 
                         <div class="row justify-content-center m-0 p-0">
@@ -44,16 +44,25 @@ include '../elements/meta.php';
                         </div>
                     </div>
                 </div>
+                <div class="row m-0 p-0 justify-content-center ">
+                    <div class="col-lg-2 col-10 mt-3  m-2">
+                        <a href="landing.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
+    <?php if (isset($_SESSION['swal'])) { ?>
+        <script>
+            Swal.fire({
+                icon: '<?= $_SESSION['swal']['icon'] ?>',
+                title: '<?= $_SESSION['swal']['title'] ?>',
+                text: '<?= $_SESSION['swal']['text'] ?>'
+            })
+        </script>
+    <?php
+        unset($_SESSION['swal']);
+    } ?>
     <?php include '../elements/footer.php' ?>
 </body>
 

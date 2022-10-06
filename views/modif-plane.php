@@ -14,7 +14,7 @@ require_once '../controllers/controller-modif-plane.php';
             <div class="col-lg-8 bg-light ">
                 <div class="row m-3 p-0 justify-content-center">
                     <div class="col-lg-11 col-12 text-center">
-                        <p class="text-center fs-5 mt-5 fontTitle lignemodifyPlane"> Modifier l'avion </p>
+                        <p class="text-center fs-5 mt-5 fontTitle ligneModifyPlane"> Modifier l'avion </p>
                     </div>
                 </div>
 

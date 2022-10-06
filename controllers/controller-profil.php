@@ -108,8 +108,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
             $userPictureProfil = $infoUser['user_picture_profil'];
             $userObj->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, $passwordUser, 2, $usersId);
+            
+            $_SESSION['swal'] = [
+                'icon' => 'success',
+                'title' => 'Profil bien modifié',
+                'text' => 'Modifications bien prise en compte'
+            ];
 
-            // header('Location: compte.php');
+            header('Location: compte.php');
+            exit;
+
         } else {
             $resultUploadImage = form::uploadImage('pictureProfil', $paramUpload);
             if ($resultUploadImage['success'] === false) {
@@ -123,11 +131,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $userPictureProfil = $resultUploadImage['imageName'];
                 $usersModif->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, $passwordUser, 2, $usersId);
 
-                // header('Location: compte.php');
+                $_SESSION['swal'] = [
+                    'icon' => 'success',
+                    'title' => 'Profil bien modifié',
+                    'text' => 'Modifications bien prise en compte'
+                ];
+
+                header('Location: compte.php');
+                exit;
             }
         }
     }
 }
 $userObj = new Users();
 $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
-

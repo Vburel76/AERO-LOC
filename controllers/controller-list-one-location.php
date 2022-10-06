@@ -26,8 +26,7 @@ if (isset($_GET['delete'])) {
 
 $attribut = new Location();
 
-$location = $attribut->returnOnelocation($_GET['locationId']);
-
 if (isset($_POST['change'])) {
-  $validation = $attribut->ChangeValidation(1, $_GET['locationId']);
+$attribut->ChangeValidation(1, $_GET['locationId']);
 }
+$location = $attribut->returnOnelocation($_GET['locationId']);

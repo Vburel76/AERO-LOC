@@ -29,11 +29,11 @@ header {
     color: white;
 }
 
-.textFooter{
+.textFooter {
     color: white;
 }
 
-.textFooter:hover{
+.textFooter:hover {
     color: white;
 }
 
@@ -205,7 +205,7 @@ header {
     color: white;
 }
 
-.textcolorFooter{
+.textcolorFooter {
     background-color: black;
     color: white;
 }
@@ -301,6 +301,10 @@ header {
 
 }
 
+.flyColor {
+    border: 1px solid rgb(31, 80, 123);
+}
+
 
 .imgSize {
     width: 90%;
@@ -341,9 +345,6 @@ header {
     background-color: white;
     font-weight: bold;
 }
-
-
-
 
 /* admin button */
 .fontTheme {
@@ -583,6 +584,15 @@ header {
     vertical-align: middle;
 }
 
+.ligneModifyPlane:before,
+.ligneModifyPlane:after {
+    content: '';
+    width: 37%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .lignereservation:before,
 .lignereservation:after {
     content: '';
@@ -731,6 +741,15 @@ header {
 
 
 @media screen and (max-width: 780px) {
+
+    .ligneModifyPlane:before,
+    .ligneModifyPlane:after {
+        content: '';
+        width: 30%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     .lignereservation:before,
     .lignereservation:after {

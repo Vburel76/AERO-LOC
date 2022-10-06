@@ -254,7 +254,7 @@ class Location extends DataBase
     {
         $pdo = parent::connectDb();
 
-        $sql = "UPDATE `location` SET `location_start`=:location_start ,`location_periode`=:location_periode ,`location_departure`=:location_departure,`location_arrival`=:location_arrival  WHERE `location_id` =:location_id";
+        $sql = "UPDATE `location` SET `location_validate`= 0 , `location_start`=:location_start ,`location_periode`=:location_periode ,`location_departure`=:location_departure,`location_arrival`=:location_arrival  WHERE `location_id` =:location_id";
 
         $query = $pdo->prepare($sql);
 

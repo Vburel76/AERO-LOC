@@ -38,7 +38,7 @@ require_once '../controllers/controller-login.php';
             </div>
             <div class="row justify-content-end">
                 <div class="col-lg-2 text-end">
-                    <a href="landing.php" type="submit" class="btn m-1 p-1 fontColor btnSize">Retour à l'accueil</a>
+                    <a href="landing.php" type="submit" class="btn m-1 p-1 fontColor btnSize">Accueil</a>
                 </div>
             </div>
         </div>

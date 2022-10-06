@@ -32,14 +32,14 @@ if (!isset($_SESSION)) {
             </div>
             <div class="row m-0 p-0 justify-content-center">
                 <?php foreach ($planes as $value) { ?>
-                    <div class="col-lg-10 border border-success mt-3">
+                    <div class="col-lg-10 col-11 flyColor mt-3">
                         <div class="row ">
-                            <div class="col-lg-4">
-                                <div class="col-lg-12 m-0 text-center p-4">
+                            <div class="col-lg-4 col-12">
+                                <div class="col-lg-12 col-12 m-0 text-center p-4">
                                     <img class=" text-center img-fluid" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset="">
                                 </div>
                             </div>
-                            <div class="col-lg-8 p-4">
+                            <div class="col-lg-8 col-12 p-4">
                                 <h2 class="fs-5 fw-bold fontTitle presentationColor"><?= $value['plane_name'] ?></h2>
                                 <ul class="mt-3">
                                     <li class="m-0 ">La taille est de <b><?= $value['plane_size'] ?>m</b></li>
@@ -49,7 +49,7 @@ if (!isset($_SESSION)) {
                                     <li class="m-0 ">Son autonomie est de <b><?= $value['plane_autonomy'] ?> h</b></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-12 px-4">
+                            <div class="col-lg-12 col-12 px-4">
                                 <p class="fw-bold h5">Description :</p>
                                 <p class="textJust"><?= $value['plane_description'] ?></p>
                             </div>

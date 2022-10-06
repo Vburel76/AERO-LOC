@@ -3,7 +3,6 @@ if (!isset($_SESSION['user'])) {
     session_start();
 }
 ?>
-
 <?php
 require_once '../controllers/controller-profil.php';
 ?>
@@ -16,15 +15,11 @@ require_once '../controllers/controller-profil.php';
 <body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center">
         <div class="col-lg-8 bg-light p-0">
-
-
-
             <div class="row m-3 p-0 justify-content-center">
                 <div class="col-lg-11 col-12 text-center">
                     <p class="text-center fs-5 mt-5 fontTitle ligneprofil"> Modifier le profil </p>
                 </div>
             </div>
-
             <form action="#" method="POST" novalidate enctype="multipart/form-data">
                 <div class="row justify-content-center m-0 p-0 ">
                     <div class="col-lg-10 col-12">
@@ -56,7 +51,7 @@ require_once '../controllers/controller-profil.php';
                             </div>
                             <div class="row justify-content-center m-0 p-0">
                                 <div class="col-lg-3  m-4">
-                                    <input type="submit" class="btn fontColor btnSize" value="valider">
+                                    <input type="submit" class="btn fontColor btnSize" value="Valider">
                                 </div>
                             </div>
                         </div>

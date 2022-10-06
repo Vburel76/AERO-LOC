@@ -7,14 +7,12 @@ require_once('../controllers/controller-logout.php');
 
 <?php include '../elements/meta.php' ?>
 
-<body>
-    <header class="myHeader bg-light">
-        <h1 class="text-center">Aero-Loc</h1>
-    </header>
-    <div class="row justify-content-center m-3 p-0">
-        <div class="col-lg-6 text-center m-5 p-3 rounded modalTheme">
+<body class="d-flex flex-column min-vh-100 BGlanding">
+
+    <div class="row justify-content-center m-3 mt-5 p-0">
+        <div class="col-lg-6 text-center m-5 p-3 rounded modalTheme bg-light">
             <p class="fs-5 fontTitle">Bien Déconnecté</p>
-            <a href="login.php" class="btn buttontheme">Retour</a>
+            <a href="login.php" class="btn buttontheme">Accueil</a>
         </div>
     </div>
 

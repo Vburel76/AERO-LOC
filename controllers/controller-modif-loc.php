@@ -60,10 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $locationModif = new Location();
 
-        if ($locationModif->checkIfDateExists($_POST['modifDateLoc'])) {
+        // if ($locationModif->checkIfDateExists($_POST['modifDateLoc'])) {
 
-            $errors['modifDateLoc'] = 'Date indisponible';
-        } else {
+        //     $errors['modifDateLoc'] = 'Date indisponible';
+        // } else {
             $locationModif->modifLocValidate($locationStart,  $locationPeriode, $locationDeparture,  $locationArrival, $locationId);
 
             $_SESSION['swal'] = [
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ];
             header('Location: list-one-location.php?locationId=' . $locationId);
             exit;
-        }
+        // }
     }
 }
 

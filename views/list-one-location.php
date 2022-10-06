@@ -100,7 +100,7 @@ require_once('../controllers/controller-list-one-location.php');
                             </div>
 
                             <div class="col-lg-2 col-3 me-2 ">
-                                <a href="modif-loc.php?locationId=<?= $location['location_id'] ?>" type="button" class="btn TextcolorPagePlaneGrey fontText m-1 ">modifier</a>
+                                <a href="modif-loc.php?locationId=<?= $location['location_id'] ?>" type="button" class="btn TextcolorPagePlaneGrey fontText m-1 ">Modifier</a>
                             </div>
                             <div class="col-lg-2 col-3 me-2 ">
                                 <button type="button" class="btn  TextcolorPagePlaneRed fontText m-1" data-bs-toggle="modal" data-bs-target="#location-<?= $location['location_id'] ?>">Supprimer</button>
@@ -152,7 +152,6 @@ require_once('../controllers/controller-list-one-location.php');
                         </div>
                     </div>
                 <?php } ?>
-
             </div>
             <?php if (isset($_SESSION['swal'])) { ?>
                 <script>
