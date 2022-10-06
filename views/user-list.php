@@ -28,6 +28,7 @@ require_once('../controllers/controller-list-user.php');
                                     <th class="text-center" scope="col">Prénom</th>
                                     <th class="text-center" scope="col">Mobile</th>
                                     <th class="text-center" scope="col"></th>
+                                    <th class="text-center" scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody class="p-5">
@@ -41,7 +42,8 @@ require_once('../controllers/controller-list-user.php');
                                         <td class="pt-3"><?= $value['user_phone'] ?></td>
                                         <td class="text-center">
                                             <a href="list-one-user.php?userId=<?= $value['user_id'] ?>" class="btn buttonthemeGrey m-1 ">+ d'Info</a>
-
+                                        </td>
+                                        <td class="text-center">
                                             <button type="button" class="btn buttonthemeRed m-1" data-bs-toggle="modal" data-bs-target="#user-<?= $value['user_id'] ?>">Supprimer</button>
                                         </td>
                                     </tr>

@@ -54,10 +54,10 @@ require_once('../controllers/controllers-plane-list.php');
 
                             </tbody>
                         </table>
-                        <div class="row m-0 p-0 justify-content-center ">
-                            <div class="col-lg-2 col-10 mt-3  m-2">
-                                <a href="plane-list.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
-                            </div>
+                    </div>
+                    <div class="row m-0 p-0 justify-content-center ">
+                        <div class="col-lg-2 col-10 mt-3  m-2">
+                            <a href="admin.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
                         </div>
                     </div>
 

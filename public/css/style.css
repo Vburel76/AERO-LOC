@@ -29,6 +29,14 @@ header {
     color: white;
 }
 
+.textFooter{
+    color: white;
+}
+
+.textFooter:hover{
+    color: white;
+}
+
 .textNavBar:hover {
     color: black;
 }
@@ -194,6 +202,11 @@ header {
 
 .Textcolor {
     background-color: rgb(31, 80, 123);
+    color: white;
+}
+
+.textcolorFooter{
+    background-color: black;
     color: white;
 }
 
@@ -483,15 +496,15 @@ header {
     height: 90vh;
 }
 
-.modifOneUser{
+.modifOneUser {
     height: 86vh;
 }
 
-.listOneUser{
+.listOneUser {
     height: 73vh;
 }
 
-.listOnePlane{
+.listOnePlane {
     height: 93vh;
 
 }
@@ -552,6 +565,35 @@ header {
 }
 
 /* ligne */
+.ligneprofil:before,
+.ligneprofil:after {
+    content: '';
+    width: 35%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ligneModifyLocation:before,
+.ligneModifyLocation:after {
+    content: '';
+    width: 36%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lignereservation:before,
+.lignereservation:after {
+    content: '';
+    width: 37%;
+    border-top: 3px double black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
 .ligneGalerie:before,
 .ligneGalerie:after {
     content: '';
@@ -689,6 +731,15 @@ header {
 
 
 @media screen and (max-width: 780px) {
+
+    .lignereservation:before,
+    .lignereservation:after {
+        content: '';
+        width: 28%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     .lignecontenu:before,
     .lignecontenu:after {

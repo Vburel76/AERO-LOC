@@ -20,7 +20,7 @@ if (isset($_GET['delete'])) {
 
   // je supprime la location avec la methode deleteLocation
   $attributDel->deleteLocation($_GET['delete']);
-  header("Location: list-location.php");
+  header("Location: reservation.php");
 }
 
 

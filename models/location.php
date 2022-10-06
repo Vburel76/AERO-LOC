@@ -205,7 +205,7 @@ class Location extends DataBase
     {
         $pdo = parent::connectDb();
 
-        $sql = "SELECT `location_start`,`location_periode`,`location_departure`,`location_arrival` FROM `location` INNER JOIN `plane` ON `plane_id_plane` = `plane_id` WHERE `plane_id` =:plane_id";
+        $sql = "SELECT `location_start`,`location_periode`,`location_departure`,`location_arrival` FROM `location` INNER JOIN `plane` ON `plane_id_plane` = `plane_id` WHERE `plane_id` =:plane_id AND `location_validate` = 1 "  ;
 
         $query = $pdo->prepare($sql);
 

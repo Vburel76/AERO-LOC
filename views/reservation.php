@@ -11,15 +11,9 @@ require_once('../controllers/controller-reservation.php');
 
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-8 bg-light  p-0">
-            <div class="row m-0 p-0">
-                <div class="col-lg-2 m-2">
-                    <a href="landing.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
-                </div>
-            </div>
-
             <div class="row m-3 p-0 justify-content-center">
                 <div class="col-lg-11 col-12 text-center">
-                    <p class="text-center fs-5 mt-5 fontTitle lignemodifyPlane"> Mes réservation </p>
+                    <p class="text-center fs-5 mt-5 fontTitle lignereservation"> Mes réservation </p>
                 </div>
             </div>
 
@@ -47,7 +41,7 @@ require_once('../controllers/controller-reservation.php');
                                         <td class="align-middle"><?= $value['location_id'] ?></td>
                                         <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
                                         <td class="align-middle "><?= $value['plane_name'] ?></td>
-                                        <td class="align-middle "><?= date_format(date_create($value['location_start']),"d/m/Y") ?></td>
+                                        <td class="align-middle "><?= date_format(date_create($value['location_start']), "d/m/Y") ?></td>
                                         <td class="align-middle"><?= $value['location_periode'] ?></td>
                                         <td class="align-middle"><?= $value['user_lastname'] ?></td>
                                         <td class="align-middle"><?= $value['user_firstname'] ?></td>
@@ -59,6 +53,11 @@ require_once('../controllers/controller-reservation.php');
 
                             </tbody>
                         </table>
+                    </div>
+                    <div class="row m-0 p-0 justify-content-center ">
+                        <div class="col-lg-2 col-10 mt-3  m-2">
+                            <a href="landing.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,23 +9,17 @@ require_once('../controllers/controller-list-location.php');
 <body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-8 bg-light p-0">
-            <div class="row m-0 p-0 justify-content-center">
-                <div class="col-lg-2 col-10 m-2">
-                    <a href="admin.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
-                </div>
-            </div>
-
             <div class="row m-3 p-0 justify-content-center">
                 <div class="col-lg-11 col-12 text-center">
-                    <p class="fontTitle text-center m-3 p-2 fs-3 ligneLocation "> LOCATIONS </p>
+                    <p class="fontTitle text-center m-3 p-2 fs-3 ligneLocation "> Locations </p>
                 </div>
             </div>
 
             <div class="row m-0 p-0 justify-content-center">
-                <div class="col-lg-12 col-12 ">
+                <div class="col-lg-12 col-12">
                     <div class="table-responsive">
                         <label class="m-2 fw-bold">entrer le nom de l'utilisateur:</label>
-                        <input class="rounded" id="myInput" onkeyup="myFunction()" type="text" />
+                        <input class="rounded" id="myInput" placeholder="Recherhe par Nom" onkeyup="myFunction()" type="text" />
                         <div class="table-responsive">
                             <table id="myTable" class="table table-striped text-center">
                                 <thead>
@@ -49,18 +43,23 @@ require_once('../controllers/controller-list-location.php');
                                             <td class="align-middle"><?= $value['location_id'] ?></td>
                                             <td class="align-middle "><img class="pictureLocation" src="../public/img/<?= $value['plane_picture'] ?>" alt="" srcset=""></td>
                                             <td class="align-middle "><?= $value['plane_name'] ?></td>
-                                            <td class="align-middle "><?= date_format(date_create($value['location_start']),"d/m/Y") ?></td>
+                                            <td class="align-middle "><?= date_format(date_create($value['location_start']), "d/m/Y") ?></td>
                                             <td class="align-middle"><?= $value['location_periode'] ?></td>
                                             <td class="align-middle"><?= $value['user_lastname'] ?></td>
                                             <td class="align-middle"><?= $value['user_firstname'] ?></td>
                                             <td class="align-middle"><?= $value['location_validate'] == 1 ? '<p class="text-success">validé</p>' : '<span class="text-danger">En attente de validation</span>'  ?></td>
                                             <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn buttontheme">Info</a></td>
                                         </tr>
-
                                     <?php } ?>
 
                                 </tbody>
                             </table>
+
+                        </div>
+                        <div class="row m-0 p-0 justify-content-center ">
+                            <div class="col-lg-2 col-10 mt-3  m-2">
+                                <a href="admin.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                            </div>
                         </div>
                     </div>
 

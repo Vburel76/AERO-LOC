@@ -2,7 +2,7 @@
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
     exit;
-  }
+}
 
 require_once '../config.php';
 require_once '../models/database.php';
@@ -37,8 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($_POST['departureModifLoc'] == '') {
             $errors['departureModifLoc'] = "champ obligatoire";
-        } else if (!preg_match($regexName, $_POST['departureModifLoc'])) {
-            $errors['departureModifLoc'] = "Mauvais format";
         }
     }
 
@@ -46,8 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($_POST['arrivalModifLoc'] == '') {
             $errors['arrivalModifLoc'] = "champ obligatoire";
-        } else if (!preg_match($regexName, $_POST['arrivalModifLoc'])) {
-            $errors['arrivalModifLoc'] = "Mauvais format";
         }
     }
 
@@ -60,13 +56,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $locationDeparture = htmlspecialchars($_POST['departureModifLoc']);
         $locationArrival = htmlspecialchars($_POST['arrivalModifLoc']);
         $locationId = intval($_GET['locationId']);
-        
+
 
         $locationModif = new Location();
 
-        $locationModif->modifLocValidate( $locationStart,  $locationPeriode, $locationDeparture,  $locationArrival, $locationId);
+        if ($locationModif->checkIfDateExists($_POST['modifDateLoc'])) {
+
+            $errors['modifDateLoc'] = 'Date indisponible';
+        } else {
+            $locationModif->modifLocValidate($locationStart,  $locationPeriode, $locationDeparture,  $locationArrival, $locationId);
+
+            $_SESSION['swal'] = [
+                'icon' => 'success',
+                'title' => 'réservation bien modifiée',
+                'text' => 'En attente de validation'
+            ];
+            header('Location: list-one-location.php?locationId=' . $locationId);
+            exit;
+        }
     }
 }
+
 $locObj = new Location();
 
 $infoLocation = $locObj->returnOnelocation($_GET['locationId']);

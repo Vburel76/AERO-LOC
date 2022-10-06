@@ -112,14 +112,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // header('Location: compte.php');
         } else {
             $resultUploadImage = form::uploadImage('pictureProfil', $paramUpload);
-            var_dump($resultUploadImage);
             if ($resultUploadImage['success'] === false) {
                 $errors['pictureProfil'] = $resultUploadImage['errorMessage'];
             } else {
                 $usersModif = new Users();
                 $infoUser = $usersModif->returnOneUser($_SESSION['user']['user_id']);
                 $oldUserPicture = $infoUser['user_picture_profil'];
-                var_dump($oldUserPicture);
                 unlink('../public/img/' . $oldUserPicture);
 
                 $userPictureProfil = $resultUploadImage['imageName'];

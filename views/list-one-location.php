@@ -13,12 +13,6 @@ require_once('../controllers/controller-list-one-location.php');
     <div class="row m-0 p-0 justify-content-center ">
         <div class="col-lg-8 bg-light  p-0">
 
-            <div class="row m-0 p-0">
-                <div class="col-lg-2 m-2">
-                    <a href="reservation.php" type="submit" class="btn fontColor btnSize p-1">Retour</a>
-                </div>
-            </div>
-
             <div class="row m-3 p-0 justify-content-center ">
                 <div class="col-lg-11 col-12 text-center">
                     <p class="fontTitle text-center m-3 p-2 fs-3 ligneLocation "> Location </p>
@@ -27,7 +21,7 @@ require_once('../controllers/controller-list-one-location.php');
 
 
 
-            <div class="row justify-content-center">
+            <div class="row m-0 p-0 justify-content-center">
 
                 <?php if ($location != false) { ?>
                     <div class="col-lg-11 col-11 rounded roundColor p-2 m-2">
@@ -45,12 +39,12 @@ require_once('../controllers/controller-list-one-location.php');
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 ">
-                                        <p class="m-2">Altitude max : <b><?= $location['plane_altitude'] ?> KM</b></p>
-                                        <p class="m-2">Vitesse max : <b><?= $location['plane_speed'] ?> KM/H</b></p>
+                                        <p class="m-2">Altitude max : <b><?= $location['plane_altitude'] ?> Km</b></p>
+                                        <p class="m-2">Vitesse max : <b><?= $location['plane_speed'] ?> Km/h</b></p>
                                     </div>
                                     <div class="col-lg-6">
-                                        <p class="m-2">Portée : <b><?= $location['plane_scope'] ?> KM</b> </p>
-                                        <p class="m-2">Autonomie : <b><?= $location['plane_autonomy'] ?> H</b></p>
+                                        <p class="m-2">Portée : <b><?= $location['plane_scope'] ?> Km</b> </p>
+                                        <p class="m-2">Autonomie : <b><?= $location['plane_autonomy'] ?> h</b></p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -86,7 +80,7 @@ require_once('../controllers/controller-list-one-location.php');
                         </div>
                         <div class="row m-2 p-0 justify-content-center">
                             <div class="col-lg-5">
-                                <p class="text-start fontText m-2">Date : <b><?= date_format(date_create($location['location_start']),"d/m/Y") ?></b></p>
+                                <p class="text-start fontText m-2">Date : <b><?= date_format(date_create($location['location_start']), "d/m/Y") ?></b></p>
                                 <p class="text-start fontText m-2 ">Statut: <b><?= $location['location_validate'] == 1 ? '<span class="text-success">validé</span>' : '<span class="text-danger">En attente</span>'  ?></b></p>
                             </div>
                             <div class="col-lg-5">
@@ -118,7 +112,7 @@ require_once('../controllers/controller-list-one-location.php');
                         <!-- Modal -->
                         <div class="modal fade" id="location-<?= $location['location_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content">
+                                <div class="modal-content modalTheme">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimez la location ? </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -128,9 +122,9 @@ require_once('../controllers/controller-list-one-location.php');
                                         <p><b>Prenom :</b> <?= $location['user_firstname'] ?></p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">non</button>
+                                        <button type="button" class="btn buttontheme" data-bs-dismiss="modal">non</button>
                                         <form action="" method="POST">
-                                            <button type="button" class="btn btn-primary" name="delete" onclick="document.location='list-one-location.php?delete=<?= $location['location_id'] ?>'">oui</button>
+                                            <button type="button" class="btn buttontheme" name="delete" onclick="document.location='list-one-location.php?delete=<?= $location['location_id'] ?>'">oui</button>
                                         </form>
 
                                     </div>
@@ -140,6 +134,11 @@ require_once('../controllers/controller-list-one-location.php');
 
 
                     </div>
+                    <div class="row m-0 p-0 justify-content-center ">
+                        <div class="col-lg-2 col-10 mt-3  m-2">
+                            <a href="reservation.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                        </div>
+                    </div>
 
                 <?php } else { ?>
                     <div class="row justify-content-center">
@@ -147,7 +146,7 @@ require_once('../controllers/controller-list-one-location.php');
                             <p class="text-center fs-5 mt-5 border border-dark bg-light fontTitle p-3">veuillez sélectionner une location valide</p>
                             <div class="row m-0 p-0 justify-content-center">
                                 <div class="col-lg-3 col-10 m-2">
-                                    <a href="list-location.php" type="submit" class="btn fontColor btnSize p-2">Retour</a>
+                                    <a href="reservation.php" type="submit" class="btn fontColor btnSize p-2">Retour</a>
                                 </div>
                             </div>
                         </div>
@@ -155,6 +154,17 @@ require_once('../controllers/controller-list-one-location.php');
                 <?php } ?>
 
             </div>
+            <?php if (isset($_SESSION['swal'])) { ?>
+                <script>
+                    Swal.fire({
+                        icon: '<?= $_SESSION['swal']['icon'] ?>',
+                        title: '<?= $_SESSION['swal']['title'] ?>',
+                        text: '<?= $_SESSION['swal']['text'] ?>'
+                    })
+                </script>
+            <?php
+                unset($_SESSION['swal']);
+            } ?>
         </div>
     </div>
 </body>
