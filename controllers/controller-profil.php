@@ -74,32 +74,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    if (isset($_POST['lastpassword']) && !empty($_POST['lastpassword'])) {
-        if (password_verify($_POST['lastpassword'], $_SESSION['user']['user_password'])) {
-            echo "bon mot de passe";
-        } else {
-            $errors['lastpassword'] = "mauvais mot de passe";
-        }
-    }
-
-    if (isset($_POST['password'])) {
-
-
-        if ($_POST['confirmPassword'] == '' &&  $_POST['password'] != '') {
-            $errors['confirmPassword'] = 'champ obligatoire';
-        } else if ($_POST['confirmPassword'] != $_POST['password']) {
-            $errors['password'] = "mot de passe différent";
-        }
-    }
-
-
 
     if (count($errors) == 0) {
 
         // Je stock les valeurs des inputs dans des variables en effectuant un htmlspecialchars afin de m'assurer que les données soient safe
         $lastnameUser = htmlspecialchars($_POST['lastname']);
         $firstnameUser = htmlspecialchars($_POST['firstname']);
-        $passwordUser = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $phoneNumberUser = htmlspecialchars($_POST['mobile']);
         $usersId = htmlspecialchars($_SESSION['user']['user_id']);
 
@@ -107,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $userObj = new Users();
             $infoUser = $userObj->returnOneUser($_SESSION['user']['user_id']);
             $userPictureProfil = $infoUser['user_picture_profil'];
-            $userObj->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, $passwordUser, 2, $usersId);
+            $userObj->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, 2, $usersId);
             
             $_SESSION['swal'] = [
                 'icon' => 'success',
@@ -129,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 unlink('../public/img/' . $oldUserPicture);
 
                 $userPictureProfil = $resultUploadImage['imageName'];
-                $usersModif->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, $passwordUser, 2, $usersId);
+                $usersModif->modifUser($lastnameUser, $firstnameUser, $userPictureProfil, $phoneNumberUser, 2, $usersId);
 
                 $_SESSION['swal'] = [
                     'icon' => 'success',

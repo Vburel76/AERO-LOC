@@ -32,7 +32,7 @@ if (!isset($_SESSION)) {
                     <p class="fs-4 fontTitle text-center">Durée de la formation</p>
 
 
-                    <p class=" fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous y consacrez.Le programme est adapté en fonction de la rapidité d'apprentissage du client.</p>
+                    <p class=" fontText">La formation se déroule sur une période de 6 à 18 mois en fonction des disponibilités et du temps que vous pourrez y consacrer.Le programme est adapté en fonction de la rapidité d'apprentissage du client.</p>
                 </article>
             </section>
 
@@ -40,16 +40,16 @@ if (!isset($_SESSION)) {
 
             <p class="fs-5 text-center mt-4  fontTitle">Conditions d'admission pour la formation</p>
 
-            <p class="text-center mt-4 fontText">Un certain nombre de conditions doivent être remplies pour pouvoir débuter la formation.</p>
+            <p class="text-center mt-4 fontText">Un certain nombre de conditions doit être respecté pour pouvoir débuter la formation.</p>
 
             <section class="row justify-content-center mt-5 m-0 p-0">
                 <article class="col-lg-4 col-8 mt-1 m-2 text-center">
                     <img class="imgFormation " src="../public/img/formationImg.jpg" alt="formationImg">
                 </article>
                 <article class="col-lg-4 col-8 mt-4 m-2 ">
-                    <p class="m-2 fontText text-center Textcolor mt-1 p-2"><i class="bi bi-globe fs-4 m-2"></i>être de nationalité francais</p>
-                    <p class="m-2 fontText text-center Textcolor mt-5 p-2"><i class="bi bi-check2-circle fs-4 m-2"></i>avoir l'age minimum requis</p>
-                    <p class="m-2 fontText text-center Textcolor mt-5 p-2"><i class="bi bi-heart-pulse fs-4 m-2"></i>être apte médicalement</p>
+                    <p class="m-2 fontText text-center Textcolor mt-1 p-2"><i class="bi bi-globe fs-4 m-2"></i>Etre de nationalité française</p>
+                    <p class="m-2 fontText text-center Textcolor mt-5 p-2"><i class="bi bi-check2-circle fs-4 m-2"></i>Avoir l'âge minimum requis</p>
+                    <p class="m-2 fontText text-center Textcolor mt-5 p-2"><i class="bi bi-heart-pulse fs-4 m-2"></i>Etre apte médicalement</p>
                 </article>
             </section>
 
@@ -66,7 +66,7 @@ if (!isset($_SESSION)) {
 
             <section class="row justify-content-center m-0 p-0">
                 <article class="col-lg-9 mt-5 ">
-                    <p class="fontText">La formation commence par une partie théorique de plusieurs heures  qui s'effectue dans une salle de cours avec un formateur assermenté. Cette partie theorique fera l'objet d'une évaluation.Par la suite la partie pratique se déroulera tout d'abord en simulateur et ensuite en avion, la aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
+                    <p class="fontText">La formation débute par une partie théorique de plusieurs heures  qui s'effectue dans une salle de cours avec un formateur assermenté. Cette partie theorique fera l'objet d'une évaluation par la suite, la partie pratique se déroulera tout d'abord en simulateur et ensuite en avion; là aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
                 </article>
             </section>
 
@@ -141,7 +141,7 @@ if (!isset($_SESSION)) {
             </section>
 
             <div class="text-center mt-3 fontText">
-                <p>Début des leçons de pilotage pratique à l'issu de l'obtention du PPL théorique. avec instructeur.Le planning s'adaptera à vos besoin.</p>
+                <p>Début des leçons de pilotage pratique à l'issue de l'obtention du PPL théorique avec instructeur.Le planning s'adaptera à vos besoins.</p>
             </div>
 
             <section class="row m-0 p-0 justify-content-center ">

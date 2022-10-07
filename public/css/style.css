@@ -376,7 +376,7 @@ header {
 }
 
 .pictureOneUser {
-    width: 12rem;
+width: 12rem;
 
 }
 
@@ -501,13 +501,18 @@ header {
     height: 86vh;
 }
 
+.formularUser{
+    padding-bottom: 2rem;
+}
+
 .listOneUser {
-    height: 73vh;
+    /* height: 73vh; */
+    margin-bottom: 5rem;
 }
 
 .listOnePlane {
-    height: 93vh;
-
+    /* height: 93vh; */
+    margin-bottom: 12rem;
 }
 
 
@@ -566,6 +571,7 @@ header {
 }
 
 /* ligne */
+
 .ligneprofil:before,
 .ligneprofil:after {
     content: '';
@@ -574,6 +580,7 @@ header {
     display: inline-block;
     vertical-align: middle;
 }
+
 
 .ligneModifyLocation:before,
 .ligneModifyLocation:after {
@@ -587,7 +594,7 @@ header {
 .ligneModifyPlane:before,
 .ligneModifyPlane:after {
     content: '';
-    width: 37%;
+    width: 35%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -634,7 +641,7 @@ header {
 .ligneModify:before,
 .ligneModify:after {
     content: '';
-    width: 40%;
+    width: 39%;
     border-top: 3px double black;
     display: inline-block;
     vertical-align: middle;
@@ -741,6 +748,15 @@ header {
 
 
 @media screen and (max-width: 780px) {
+
+    .ligneprofil:before,
+    .ligneprofil:after {
+        content: '';
+        width: 26%;
+        border-top: 3px double black;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     .ligneModifyPlane:before,
     .ligneModifyPlane:after {

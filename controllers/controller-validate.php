@@ -41,9 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $errors['departure'] = "champ obligatoire";
     } else if (!preg_match($regexName, $_POST['departure'])) {
       $errors['departure'] = "Mauvais format";
-    } else if ($_POST['departure'] === $_POST['arrival']) {
-      $errors['departure'] = "lieu de d'arrivée";
-    }
+    } 
   }
 
   if (isset($_POST['arrival'])) {
@@ -52,9 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $errors['arrival'] = "champ obligatoire";
     } else if (!preg_match($regexName, $_POST['arrival'])) {
       $errors['arrival'] = "Mauvais format";
-    } else if ($_POST['arrival'] === $_POST['departure']) {
-      $errors['arrival'] = "lieu de départ identique";
-    }
+    } 
   }
 
   if (count($errors) == 0) {

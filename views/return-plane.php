@@ -9,14 +9,14 @@ require_once('../models/plane.php');
 ?>
 
 <?php include '../elements/meta.php' ?>
+<?php include '../elements/navBar.php' ?>
 
 
-
-<body class="d-flex flex-column min-vh-100 BGlanding border border-primary">
+<body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center">
+        
         <?php if ($plane != false) { ?>
-
-            <div class="col-lg-8 col-12 bg-light listOnePlane">
+            <div class="col-lg-8 col-12 bg-light ">
                 <div class="row m-3 p-0 justify-content-center">
                     <div class="col-lg-11 col-12 text-center">
                         <p class="fontTitle text-center m-3 p-2 fs-5  ligneModify "> Avion </p>
@@ -24,7 +24,7 @@ require_once('../models/plane.php');
                 </div>
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-10 col-12">
+                    <div class="col-lg-10 col-12 listOnePlane">
                         <div class="row roundColor justify-content-evenly rounded m-3 mb-5 ">
                             <div class="col-lg-5 col-12 text-center p-2">
                                 <img class=" img-fluid mt-3 " src="../public/img/<?= $plane['plane_picture'] ?>" alt="" srcset="">
@@ -36,13 +36,15 @@ require_once('../models/plane.php');
                                 <p class="fs-5">Altitude max : <b><?= $plane['plane_altitude'] ?></b></p>
                                 <p class="fs-5">Vitesse max : <b><?= $plane['plane_speed'] ?></b></p>
                             </div>
+                          
                         </div>
+                        <div class="row m-0 p-0 justify-content-center ">
+                                <div class="col-lg-2 col-10 mt-3  m-2">
+                                    <a href="plane-list.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                                </div>
+                            </div>
                     </div>
-                    <div class="row m-0 p-0 justify-content-center ">
-                        <div class="col-lg-2 col-10 mt-3  m-2">
-                            <a href="plane-list.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         <?php } else { ?>
@@ -57,7 +59,6 @@ require_once('../models/plane.php');
                 </div>
             </div>
         <?php } ?>
-
     </div>
 
     <?php include '../elements/footer.php' ?>

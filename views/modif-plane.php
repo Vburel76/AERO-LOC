@@ -6,10 +6,10 @@ require_once '../controllers/controller-modif-plane.php';
 ?>
 
 <?php include '../elements/meta.php' ?>
+<?php include '../elements/navBar.php' ?>
 
 <body class="d-flex flex-column min-vh-100 BGlanding">
     <div class="row m-0 p-0 justify-content-center ">
-
         <?php if ($infoPlane != false) { ?>
             <div class="col-lg-8 bg-light ">
                 <div class="row m-3 p-0 justify-content-center">
@@ -22,7 +22,7 @@ require_once '../controllers/controller-modif-plane.php';
                     <div class="row justify-content-center m-2 p-0 ">
                         <div class="col-lg-11 col-12">
                             <div class="row justify-content-center m-0 p-0 pt-2 mb-3 rounded roundColor">
-                                <div class="col-lg-5 col-10 p-1 rounded">
+                                <div class="col-lg-6 col-10 p-1 rounded">
 
                                     <label for="file" class="fontText">Image</label><span class="ms-2 text-danger"><?= isset($errors['fileToUpload']) ? $errors['fileToUpload'] : '' ?></span>
                                     <br>
@@ -58,7 +58,7 @@ require_once '../controllers/controller-modif-plane.php';
                                 </div>
 
                                 <div class="row justify-content-center m-0 p-0">
-                                    <div class="col-lg-3  m-4">
+                                    <div class="col-lg-3 col-10  m-4">
                                         <input type="submit" class="btn fontColor btnSize" value="Valider">
                                     </div>
                                 </div>
@@ -86,6 +86,7 @@ require_once '../controllers/controller-modif-plane.php';
             </div>
         <?php } ?>
     </div>
+    <?php include '../elements/footer.php' ?>
 </body>
 
-<?php include '../elements/footer.php' ?>
+</html>

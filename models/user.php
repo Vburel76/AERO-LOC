@@ -261,11 +261,11 @@ class Users extends DataBase
      * 
      * 
      */
-    public function modifUser(string $lasnameUser, string $firstnameUser, string $userPictureProfil, string $phoneNumberUser, string $passwordUser, string $roleUser, string $usersId): void
+    public function modifUser(string $lasnameUser, string $firstnameUser, string $userPictureProfil, string $phoneNumberUser, string $roleUser, string $usersId): void
     {
         $pdo = parent::connectDb();
 
-        $sql = "UPDATE `user` SET `user_lastname`=:user_lastname ,`user_firstname`=:user_firstname ,`user_picture_profil`=:user_picture_profil,`user_phone`=:user_phone,`user_password`=:user_password,`role_id_role` =:role_id_role  WHERE `user_id` =:user_id";
+        $sql = "UPDATE `user` SET `user_lastname`=:user_lastname ,`user_firstname`=:user_firstname ,`user_picture_profil`=:user_picture_profil,`user_phone`=:user_phone,`role_id_role` =:role_id_role  WHERE `user_id` =:user_id";
 
         $query = $pdo->prepare($sql);
 
@@ -273,7 +273,6 @@ class Users extends DataBase
         $query->bindValue(':user_firstname', $firstnameUser, PDO::PARAM_STR);
         $query->bindValue(':user_picture_profil', $userPictureProfil, PDO::PARAM_STR);
         $query->bindValue(':user_phone', $phoneNumberUser, PDO::PARAM_STR);
-        $query->bindValue(':user_password', $passwordUser, PDO::PARAM_STR);
         $query->bindValue(':role_id_role', $roleUser, PDO::PARAM_STR);
         $query->bindValue(':user_id', $usersId, PDO::PARAM_STR);
 

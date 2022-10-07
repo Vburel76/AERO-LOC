@@ -25,7 +25,7 @@ include '../elements/meta.php';
 
 
             <div class="row justify-content-center m-2 p-0">
-                <div class="col-lg-8 col-12 m-5 roundColor">
+                <div class="col-lg-8 col-11 m-5 roundColor">
                     <div class="row justify-content-center">
                         <div class="col-lg-5 col-10 text-center m-4">
                             <img class="imgCompte " src="../public/img/<?= $user['user_picture_profil'] ?>" alt="" srcset="">

@@ -40,17 +40,9 @@ require_once '../controllers/controller-profil.php';
                                 <label for="mobile">Mobile</label><span class="ms-2 text-danger"><?= isset($errors['mobile']) ? $errors['mobile'] : '' ?></span>
                                 <input id="mobile" name="mobile" class="tailleInput" type="tel" value="<?= $infoUser['user_phone'] ?>">
 
-                                <label for="lastpassword">Ancien mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['lastpassword']) ? $errors['lastpassword'] : '' ?></span>
-                                <input id="lastpassword" name="lastpassword" class="tailleInput" type="password">
-
-                                <label for="password">Nouveau mot de passe</label><span class="ms-2 text-danger"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
-                                <input id="password" name="password" class="tailleInput" type="password">
-
-                                <label for="confirmPassword">Confirmer le nouveau mot de passe </label><span class="ms-2 text-danger"><?= isset($errors['confirmPassword']) ? $errors['confirmPassword'] : '' ?></span>
-                                <input id="confirmPassword" name="confirmPassword" class="tailleInput" type="password">
                             </div>
                             <div class="row justify-content-center m-0 p-0">
-                                <div class="col-lg-3  m-4">
+                                <div class="col-lg-3 col-10  m-4">
                                     <input type="submit" class="btn fontColor btnSize" value="Valider">
                                 </div>
                             </div>

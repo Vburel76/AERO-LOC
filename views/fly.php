@@ -65,7 +65,7 @@ if (!isset($_SESSION)) {
 
             <section class="row justify-content-center m-3">
                 <article class="col-lg-5 col-12 textSimulateur textJust fontText mt-3  m-0">
-                    <p>Nous vous proposons également un simulateur Certifié FNPT II pour pouvoir vous entrainez le mieux possible et ainsi pouvoir être opérationnel rapidement.Modélisant nos 6 avions, pratiquez aussi bien des tours de pistes que des approches RNP, de jour, de nuit, avec toutes les conditions météos possibles.</p>
+                    <p>Nous vous proposons également un simulateur certifié FNPT II pour pouvoir vous entrainez le mieux possible et ainsi pouvoir être opérationnel rapidement. Modélisant nos 6 avions, pratiquez aussi bien des tours de pistes que des approches RNP, de jour, de nuit, avec toutes les conditions météos possibles.</p>
 
                     <li>Simulateur cabine : Angle de vue HD 250° Horizontal, 49° vertical. Manche de pilotage type “volant” 3 axes avec moteurs couples sur tous les axes. Deux sièges en cabine.</li>
                     <br>
@@ -73,7 +73,7 @@ if (!isset($_SESSION)) {
                     <br>
                     <li>Avionique: Instrumentation classique ou glass-cockpit, selon la configuration choisie avant le vol.</li>
                     <br>
-                    <li>Certification : Le simulateur est “certifiable” auprès de la DSAC. Pour l’instant les démarches n’ont pas été engagées donc les heures de vols ne peuvent pas être enregistrées dans le carnet de vol du pilote.</li>
+                    <li>Certification : Le simulateur est “certifiable” auprès de la DSAC. Pour l’instant, les démarches n’ont pas été engagées donc les heures de vols ne peuvent pas être enregistrées dans le carnet de vol du pilote.</li>
                 </article>
                 <div class="col-lg-5 col-12 mt-3">
                     <img class="imageFlotte" src="../public/img/simulateur.jpg" alt="simulateur.jpg">

@@ -27,6 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $resultVerifyImg = Form::verifyImg('pictureProfil', $paramUpload);
 
+    if ($resultVerifyImg['permissionToUpload'] === false) {
+        $errors['pictureProfil'] = $resultVerifyImg['errorMessage'];
+    }
+
     if (isset($_POST['firstname'])) {
 
         if ($_POST['firstname'] == '') {

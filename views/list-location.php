@@ -18,8 +18,8 @@ require_once('../controllers/controller-list-location.php');
             <div class="row m-0 p-0 justify-content-center">
                 <div class="col-lg-12 col-12">
                     <div class="table-responsive">
-                        <label class="m-2 fw-bold">entrer le nom de l'utilisateur:</label>
-                        <input class="rounded" id="myInput" placeholder="Recherhe par Nom" onkeyup="myFunction()" type="text" />
+                        <label class="m-2 fw-bold">Recherche par nom:</label>
+                        <input class="rounded" id="myInput" placeholder="ex: burel" onkeyup="myFunction()" type="text" />
                         <div class="table-responsive">
                             <table id="myTable" class="table table-striped text-center">
                                 <thead>
@@ -27,7 +27,7 @@ require_once('../controllers/controller-list-location.php');
                                         <th class="pictureSize" scope="col">#</th>
                                         <th class="pictureSize" scope="col">Image</th>
                                         <th class="pictureSize" scope="col">Avion</th>
-                                        <th class="pictureSize" scope="col">date de départ</th>
+                                        <th class="pictureSize" scope="col">Date de départ</th>
                                         <th class="pictureSize" scope="col">Période</th>
                                         <th class="pictureSize" scope="col">Nom</th>
                                         <th class="pictureSize" scope="col">Prénom</th>

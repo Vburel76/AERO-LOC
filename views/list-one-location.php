@@ -31,7 +31,7 @@ require_once('../controllers/controller-list-one-location.php');
                             </div>
 
                             <div class="col-lg-6 mt-2">
-                                <p class="fs-5 fw-bold fontTitle">Detail sur l'avion:</p>
+                                <p class="fs-5 fw-bold fontTitle">Détail sur l'avion: </p>
                                 <div class="row mb-2">
                                     <div class="col-lg-12">
                                         <p class="text-start  m-2">Modèle : <b><?= $location['plane_name'] ?></b></p>
@@ -57,7 +57,7 @@ require_once('../controllers/controller-list-one-location.php');
                         </div>
                         <div class="row ">
                             <div class="col-lg-12 m-2 ">
-                                <p class="fs-5 fw-bold fontTitle">Detail sur le client :</p>
+                                <p class="fs-5 fw-bold fontTitle">Détail sur le client :</p>
                             </div>
                             <div>
                                 <div class="row m-2 p-0 justify-content-center">
@@ -75,7 +75,7 @@ require_once('../controllers/controller-list-one-location.php');
 
                         <div class="row">
                             <div class="col-lg-12 m-2">
-                                <p class="fs-5 fw-bold fontTitle">Detail sur la location :</p>
+                                <p class="fs-5 fw-bold fontTitle">Détail sur la location :</p>
                             </div>
                         </div>
                         <div class="row m-2 p-0 justify-content-center">

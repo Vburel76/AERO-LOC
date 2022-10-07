@@ -25,10 +25,10 @@ if (!isset($_SESSION['user'])) {
                     <img class="imageArticle1" src="../public/img/aeroclub.jpg" alt="aeroclub">
                 </article>
                 <article class="col-lg-5 m-3 p-0 ">
-                    <p class=" textJust mt-4 fontText ">AeroLoc n'est pas une compagnie aérienne, mais une société de <a class="text-decoration-none" href="pagePlane.php"> location </a> d'aéronefs sans pilote pour réaliser vos vols privés et vols d'affaires à tarifs abordables.<br>
+                    <p class=" textJust mt-4 fontText ">AeroLoc n'est pas une compagnie aérienne mais une société de <a class="text-decoration-none" href="pagePlane.php"> location </a> d'aéronefs sans pilote afin de réaliser vos vols privés et vols d'affaires à tarifs abordables.<br>
                         La société est fondée en 2015 et implantée près de la ville du Havre.
-                        Nous vous offrons également la possibilité de passer le PPL licences de pilotage obligatoire pour pouvoir piloter un de nos avions .<br>
-                        Retrouver sur notre site toutes les informations sur la <a class="text-decoration-none" href="pagePlane.php"> location </a> et le passage des licences de pilotage.
+                        Nous vous offrons également la possibilité de passer le PPL licence de pilotage obligatoire pour pouvoir piloter un de nos avions .<br>
+                        Retrouvez sur notre site toutes les informations sur la <a class="text-decoration-none" href="pagePlane.php"> location </a> et le passage des licences de pilotage.
                     </p>
 
                     </p>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['user'])) {
                     </article>
                     <article class="col-lg-5 col-12 info  p-0 m-1 ">
                         <p class="fs-5 Textcolor text-center fontTitle">Certification</p>
-                        <p class="fontText px-3">Aero-Loc propose également le passage des certifications nécessaires pour pouvoir piloter.
+                        <p class="fontText px-3">Aero-Loc propose également le passage des certifications nécessaires au pilotage.
                         </p>
                         <div class="row justify-content-center">
                             <div class="col-lg-8 col-10 text-center ">
@@ -75,23 +75,23 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <section class="row justify-content-center">
                         <article class="col-lg-10 m-2 fontText textJust">
-                            <p>Vous trouverez un aperçu de nos tarifs ci dessous.Pour plus de renseignement sur les démarches administratives ou la demande de devis, nos chargés d'affaires sont à votre disposition toute la semaine 7/7. </p>
-                            <p>Pour toute autre demande vous pouvez nous <a class="text-decoration-none" href="contact.php">contacter</a> via notre numéro ou le formulaire de contact.</p>
+                            <p>Vous trouverez un aperçu de nos tarifs ci-dessous. Pour plus de renseignements sur les démarches administratives ou une demande de devis, nos chargés d'affaires sont à votre disposition toute la semaine 7/7. </p>
+                            <p>Pour toute autre demande vous pouvez nous contacter via notre numéro ou le formulaire de contact.</p>
                         </article>
                     </section>
                 </div>
 
                 <section class="row justify-content-center  imgRate">
                     <article class="col-lg-10 Textcolor mt-2 mb-4 p-3">
-                        <p class="text-center mb-3 fs-5 text-light fontTitle ">De quoi est constitué le prix de la location d'un avion ?</p>
+                        <p class="text-center mb-3 fs-5 text-light fontTitle ">Comment est constitué le prix de la location d'un avion ?</p>
                         <ul>
-                            <li class="text-light fontText">Premièrement la location de l'avion coque nue (c'est à dire sans pilote)</li>
+                            <li class="text-light fontText">Premièrement la location de l'avion coque nue (c'est-à-dire sans pilote)</li>
                         </ul>
-                        <p class="text-light fontText ">L'estimation du prix d'un déplacement en avion pourra varier en fonction des facteurs suivants:</p>
+                        <p class="text-light fontText ">L'estimation du prix d'un déplacement en avion peut varier en fonction des facteurs suivants:</p>
                         <ul>
                             <li class="text-light fontText">Le modèle de l'avion. En effet, le tarif ne sera pas le même entre deux avions de taille et puissance différentes. </li>
-                            <li class="text-light fontText">La distance entre le lieu de depart et celui d'arrivée. Plus la distance est élevée plus la consommation en carburant et l'entretien de l'avion sera nécessaire. </li>
-                            <li class="text-light fontText">Les taxes d'aéroport (Différentes d'un aeroport à l'autre).</li>
+                            <li class="text-light fontText">La distance entre le lieu de départ et celui d'arrivée. Plus la distance est élevée plus la consommation en carburant et l'entretien de l'avion sera nécessaire. </li>
+                            <li class="text-light fontText">Les taxes d'aéroport (différentes d'un aéroport à l'autre).</li>
                         </ul>
                     </article>
                 </section>
@@ -99,11 +99,11 @@ if (!isset($_SESSION['user'])) {
                 <section class="row justify-content-evenly fontText">
                     <article class="col-lg-3 mt-3">
                     <p class="h3">Cessna</p>
-                        <p class="textJust fw-bold">Le prix pour la location d'un petit avion commence à 300 €/HT (coque nue) auquel s'ajoute les couts ci dessus.</p>
+                        <p class="textJust fw-bold">Le prix pour la location d'un petit avion commence à 300 €/HT (coque nue) auquel s'ajoute les coûts ci dessus.</p>
                     </article>
                     <article class="col-lg-3 mt-3">
                     <p class="h3">Socata</p>
-                        <p class="textJust fw-bold">Le prix de location pour un avion de grande taille commence à 550€/HT (coque nue) auquel s'ajoute les coûts ci dessus. </p>
+                        <p class="textJust fw-bold">Le prix de location pour un avion de grande taille commence à 550€/HT (coque nue) auquel s'ajoute les coûts ci-dessus. </p>
                     </article>
                 </section>
 

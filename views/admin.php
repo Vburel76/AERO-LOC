@@ -28,7 +28,7 @@ require_once '../controllers/controller-admin.php';
                     <a type="button" href="list-location.php" class="btn  p-4 btnTaille m-2 fontTheme  rounded-pill ">Gestion des locations</a>
                 </div>
                 <div class="row m-0 p-0 justify-content-center ">
-                    <div class="col-lg-2 col-10 mt-3  m-2">
+                    <div class="col-lg-2 col-5 mt-3  m-2">
                         <a href="landing.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
                     </div>
                 </div>
