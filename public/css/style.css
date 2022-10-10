@@ -515,6 +515,10 @@ width: 12rem;
     margin-bottom: 12rem;
 }
 
+.pointnone{
+    list-style-type : none;
+}
+
 
 /* list-location js */
 

@@ -28,14 +28,14 @@ include '../elements/meta.php';
                 <div class="col-lg-8 col-11 m-5 roundColor">
                     <div class="row justify-content-center">
                         <div class="col-lg-5 col-10 text-center m-4">
-                            <img class="imgCompte " src="../public/img/<?= $user['user_picture_profil'] ?>" alt="" srcset="">
+                            <img class="imgCompte border border-dark" src="../public/img/<?= $user['user_picture_profil'] ?>" alt="" srcset="">
                         </div>
-                        <div class="col-lg-5 col-10 m-4">
-                            <p class="m-3 mb-2 "><span class="fw-bold">Nom :</span> <?= strtoupper($user['user_lastname']); ?></p>
-                            <p class="m-3"><span class="fw-bold">Prénom :</span> <?= ucfirst($user['user_firstname']); ?></p>
-                            <p class="m-3"><span class="fw-bold">mail :</span> <?= $user['user_mail']; ?></p>
-                            <p class="m-3"><span class="fw-bold">Mobile :</span> <?= $user['user_phone']; ?></p>
-                        </div>
+                        <ul class="pointnone col-lg-5 col-10 m-4">
+                            <li><span class="fw-bold">Nom :</span> <?= strtoupper($user['user_lastname']); ?></li>
+                            <li><span class="fw-bold">Prénom :</span> <?= ucfirst($user['user_firstname']); ?></li>
+                            <li><span class="fw-bold">Mail :</span> <?= $user['user_mail']; ?></li>
+                            <li><span class="fw-bold">Mobile :</span> <?= $user['user_phone']; ?></li>
+                        </ul>
 
                         <div class="row justify-content-center m-0 p-0">
                             <div class="col-lg-3 col-10 col-10 m-3 text-center">
