@@ -166,6 +166,7 @@ require_once('../controllers/controller-list-one-location.php');
             } ?>
         </div>
     </div>
+    <?php include '../elements/footer.php' ?>
 </body>
 
-<?php include '../elements/footer.php' ?>
+</html>

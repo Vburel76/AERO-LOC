@@ -7,6 +7,7 @@ if (!isset($_SESSION['user'])) {
 require_once '../controllers/controller-modif-loc.php';
 require_once '../controllers/controller-list-one-location.php';
 ?>
+
 <?php include '../elements/navBar.php' ?>
 
 <body class="d-flex flex-column min-vh-100 BGlanding">
@@ -81,10 +82,6 @@ require_once '../controllers/controller-list-one-location.php';
         </div>
     </div>
     <?php include '../elements/footer.php' ?>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../dist/js/lightbox-plus-jquery.js"></script>
-    <script src="../dist/js/lightbox.js"></script>
 </body>
 
 </html>
