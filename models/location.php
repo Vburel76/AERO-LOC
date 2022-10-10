@@ -174,15 +174,16 @@ class Location extends DataBase
      * 
      * @param string $start variable de la date de depart.
      */
-    public function checkIfDateExists(string $start): bool
+    public function checkIfDateExists(string $start ,int $idPlane): bool
     {
         $pdo = parent::connectDb();
 
-        $sql = "SELECT `location_start` FROM `location` WHERE `location_start` = :start";
+        $sql = "SELECT `location_start` FROM `location` WHERE `location_start` = :start AND `plane_id_plane`=:idPlane ";
 
         $query = $pdo->prepare($sql);
 
         $query->bindValue(':start', $start, PDO::PARAM_STR);
+        $query->bindValue(':idPlane', $idPlane, PDO::PARAM_INT);
 
         $query->execute();
 

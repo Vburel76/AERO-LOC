@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $userObj = new Location();
 
-    if ($userObj->checkIfDateExists($_POST['dateStart'])) {
+    if ($userObj->checkIfDateExists($_location_start,$_plane_id)) {
 
       $errors['dateStart'] = 'Date indisponible';
     } else {

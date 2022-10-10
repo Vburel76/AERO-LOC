@@ -47,7 +47,7 @@ require_once('../controllers/controller-list-location.php');
                                             <td class="align-middle"><?= $value['location_periode'] ?></td>
                                             <td class="align-middle"><?= $value['user_lastname'] ?></td>
                                             <td class="align-middle"><?= $value['user_firstname'] ?></td>
-                                            <td class="align-middle"><?= $value['location_validate'] == 1 ? '<p class="text-success">validé</p>' : '<span class="text-danger">En attente de validation</span>'  ?></td>
+                                            <td class="align-middle"><?= $value['location_validate'] == 1 ? '<span class="text-success">validé</span>' : '<span class="text-danger">En attente de validation</span>'  ?></td>
                                             <td class="align-middle"><a href="list-one-location.php?locationId=<?= $value['location_id'] ?>" class="btn buttontheme">Info</a></td>
                                         </tr>
                                     <?php } ?>
