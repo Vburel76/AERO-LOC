@@ -20,7 +20,7 @@ if (!isset($_SESSION)) {
                 <article class="col-lg-10 col-12 p-3 ">
                     <p class="text-center fs-4  fontTitle ">Louer un de nos avions</p>
                     <p class=" textFly fontText textJust ">Aero-Loc propose un large choix de modèle d'avion qui sera mis à votre disposition en fonction de votre experience , sinon un réentraînement sur le modèle souhaité vous sera proposez.Dans tous les cas une heure de vol avec instructeur sera obligatoire pour tous les nouveaux clients. Votre sécurité est notre principale préocupation.Une licence de pilotage en cours de validité est évidemment indispensable pour pouvoir louer nos avions , nous vous proposons également d'obtenir cette licence.</p>
-                    <p class=" fontText textJust ">Nos avions sont régulièrements entretenus selon la réglementation en vigueur en France.<br>Si vous avez la moindre question vous pouvez nous contacter.</p>
+                    <p class=" fontText textJust ">Nos avions sont régulièrement entretenus selon la réglementation en vigueur en France.<br>Si vous avez la moindre question vous pouvez nous contacter.</p>
                 </article>
 
             </section>

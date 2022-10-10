@@ -66,7 +66,7 @@ if (!isset($_SESSION)) {
 
             <section class="row justify-content-center m-0 p-0">
                 <article class="col-lg-9 mt-5 ">
-                    <p class="fontText">La formation débute par une partie théorique de plusieurs heures  qui s'effectue dans une salle de cours avec un formateur assermenté. Cette partie theorique fera l'objet d'une évaluation par la suite, la partie pratique se déroulera tout d'abord en simulateur et ensuite en avion; là aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
+                    <p class="fontText">La formation débute par une partie théorique de plusieurs heures  qui s'effectue dans une salle de cours avec un formateur assermenté. Cette partie théorique fera l'objet d'une évaluation par la suite, la partie pratique se déroulera tout d'abord en simulateur et ensuite en avion; là aussi vous passerez une évaluation qui determinera l'obtention du PPL ou pas . </p>
                 </article>
             </section>
 

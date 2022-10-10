@@ -136,7 +136,7 @@ require_once('../controllers/controller-list-one-location.php');
                     </div>
                     <div class="row m-0 p-0 justify-content-center ">
                         <div class="col-lg-2 col-10 mt-3  m-2">
-                            <a href="list-location.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                            <a href="reservation.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
                         </div>
                     </div>
 
@@ -146,7 +146,7 @@ require_once('../controllers/controller-list-one-location.php');
                             <p class="text-center fs-5 mt-5 border border-dark bg-light fontTitle p-3">veuillez sélectionner une location valide</p>
                             <div class="row m-0 p-0 justify-content-center">
                                 <div class="col-lg-3 col-10 m-2">
-                                    <a href="list-location.php" type="submit" class="btn fontColor btnSize p-2">Retour</a>
+                                    <a href="reservation.php" type="submit" class="btn fontColor btnSize p-2">Retour</a>
                                 </div>
                             </div>
                         </div>
