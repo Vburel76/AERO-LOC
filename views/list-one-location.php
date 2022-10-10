@@ -31,7 +31,7 @@ require_once('../controllers/controller-list-one-location.php');
                             </div>
 
                             <div class="col-lg-6 mt-2">
-                                <p class="fs-5 fw-bold fontTitle">Détail sur l'avion: </p>
+                                <p class="fs-5 fw-bold fontTitle">Détails sur l'avion: </p>
                                 <div class="row mb-2">
                                     <div class="col-lg-12">
                                         <p class="text-start  m-2">Modèle : <b><?= $location['plane_name'] ?></b></p>
@@ -57,7 +57,7 @@ require_once('../controllers/controller-list-one-location.php');
                         </div>
                         <div class="row ">
                             <div class="col-lg-12 m-2 ">
-                                <p class="fs-5 fw-bold fontTitle">Détail sur le client :</p>
+                                <p class="fs-5 fw-bold fontTitle">Détails sur le client :</p>
                             </div>
                             <div>
                                 <div class="row m-2 p-0 justify-content-center">
@@ -75,7 +75,7 @@ require_once('../controllers/controller-list-one-location.php');
 
                         <div class="row">
                             <div class="col-lg-12 m-2">
-                                <p class="fs-5 fw-bold fontTitle">Détail sur la location :</p>
+                                <p class="fs-5 fw-bold fontTitle">Détails sur la location :</p>
                             </div>
                         </div>
                         <div class="row m-2 p-0 justify-content-center">
@@ -136,17 +136,17 @@ require_once('../controllers/controller-list-one-location.php');
                     </div>
                     <div class="row m-0 p-0 justify-content-center ">
                         <div class="col-lg-2 col-10 mt-3  m-2">
-                            <a href="reservation.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
+                            <a href="list-location.php" type="submit" class="btn fontColorbtnValidate btnSize p-1">Retour</a>
                         </div>
                     </div>
 
                 <?php } else { ?>
                     <div class="row justify-content-center">
-                        <div class="col-lg-6 ">
+                        <div class="col-lg-6">
                             <p class="text-center fs-5 mt-5 border border-dark bg-light fontTitle p-3">veuillez sélectionner une location valide</p>
                             <div class="row m-0 p-0 justify-content-center">
                                 <div class="col-lg-3 col-10 m-2">
-                                    <a href="reservation.php" type="submit" class="btn fontColor btnSize p-2">Retour</a>
+                                    <a href="list-location.php" type="submit" class="btn fontColor btnSize p-2">Retour</a>
                                 </div>
                             </div>
                         </div>

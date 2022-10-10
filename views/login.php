@@ -24,7 +24,7 @@ require_once '../controllers/controller-login.php';
                 <div class="row justify-content-center m-0 p-0">
                     <div class="col-lg-11  mt-1 ">
                         <p class="text-danger text-center fontStyle"><?= isset($errors['connection']) ? $errors['connection'] : '' ?></p>
-                        <input type="submit" class="btn fontColor btnSize" value="Connection">
+                        <input type="submit" class="btn fontColor btnSize" value="Connexion">
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ require_once '../controllers/controller-login.php';
                     <a href="formulaire-user.php" type="submit" class="btn fontColor btnSize m-1 p-1">Créer un compte</a>
                 </div>
             </div>
-            <div class="row justify-content-end">
+            <div class="row justify-content-center">
                 <div class="col-lg-2 text-end">
                     <a href="landing.php" type="submit" class="btn m-1 p-1 fontColor btnSize">Accueil</a>
                 </div>

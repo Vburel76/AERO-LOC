@@ -107,7 +107,17 @@ class Plane extends Database
     /**
      * Permet d'ajouter un avion grace a un formulaire
      * 
+     * @param string $_plane_name Nom de l'avion
+     * @param string $_plane_size Taille de l'avion
+     * @param string $_plane_scode Portée de l'avion
+     * @param string $_plane_autonomy Autonomie de l'avion
+     * @param string $_plane_altitude Altitude max de l'avion
+     * @param string $_speed Vitesse de l'avion
+     * @param string $_plane_picture Photo de l'avion
+     * @param string $_plane_description Description de l'avion
+     * @param string $_plane_loc_description Description de la location
      * 
+     * @return void
      */
     public function addPlane(string $_plane_name, int $_plane_size, int $_plane_scode, int $_plane_autonomy, int $_plane_altitude, int $_speed, string $_plane_picture, string $_plane_description, string $_plane_loc_description): void
     {
@@ -133,23 +143,18 @@ class Plane extends Database
     }
 
     /**
-     * Permet d'afficher la liste des avions de la BDD  
+     * Permet de recupérer tous les avions
      * 
-     * 
+     * @return array
      */
-    public function returnPlane()
+    public function returnPlane(): array
     {
-        // création d'une instance pdo via la fonction du parent
         $pdo = parent::connectDb();
 
-        // j'écris la requête me permettant d'insérer un patient dans la table patients
-        // je mets en place des marqueurs nominatifs pour faciliter la manipulation des paramètres : :lastname, :firstname, :phonenumber, :address, :mail
         $sql = "SELECT * FROM `plane`";
 
-        // je prépare la requête que je stock dans $query à l'aide de la méthode ->prepare()
         $query = $pdo->query($sql);
 
-        // une fois le mail récupéré, j'execute la requête à l'aide de la méthode ->execute()
         $query->execute();
 
         $result = $query->fetchAll();
@@ -158,9 +163,19 @@ class Plane extends Database
     }
 
     /**
-     * Permet de modifier les informations d'un avion par rapport à son id   
+     * Permet de mettre à jour les données de l'avion
      * 
+     * @param string $_plane_name Nom de l'avion
+     * @param string $_plane_size Taille de l'avion
+     * @param string $_plane_scode Portée de l'avion
+     * @param string $_plane_autonomy Autonomie de l'avion
+     * @param string $_plane_altitude Altitude max de l'avion
+     * @param string $_speed Vitesse de l'avion
+     * @param string $_plane_picture Photo de l'avion
+     * @param string $_plane_description Description de l'avion
+     * @param string $_plane_loc_description Description de la location
      * 
+     * @return void
      */
     public function modifPlane(string $_plane_name, int $_plane_size, int $_plane_scode, int $_plane_autonomy, int $_plane_altitude, int $_speed, string $_plane_picture, string $_plane_description, string $_plane_loc_description, string $_planeId): void
     {
@@ -219,7 +234,9 @@ class Plane extends Database
     /**
      * Permet de supprimer un avion  
      * 
+     * @param string $planeid Index de l'avion
      * 
+     *  @return void
      */
     public function deletePlane(string $planeid): void
     {
