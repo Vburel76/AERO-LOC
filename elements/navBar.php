@@ -4,10 +4,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="d-lg-none d-block dropstart ">
-            <button class="btn  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle taille "></i>
-            </button>
+        <div class="d-lg-none d-block dropdown dropstart">
+            
+                <?php if (isset($_SESSION['user'])) { ?>
+                    <p class="m-auto d-inline textUserNavBar"><?= $_SESSION['user']['user_lastname'] ?></p>
+                <?php } ?>
+                <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle taille "></i>
+                </button>
+            
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <?php if (isset($_SESSION['user'])) { ?>
                     <li><a class="dropdown-item" href="compte.php">Mon profil</a></li>
@@ -16,7 +21,7 @@
                 <?php if (isset($_SESSION['user'])) { ?>
                     <li><a class="dropdown-item" href="reservation.php">Réservation</a></li>
                 <?php } ?>
-              
+
                 <?php if (isset($_SESSION['user'])) { ?>
                     <li><a type="button" class="dropdown-item" href="logout.php">Déconnexion</a></li>
                 <?php } ?>
